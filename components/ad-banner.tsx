@@ -1,23 +1,20 @@
-import Image from "next/image";
-import Promo from "../public/promo10.png"
+
 
 const AdBanner = () => {
-    return ( 
-        <div className="text-white my-5 p-3 mx-[30px] lg:mx-[72px] bg-[#604652] flex gap-x-5 items-center rounded-lg justify-center">
-            <div className="flex flex-col max-w-[700px] ">
-               <p className="text-4xl font-bold">Its our Opening Sales!!!</p>
-               <p className="text-lg">Get a discount on all purchases this opening weekend <br /> This offer is valid from June 1 to June 4 </p>
-            </div> 
-            <div>
-               <Image
-               src={Promo}
-               alt="10%"
-               width={200}
-               height={200}
-               />
+   return (
+
+      <div className="px-[83px] lg:px-[272px]">
+         <div className="  ">
+            <div className="flex flex-col items-center  text-center gap-y-2">
+               <p className="text-[#720439] font-openSans font-semibold text-[12px] md:text-[24px] leading-[16px] md:leading-[33px] ">Explore Our Collections</p>
+               <p className="text-[#1E1E1E] font-openSans font-bold text-[20px] md:text-[34px] lg:text-[44px] leading-[28px] md:leading-[40px] lg:leading-[61px] ">Perfect fusion of style and confidence</p>
             </div>
-        </div>
-     );
+
+         </div>
+
+      </div>
+   );
 }
- 
+
+
 export default AdBanner;
