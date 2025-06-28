@@ -1,8 +1,9 @@
 import AdBanner from "@/components/ad-banner";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
+import { IreCollection } from "@/components/ire-collection";
 import { Navigation } from "@/components/navigation";
-import { ProductCard } from "@/components/product-card";
+
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <div className="px-[83px] lg:px-[272px]">
         <AdBanner />
       </div>
-        <ProductCard />
+      <IreCollection />
+        
         <Footer />
 
     </div>
