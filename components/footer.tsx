@@ -44,11 +44,8 @@ const Footer = () => {
                         {/* section header */}
                         <p className="font-medium text-lg tracking-[0.25px] ">Collections </p>
                         <div className="flex flex-col gap-y-1 md:gap-y-3 text-sm tracking-[0.25px] font-roboto font-normal ">
-                            <p>Partners</p>
-                            <p>Community</p>
-                            <p>Developers</p>
-                            <p>App</p>
-
+                            <p>Ire Collection</p>
+                            <p>Anu Collection</p>
                         </div>
                     </div>
 
