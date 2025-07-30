@@ -1,6 +1,25 @@
-import { ProductCard } from "./product-card"
+"use client";
+import { useParams } from "next/navigation";
 
-const bridalsCollectionData = [
+const BridalsPage = () => {
+    const { collectionId } = useParams();
+    const collectionData = bridalsData.find(item => item.id === collectionId);
+    if (!collectionData) {
+        return <div>Collection not found</div>;
+    }
+
+    console.log(collectionData)
+
+    return (
+        <div>
+            oijhhui hello world
+        </div>
+    )
+}
+
+export default BridalsPage;
+
+const bridalsData = [
     {
         id: "bridal-1",
         imageSrc: "hero_4.jpg",
@@ -58,22 +77,3 @@ const bridalsCollectionData = [
         link: "bridals/bridal-8",
     },
 ]
-
-export const BridalsCollection = () => {
-    return (
-        <div className='mx-[15px] md:mx-[25px] lg:mx-[70px] mt-4'>
-            <p className='text-[36px] font-normal leading-[14px]'>Bridals</p>
-            <div className='mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4'>
-                {bridalsCollectionData.map((item) => (
-                    <ProductCard
-                        key={item.id}
-                        imageSrc={item.imageSrc}
-                        title={item.title}
-                        description={item.description}
-                        link={item.link}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
