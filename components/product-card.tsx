@@ -40,8 +40,8 @@ export const ProductCard = ({imageSrc,title,description,link}:Readonly<ProductCa
 
       <div className=" relative w-full h-full text-black  text-sm flex lg:hidden ">
         <div className='flex-col gap-y-3 items-center justify-start p-2'>
-          <p className="text-xl font-semibold">{title}</p>
-          <p className="w-full text-xs text-wrap line-clamp-4">{description}</p>
+          <p className="text-lg font-semibold">{title}</p>
+          <p className="w-full text-xs text-wrap line-clamp-2">{description}</p>
           <Link href={`/${link}`} className="flex gap-2 w-full text-sm text-gray-400 items-center mt-1">
             <p>See more</p>
             <ChevronRight size={16} />

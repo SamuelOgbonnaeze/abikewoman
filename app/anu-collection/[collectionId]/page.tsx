@@ -1,4 +1,22 @@
-import { ProductCard } from "./product-card"
+"use client";
+import { useParams } from "next/navigation";
+
+const CollectionPage = () => {
+    const { collectionId } = useParams();
+    const collectionData = anuCollectionData.find(item => item.id === collectionId);
+    if (!collectionData) {
+        return <div>Collection not found</div>;
+    }
+
+
+    return(
+        <div>
+            oijhhui hello world
+        </div>
+    )
+}
+
+export default CollectionPage;
 
 const anuCollectionData = [
     {
@@ -58,22 +76,3 @@ const anuCollectionData = [
         link: "anu-collection/anu-8",
     }
 ]
-
-export const AnuCollection = () => {
-    return (
-        <div className='mx-[15px] md:mx-[25px] lg:mx-[70px]  mt-4'>
-            <p className='text-[36px] font-normal leading-[14px]'>Anu Collection</p>
-            <div className='mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4' >
-                {anuCollectionData.map((item) => (
-                    <ProductCard
-                        key={item.id}
-                        imageSrc={item.imageSrc}
-                        title={item.title}
-                        description={item.description}
-                        link={item.link}
-                    />
-                ))}
-            </div>
-        </div>
-    )
-}
