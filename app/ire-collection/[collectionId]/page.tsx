@@ -95,7 +95,6 @@ const IrePage = () => {
         return <div>Collection not found</div>;
     }
 
-
     return (
         <div className="bg-white">
         <Container>
@@ -108,9 +107,6 @@ const IrePage = () => {
                         <Info data={collectionData} />
                     </div>
                 </div>
-                {/* Suggested products */}
-                <hr className="my-10" />
-                {/* <ProductList title="Related Products" items={suggestedProducts} /> */}
             </div>
         </Container>
 
