@@ -8,14 +8,14 @@ import GalleryTab from "@/components/gallery/gallery-tab";
 
 interface GalleryProps {
     images: ImageType[]
-};
+}
 
 const Gallery: React.FC<GalleryProps> = ({
     images
 }) => {
     return (
         <TabGroup as="div" className="flex flex-col-reverse" >
-            <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
+            <div className="mx-auto mt-6 w-full max-w-2xl sm:block lg:max-w-none">
                 <TabList className="grid grid-cols-4 gap-6">
                     {images.map((image) => (
                         <GalleryTab key={image.id} image={image} />
