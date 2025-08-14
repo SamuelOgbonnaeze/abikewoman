@@ -8,7 +8,7 @@ import GalleryTab from "@/components/gallery/gallery-tab";
 
 interface GalleryProps {
     images: ImageType[]
-};
+}
 
 const Gallery: React.FC<GalleryProps> = ({
     images
