@@ -19,9 +19,9 @@ const Info: React.FC<InfoProps> = ({
             <h1 className="text-3xl font-bold text-gray-900">
                 {data.title}
             </h1>
-            <hr className="my-2" />
+            <hr className="my-4" />
            <p className="text-md font-bold text-gray-700">{data.description}</p>
-           <Button className="bg-[#3D021E] lg:w-[200px] ">Contact us</Button>
+           <Button className="bg-green-500">Contact us</Button>
         </div>
     );
 }
