@@ -11,10 +11,10 @@ export default function Home() {
     return (
         <div className="text-3xl">
             <Hero/>
-            <div className="px-[83px] lg:px-[272px] mb-[48px]">
+            <div className="px-[63px] md:px-[120px] lg:px-[272px] mb-[48px]">
                 <AdBanner/>
             </div>
-            <div className='flex-col space-y-[65px]'>
+            <div className='flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[50px] '>
                 <IreCollection/>
                 <BridalsCollection/>
                 <Banner/>
