@@ -16,12 +16,12 @@ const Info: React.FC<InfoProps> = ({
 
     return (
         <div className="flex flex-col space-y-6">
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="text-3xl font-bold text-gray-700">
                 {data.title}
             </h1>
             <hr className="my-4" />
            <p className="text-md font-bold text-gray-700">{data.description}</p>
-           <Button className="bg-green-500">Contact us</Button>
+           <Button className="bg-[#3D021E] md:w-[250px] text-center">Contact us</Button>
         </div>
     );
 }
