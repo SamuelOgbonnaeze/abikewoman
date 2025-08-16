@@ -62,7 +62,7 @@ const readyToWearData = [
 
 export const ReadyToWear = () => {
     return (
-        <div className='mt-4'>
+        <div id='rtw' className='mt-4'>
             <p className='text-[36px] font-normal leading-[14px]'>Ready To Wear</p>
             <div className='mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4'>
                 {readyToWearData.map((item) => (
