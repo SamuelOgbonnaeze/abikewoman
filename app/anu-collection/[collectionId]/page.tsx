@@ -5,7 +5,7 @@ import Gallery from "@/components/gallery";
 import Info from "@/components/info";
 import { collectionsData } from "@/app/data";
 
-const CollectionPage = () => {
+const AnuPage = () => {
   const { collectionId } = useParams();
   const collectionData = collectionsData.find(
     (item) => item.id === collectionId
@@ -32,4 +32,4 @@ const CollectionPage = () => {
   );
 };
 
-export default CollectionPage;
+export default AnuPage;

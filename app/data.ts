@@ -1,5 +1,3 @@
-// data.ts
-
 export const collectionsData = [
   {
     id: "anu-1",
@@ -113,7 +111,7 @@ export const collectionsData = [
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
     ],
-    title: "Classic Lace Gown",
+    title: "Classic Lace Gown First",
     category: "Bridals",
     description:
       "A timeless lace bridal gown featuring delicate floral patterns and a flowing silhouette.",
@@ -257,7 +255,7 @@ export const collectionsData = [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_4.jpg" },
     ],
-    title: "Ire Collection Title",
+    title: "Ire Collection Title fouth",
     category: "Ire Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -370,7 +368,7 @@ export const collectionsData = [
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
     ],
-    title: "Casual Shirt Dress",
+    title: "Casual Shirt Ball gown",
     category: "Ready To Wear",
     description:
       "A versatile shirt dress that can be dressed up with heels or kept casual with sneakers.",
