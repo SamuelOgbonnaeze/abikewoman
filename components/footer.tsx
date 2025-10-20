@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { GrGoogle, GrInstagram } from "react-icons/gr";
+import { GrInstagram } from "react-icons/gr";
 import { FaFacebook } from "react-icons/fa";
 import Link from "next/link";
 const Footer = () => {
