@@ -27,7 +27,7 @@ export const ProductCard = ({
         />
 
         {/* Sliding overlay from bottom */}
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-black/20  transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  text-white lg:px-4 text-sm hidden lg:flex ">
+        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-black/50  transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out  text-white lg:px-4 text-sm hidden lg:flex ">
           <div className="flex flex-col gap-y-3 items-center justify-start text-white p-2">
             <p className="text-2xl font-semibold">{title}</p>
             <p className="w-full text-sm text-wrap line-clamp-3">
