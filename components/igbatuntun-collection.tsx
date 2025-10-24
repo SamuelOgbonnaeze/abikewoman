@@ -26,14 +26,6 @@ const igbatuntunCollectionData = [
     link: "igbatuntun/ayomide-set",
   },
   {
-    id: "favor-set",
-    imageSrc: "favor-2.jpg",
-    title: "Favor Set",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
-     link: "igbatuntun/favor-set",
-  },
-  {
     id: "ibukun-set",
     imageSrc: "ibukun-2.jpeg",
     title: "Ibukun Set",
@@ -42,28 +34,52 @@ const igbatuntunCollectionData = [
     link: "igbatuntun/ibukun-set",
   },
   {
-    id: "ire-6",
-    imageSrc: "hero_4.jpg",
-    title: "Ire Collection Title",
+    id: "favor-set",
+    imageSrc: "favor-2.jpg",
+    title: "Favor Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
-    link: "ire-collection/ire-6",
+    link: "igbatuntun/favor-set",
   },
   {
-    id: "ire-7",
-    imageSrc: "hero_4.jpg",
-    title: "Ire Collection Title",
+    id: "ife-set",
+    imageSrc: "ife-11.jpg",
+    title: "Ife Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
-    link: "ire-collection/ire-7",
+    link: "igbatuntun/ife-set",
   },
   {
-    id: "ire-8",
-    imageSrc: "hero_4.jpg",
-    title: "Ire Collection Title",
+    id: "irawo-dress",
+    imageSrc: "irawo-dress-2.jpg",
+    title: "Irawo Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
-    link: "ire-collection/ire-8",
+    link: "igbatuntun/irawo-dress",
+  },
+  {
+    id: "irawo-set",
+    imageSrc: "irawo-set-1.jpg",
+    title: "Irawo Set",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/irawo-set",
+  },
+  {
+    id: "iyanu-dress",
+    imageSrc: "iyanu-dress-7.jpg",
+    title: "Iyanu Dress",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/iyanu-dress",
+  },
+  {
+    id: "kuku-set",
+    imageSrc: "kuku-set-1.jpg",
+    title: "Kuku Set",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/kuku-set",
   },
 ];
 
