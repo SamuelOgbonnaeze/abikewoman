@@ -362,7 +362,7 @@ export const collectionsData = [
       { id: "11", url: "/iyanu-dress-11.jpg" },
     ],
     title: "Iyanu Dress",
-     category: "Igbatuntun Collection",
+    category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun-collection/iyanu-dress",
@@ -382,7 +382,7 @@ export const collectionsData = [
       { id: "10", url: "/kuku-set-10.jpg" },
     ],
     title: "Kuku Set",
-     category: "Igbatuntun Collection",
+    category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun-collection/kuku-set",
