@@ -8,10 +8,11 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const slides = [
-  { id: 1, bg: "/hero_3.jpg", overlay: "/Rec_4.png" },
-  { id: 2, bg: "/consult_img.png", overlay: "/Rec_4.png" },
-  { id: 3, bg: "/hero_2.jpg", overlay: "/Rec_4.png" },
-  { id: 4, bg: "/hero_4.jpg", overlay: "/Rec_4.png" },
+  { id: 1, bg: "/bridals-1.JPG", overlay: "/Rec_4.png" },
+  { id: 2, bg: "/bridals-2.JPG", overlay: "/Rec_4.png" },
+  { id: 3, bg: "/bridals-4.JPG", overlay: "/Rec_4.png" },
+  { id: 4, bg: "/bridals-5.JPG", overlay: "/Rec_4.png" },
+  { id: 5, bg: "/bridals-6.JPG", overlay: "/Rec_4.png" },
 ];
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
     <div className="relative w-full h-[195px] md:h-[400px] lg:h-screen mb-[25px] md:mb-[50px]">
       <Swiper
         modules={[Autoplay, EffectFade]}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         effect={"fade"}
         loop
         className="w-full h-full"
@@ -49,7 +50,7 @@ const Hero = () => {
               />
 
               {/* Text content */}
-              <div className="relative w-full h-full flex flex-col items-center justify-center z-20 text-white text-center gap-y-1">
+              <div className="relative w-full h-full flex flex-col items-center justify-center z-20 text-gray-100 text-center gap-y-1">
                 <p className="text-[16px] md:text-[24px] lg:text-[44px] font-openSans leading-[22px] md:leading-[36px] lg:leading-[62px] font-bold">
                   The AbikeWoman
                 </p>
