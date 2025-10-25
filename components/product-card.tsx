@@ -24,6 +24,7 @@ export const ProductCard = ({
           width={300}
           height={384}
           className="w-full h-[170px]  lg:h-[470px] object-cover"
+          priority
         />
 
         {/* Sliding overlay from bottom */}

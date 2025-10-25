@@ -15,7 +15,7 @@ const Footer = () => {
     >
       <div className="flex flex-col md:flex-row justify-between mb-[40px] ">
         <div className="flex flex-col">
-          <Image src="/logo-ls.png" width={125} height={42} alt="Logo" />
+          <Image src="/logo-ls.png" width={125} height={42} alt="Logo" priority />
           <div className="flex flex-col gap-y-4 mt-6">
             <p className="w-[250px] text-sm tracking-[0.25px] font-semibold ">
               The AbikeWoman

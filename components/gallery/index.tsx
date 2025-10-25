@@ -31,6 +31,7 @@ const Gallery: React.FC<GalleryProps> = ({
                                 src={image.url}
                                 alt="Image"
                                 className="object-cover object-center"
+                                priority
                             />
                         </div>
                     </TabPanel>

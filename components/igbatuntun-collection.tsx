@@ -34,13 +34,14 @@ const igbatuntunCollectionData = [
     link: "igbatuntun/ibukun-set",
   },
   {
-    id: "favor-set",
-    imageSrc: "favor-2.jpg",
-    title: "Favor Set",
+    id: "isinmi-dress",
+    imageSrc: "isinmi-dress-1.jpg",
+    title: "Isinmi Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
-    link: "igbatuntun/favor-set",
+    link: "igbatuntun/isinmi-dress",
   },
+
   {
     id: "ife-set",
     imageSrc: "ife-11.jpg",
@@ -80,6 +81,30 @@ const igbatuntunCollectionData = [
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/kuku-set",
+  },
+  {
+    id: "oreoluwa-dress",
+    imageSrc: "oreoluwa-dress-1.jpg",
+    title: "Oreoluwa Dress",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/oreoluwa-dress",
+  },
+  {
+    id: "one-thing",
+    imageSrc: "one-thing-dress-1.jpg",
+    title: "One Thing Dress",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/one-thing",
+  },
+  {
+    id: "favor-set",
+    imageSrc: "favor-2.jpg",
+    title: "Favor Set",
+    description:
+      "Ire Collection Description goes here. This is some sample text to test layout.",
+    link: "igbatuntun/favor-set",
   },
 ];
 

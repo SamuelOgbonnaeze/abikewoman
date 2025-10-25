@@ -22,6 +22,7 @@ const GalleryTab: React.FC<GalleryTabProps> = ({
                             fill
                             alt=""
                             className="object-cover object-center"
+                            priority
                         />
                     </span>
                     <span className={cn(
