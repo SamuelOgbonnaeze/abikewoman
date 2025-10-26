@@ -110,7 +110,7 @@ const igbatuntunCollectionData = [
 
 export const IgbatuntunCollection = () => {
   return (
-    <div id="ire" className=" mt-4">
+    <div id="igbatuntun" className=" mt-4">
       <p className=" text-lg lg:text-[36px] font-normal leading-[14px]">
         Igbatuntun Collection
       </p>
