@@ -74,7 +74,7 @@ export const LatestReleases = () => {
     .slice(0, 4);
 
   return (
-    <div className="mt-4">
+    <div id="latest" className="mt-4">
       <p className="text-lg lg:text-[36px] font-normal leading-[14px]">
         Latest Releases
       </p>

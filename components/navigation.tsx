@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,8 +9,18 @@ import {
   NativeSelectOptGroup,
   NativeSelectOption,
 } from "./ui/native-select";
+import { useRouter } from "next/navigation";
 
 export const Navigation = () => {
+  const router = useRouter();
+
+  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    if (value) {
+      router.push(value);
+    }
+  };
+
   return (
     <div className="w-full  py-2 px-[30px] lg:px-[72px] bg-[#3D021E] border-b border-[#DFDFDF] ">
       <div className="w-full flex items-center justify-between ">
@@ -24,36 +36,37 @@ export const Navigation = () => {
         </Link>
         {/*  */}
         <div className="hidden md:flex items-center gap-x-[20px] lg:gap-x-[40px] ">
-          <NativeSelect>
-            <NativeSelectOption value="">Select</NativeSelectOption>
+          <NativeSelect onChange={handleSelectChange}>
+            <NativeSelectOption value="">Collections</NativeSelectOption>
+
             <NativeSelectOptGroup label="Collections">
-              <Link href="/#igbatuntun">
-                <NativeSelectOption value="igbatuntun">
-                  Igbatuntun Collection
-                </NativeSelectOption>
-              </Link>
-              <NativeSelectOption value="backend">Backend</NativeSelectOption>
-              <NativeSelectOption value="devops">DevOps</NativeSelectOption>
+              <NativeSelectOption value="/#igbatuntun">
+                Igbatuntun Collection
+              </NativeSelectOption>
+              <NativeSelectOption value="/#backend">Backend</NativeSelectOption>
+              <NativeSelectOption value="/#devops">DevOps</NativeSelectOption>
             </NativeSelectOptGroup>
-            <NativeSelectOptGroup label="Sales">
-              <NativeSelectOption value="sales-rep">
+
+            <NativeSelectOptGroup label="Bridals">
+              <NativeSelectOption value="/#sales-rep">
                 Sales Rep
               </NativeSelectOption>
-              <NativeSelectOption value="account-manager">
+              <NativeSelectOption value="/#account-manager">
                 Account Manager
               </NativeSelectOption>
-              <NativeSelectOption value="sales-director">
+              <NativeSelectOption value="/#sales-director">
                 Sales Director
               </NativeSelectOption>
             </NativeSelectOptGroup>
-            <NativeSelectOptGroup label="Operations">
-              <NativeSelectOption value="support">
+
+            <NativeSelectOptGroup label="Ready to wear">
+              <NativeSelectOption value="/#support">
                 Customer Support
               </NativeSelectOption>
-              <NativeSelectOption value="product-manager">
+              <NativeSelectOption value="/#product-manager">
                 Product Manager
               </NativeSelectOption>
-              <NativeSelectOption value="ops-manager">
+              <NativeSelectOption value="/#ops-manager">
                 Operations Manager
               </NativeSelectOption>
             </NativeSelectOptGroup>
@@ -78,7 +91,7 @@ export const Navigation = () => {
         {/*  */}
         <Link href="/">
           <div className="flex items-center gap-x-1 md:gap-x-4 text-[12px] lg:text-[16px] text-[#D3B1C2]  group">
-            <p className="group-hover:text-[#720439]">Order now</p>
+            <p className="group-hover:text-[#720439]">Contact now</p>
             <MessageSquareShare
               className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
               size={16}
