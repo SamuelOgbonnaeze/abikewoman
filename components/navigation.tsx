@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -42,32 +42,6 @@ export const Navigation = () => {
             <NativeSelectOptGroup label="Collections">
               <NativeSelectOption value="/#igbatuntun">
                 Igbatuntun Collection
-              </NativeSelectOption>
-              <NativeSelectOption value="/#backend">Backend</NativeSelectOption>
-              <NativeSelectOption value="/#devops">DevOps</NativeSelectOption>
-            </NativeSelectOptGroup>
-
-            <NativeSelectOptGroup label="Bridals">
-              <NativeSelectOption value="/#sales-rep">
-                Sales Rep
-              </NativeSelectOption>
-              <NativeSelectOption value="/#account-manager">
-                Account Manager
-              </NativeSelectOption>
-              <NativeSelectOption value="/#sales-director">
-                Sales Director
-              </NativeSelectOption>
-            </NativeSelectOptGroup>
-
-            <NativeSelectOptGroup label="Ready to wear">
-              <NativeSelectOption value="/#support">
-                Customer Support
-              </NativeSelectOption>
-              <NativeSelectOption value="/#product-manager">
-                Product Manager
-              </NativeSelectOption>
-              <NativeSelectOption value="/#ops-manager">
-                Operations Manager
               </NativeSelectOption>
             </NativeSelectOptGroup>
           </NativeSelect>
