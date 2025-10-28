@@ -63,8 +63,8 @@ const nuachCollectionData = [
     title: "BARABARA DRESS",
     description: (
       <>
-        Oluwa a seun Barbara l’aye eh ( God will do unimaginable things in your
-        life) <br />
+        Oluwa a seun Barbara l&apos;aye eh ( God will do unimaginable things in
+        your life) <br />
         Barbara dress - under- bust wrap skater dress
       </>
     ),
@@ -86,8 +86,14 @@ const nuachCollectionData = [
   {
     id: "ileri-boubou",
     mediaSrc: "ileri-boubou-1.mp4",
-    title: "ILERI SET AND BOUBOU",
-    description: <>Coming soon...</>,
+    title: "ILERIOLUWA SET/BOUBOU",
+    description: (
+      <>
+        May the promises of God come to pass in your lives. <br /> <br /> Comes
+        in 3 variations: <br />
+        Kimono and pants Made in adire & Chantilly lace. * Boubou made{" "}
+      </>
+    ),
     link: "nuach/ileri-boubou",
   },
   {
@@ -122,14 +128,21 @@ const nuachCollectionData = [
     id: "shalom-set",
     mediaSrc: "shalom-set-1.mp4",
     title: "SHALOM SET",
-    description: <>Coming soon...</>,
+    description: (
+      <>
+        The Peace that surpasses understanding will rule your days <br />
+        <br />
+        Shalom set is a A fitted blouse with a drape from the left shoulder
+        paired with pants.
+      </>
+    ),
     link: "nuach/shalom-set",
   },
   {
     id: "tamara-dress",
     mediaSrc: "tamara-dress-1.mp4",
     title: "TAMARA DRESS",
-    description: <>Coming soon...</>,
+    description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {

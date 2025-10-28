@@ -1,112 +1,20 @@
-export const collectionsData = [
-  {
-    id: "anu-1",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "First Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-1",
-  },
-  {
-    id: "anu-2",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_4.jpg" },
-      { id: "3", url: "/hero_4.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-2",
-  },
-  {
-    id: "anu-3",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-3",
-  },
-  {
-    id: "anu-4",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_2.jpg" },
-      { id: "3", url: "/hero_3.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-4",
-  },
-  {
-    id: "anu-5",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-5",
-  },
-  {
-    id: "anu-6",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-6",
-  },
-  {
-    id: "anu-7",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-7",
-  },
-  {
-    id: "anu-8",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Anu Collection Title",
-    category: "Anu Collection",
-    description:
-      "Anu Collection Description goes here. It can be a bit longer to test the line clamping.",
-    link: "anu-collection/anu-8",
-  },
+import { AlheriDesc, AloraDesc, AriellaDesc, AtofaratiDesc, BarabaraDesc, DanielleDesc, IlerioluwaDesc, IyeDesc, KeziahDesc, ShalomDesc, TamaraDesc, TirzahDesc } from './description';
+import { ReactNode } from "react";
 
+export type CollectionItem = {
+  id: string;
+  media: { id: string; url: string }[];
+  title: string;
+  category: string;
+  description: string | ReactNode;
+  link: string;
+};
+
+export const collectionsData: CollectionItem[] = [
+  // ===== Bridals Collection =====
   {
     id: "bridal-1",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -119,7 +27,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-2",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -132,7 +40,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-3",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -145,7 +53,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-4",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -158,7 +66,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-5",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -171,7 +79,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-6",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -184,7 +92,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-7",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -197,7 +105,7 @@ export const collectionsData = [
   },
   {
     id: "bridal-8",
-    images: [
+    media: [
       { id: "1", url: "/hero_4.jpg" },
       { id: "2", url: "/hero_3.jpg" },
       { id: "3", url: "/hero_2.jpg" },
@@ -209,9 +117,10 @@ export const collectionsData = [
     link: "bridals/bridal-8",
   },
 
+  // ===== Igbatuntun Collection =====
   {
     id: "ire-set",
-    images: [
+    media: [
       { id: "1", url: "/ire-set-1.jpg" },
       { id: "2", url: "/ire-set-2.jpg" },
       { id: "3", url: "/ire-set-3.jpg" },
@@ -228,7 +137,7 @@ export const collectionsData = [
   },
   {
     id: "amani-dress",
-    images: [
+    media: [
       { id: "1", url: "/amani-1.jpg" },
       { id: "2", url: "/amani-2.jpg" },
       { id: "3", url: "/amani-3.jpg" },
@@ -249,7 +158,7 @@ export const collectionsData = [
   },
   {
     id: "ayomide-set",
-    images: [
+    media: [
       { id: "1", url: "/ayomide-1.jpg" },
       { id: "2", url: "/ayomide-2.jpg" },
       { id: "3", url: "/ayomide-3.jpg" },
@@ -269,7 +178,7 @@ export const collectionsData = [
   },
   {
     id: "favor-set",
-    images: [
+    media: [
       { id: "1", url: "/favor-1.jpg" },
       { id: "2", url: "/favor-2.jpg" },
     ],
@@ -281,7 +190,7 @@ export const collectionsData = [
   },
   {
     id: "ibukun-set",
-    images: [
+    media: [
       { id: "1", url: "/ibukun-1.jpeg" },
       { id: "2", url: "/ibukun-2.jpeg" },
       { id: "3", url: "/ibukun-3.jpeg" },
@@ -295,7 +204,7 @@ export const collectionsData = [
   },
   {
     id: "ife-set",
-    images: [
+    media: [
       { id: "1", url: "/ife-1.jpg" },
       { id: "2", url: "/ife-2.jpg" },
       { id: "3", url: "/ife-3.jpg" },
@@ -316,7 +225,7 @@ export const collectionsData = [
   },
   {
     id: "irawo-dress",
-    images: [
+    media: [
       { id: "1", url: "/irawo-dress-1.jpg" },
       { id: "2", url: "/irawo-dress-2.jpg" },
     ],
@@ -328,7 +237,7 @@ export const collectionsData = [
   },
   {
     id: "irawo-set",
-    images: [
+    media: [
       { id: "1", url: "/irawo-set-1.jpg" },
       { id: "2", url: "/irawo-set-2.jpg" },
       { id: "3", url: "/irawo-set-3.jpg" },
@@ -348,7 +257,7 @@ export const collectionsData = [
   },
   {
     id: "iyanu-dress",
-    images: [
+    media: [
       { id: "1", url: "/iyanu-dress-1.jpg" },
       { id: "2", url: "/iyanu-dress-2.jpg" },
       { id: "3", url: "/iyanu-dress-3.jpg" },
@@ -369,7 +278,7 @@ export const collectionsData = [
   },
   {
     id: "kuku-set",
-    images: [
+    media: [
       { id: "1", url: "/kuku-set-1.jpg" },
       { id: "2", url: "/kuku-set-2.jpg" },
       { id: "3", url: "/kuku-set-3.jpg" },
@@ -389,7 +298,7 @@ export const collectionsData = [
   },
   {
     id: "oreoluwa-dress",
-    images: [
+    media: [
       { id: "1", url: "/oreoluwa-dress-1.jpg" },
       { id: "2", url: "/oreoluwa-dress-2.jpg" },
       { id: "3", url: "/oreoluwa-dress-3.jpg" },
@@ -406,7 +315,7 @@ export const collectionsData = [
   },
   {
     id: "one-thing",
-    images: [
+    media: [
       { id: "1", url: "/one-thing-dress-1.jpg" },
       { id: "2", url: "/one-thing-dress-2.jpg" },
       { id: "3", url: "/one-thing-dress-3.jpg" },
@@ -426,7 +335,7 @@ export const collectionsData = [
   },
   {
     id: "isinmi-dress",
-    images: [
+    media: [
       { id: "1", url: "/isinmi-dress-1.jpg" },
       { id: "2", url: "/isinmi-dress-2.jpg" },
       { id: "3", url: "/isinmi-dress-3.jpg" },
@@ -455,108 +364,104 @@ export const collectionsData = [
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun-collection/isinmi-dress",
   },
+   //  Nuach Collection 
   {
-    id: "rtw-1",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Pleated Midi Dress",
-    category: "Ready To Wear",
-    description:
-      "A lightweight pleated midi dress, perfect for casual outings or summer events.",
-    link: "pleated-midi-dress",
+    id: "alheri-set",
+    media: [{ id: "1", url: "/alheri-set-1.mp4" }],
+    title: "ALHERI SET",
+    category: "Nuach Collection",
+    description: <AlheriDesc />,
+    link: "nuach/alheri-set",
   },
   {
-    id: "rtw-2",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Tailored Blazer Set",
-    category: "Ready To Wear",
-    description:
-      "A sharp, tailored two-piece blazer set suitable for both work and dinner dates.",
-    link: "tailored-blazer-set",
+    id: "alora-dress",
+    media: [{ id: "1", url: "/alora-dress-1.mp4" }],
+    title: "ALORA DRESS",
+    category: "Nuach Collection",
+    description: <AloraDesc />,
+    link: "nuach/alora-dress",
   },
   {
-    id: "rtw-3",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Relaxed Linen Shirt",
-    category: "Ready To Wear",
-    description:
-      "Breathable and chic, this relaxed-fit linen shirt is a go-to for warm days.",
-    link: "relaxed-linen-shirt",
+    id: "ariella-dress",
+    media: [{ id: "1", url: "/ariella-dress-1.mp4" }],
+    title: "ARIELLA DRESS",
+    category: "Nuach Collection",
+    description: <AriellaDesc />,
+    link: "nuach/ariella-dress",
   },
   {
-    id: "rtw-4",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "High-Waisted Trousers",
-    category: "Ready To Wear",
-    description:
-      "Elegant high-waisted trousers that pair effortlessly with tucked blouses or crop tops.",
-    link: "high-waisted-trousers",
+    id: "atofarati-set",
+    media: [{ id: "1", url: "/atofarati-set-1.mp4" }],
+    title: "ATOFARATI SET",
+    category: "Nuach Collection",
+    description: <AtofaratiDesc />,
+    link: "nuach/atofarati-set",
   },
   {
-    id: "rtw-5",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Casual Shirt Ball gown",
-    category: "Ready To Wear",
-    description:
-      "A versatile shirt dress that can be dressed up with heels or kept casual with sneakers.",
-    link: "casual-shirt-dress",
+    id: "barabara-dress",
+    media: [{ id: "1", url: "/barabara-dress-1.mp4" }],
+    title: "BARABARA DRESS",
+    category: "Nuach Collection",
+    description: <BarabaraDesc />,
+    link: "nuach/barabara-dress",
+  },
+ {
+    id: "danielle-set",
+    media: [{ id: "1", url: "/danielle-set-1.mp4" }],
+    title: "DANIELLE SET",
+    category: "Nuach Collection",
+    description: <DanielleDesc />,
+    link: "nuach/danielle-set",
   },
   {
-    id: "rtw-6",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Printed Wrap Dress",
-    category: "Ready To Wear",
-    description:
-      "This wrap dress features bold prints and a flattering waist tie for a confident look.",
-    link: "printed-wrap-dress",
+    id: "ileri-boubou",
+    media: [{ id: "1", url: "/ileri-boubou-1.mp4" }],
+    title: "ILERIOLUWA SET/BOUBOU",
+    category: "Nuach Collection",
+    description: <IlerioluwaDesc />,
+    link: "nuach/ileri-boubou",
+  },
+   {
+    id: "iye-dress",
+    media: [{ id: "1", url: "/iye-dress-1.mp4" }],
+    title: "IYE DRESS",
+    category: "Nuach Collection",
+    description: <IyeDesc />,
+    link: "nuach/iye-dress",
+  },
+   {
+    id: "keziah-set",
+    media: [{ id: "1", url: "/keziah-set-1.mp4" }],
+    title: "KEZIAH SET",
+    category: "Nuach Collection",
+    description: <KeziahDesc />,
+    link: "nuach/keziah-set",
+  },
+   {
+    id: "shalom-set",
+    media: [{ id: "1", url: "/shalom-set-1.mp4" }],
+    title: "SHALOM SET",
+    category: "Nuach Collection",
+    description: <ShalomDesc />,
+    link: "nuach/shalom-set",
   },
   {
-    id: "rtw-7",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Cropped Denim Jacket",
-    category: "Ready To Wear",
-    description:
-      "A stylish cropped denim jacket perfect for layering over dresses or tanks.",
-    link: "cropped-denim-jacket",
+    id: "tamara-dress",
+    media: [{ id: "1", url: "/tamara-dress-1.mp4" }],
+    title: "TAMARA DRESS",
+    category: "Nuach Collection",
+    description: <TamaraDesc />,
+    link: "nuach/tamara-dress",
   },
   {
-    id: "rtw-8",
-    images: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Jersey Maxi Dress",
-    category: "Ready To Wear",
-    description:
-      "Comfortable and flowy jersey maxi dress ideal for errands, lounging, or travel days.",
-    link: "jersey-maxi-dress",
+    id: "tirzah-dress",
+    media: [{ id: "1", url: "/tirzah-dress-1.mp4" }],
+    title: "TIRZAH DRESS",
+    category: "Nuach Collection",
+    description: <TirzahDesc />,
+    link: "nuach/tirzah-dress",
   },
 ];
+
+
+

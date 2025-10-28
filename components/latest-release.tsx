@@ -3,7 +3,7 @@ import { ProductCard } from "./product-card";
 const latestCollectionData = [
   {
     id: "alheri-set",
-    mediaSrc: "alheri-set-1.MP4",
+    mediaSrc: "alheri-set-1.mp4",
     title: "ALHERI SET",
     description: (
       <>
@@ -17,7 +17,7 @@ const latestCollectionData = [
   },
   {
     id: "alora-dress",
-    mediaSrc: "alora-dress-1.MP4",
+    mediaSrc: "alora-dress-1.mp4",
     title: "ALORA DRESS",
     description: (
       <>
@@ -31,7 +31,7 @@ const latestCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc: "ariella-dress-1.MP4",
+    mediaSrc: "ariella-dress-1.mp4",
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -45,7 +45,7 @@ const latestCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc: "atofarati-set-1.MP4",
+    mediaSrc: "atofarati-set-1.mp4",
     title: "ATOFARATI SET",
     description: (
       <>
@@ -59,12 +59,12 @@ const latestCollectionData = [
   },
   {
     id: "barabara-dress",
-    mediaSrc: "barabara-dress-1.MP4",
+    mediaSrc: "barabara-dress-1.mp4",
     title: "BARABARA DRESS",
     description: (
       <>
-        Oluwa a seun Barbara l’aye eh ( God will do unimaginable things in your
-        life) <br />
+        Oluwa a seun Barbara l&apos;aye eh ( God will do unimaginable things in
+        your life) <br />
         Barbara dress - under- bust wrap skater dress
       </>
     ),
@@ -72,7 +72,7 @@ const latestCollectionData = [
   },
   {
     id: "danielle-set",
-    mediaSrc: "danielle-set-1.MP4",
+    mediaSrc: "danielle-set-1.mp4",
     title: "DANIELLE SET",
     description: (
       <>
@@ -85,14 +85,20 @@ const latestCollectionData = [
   },
   {
     id: "ileri-boubou",
-    mediaSrc: "ileri-boubou-1.MP4",
-    title: "ILERI SET AND BOUBOU",
-    description: <>Coming soon...</>,
+    mediaSrc: "ileri-boubou-1.mp4",
+    title: "ILERIOLUWA SET/BOUBOU",
+    description: (
+      <>
+        May the promises of God come to pass in your lives. <br /> <br /> Comes
+        in 3 variations: <br />
+        Kimono and pants Made in adire & Chantilly lace. * Boubou made{" "}
+      </>
+    ),
     link: "nuach/ileri-boubou",
   },
   {
     id: "iye-dress",
-    mediaSrc: "iye-dress-1.MP4",
+    mediaSrc: "iye-dress-1.mp4",
     title: "IYE DRESS",
     description: (
       <>
@@ -106,7 +112,7 @@ const latestCollectionData = [
   },
   {
     id: "keziah-set",
-    mediaSrc: "keziah-set-1.MP4",
+    mediaSrc: "keziah-set-1.mp4",
     title: "KEZIAH SET",
     description: (
       <>
@@ -120,21 +126,28 @@ const latestCollectionData = [
   },
   {
     id: "shalom-set",
-    mediaSrc: "shalom-set-1.MP4",
+    mediaSrc: "shalom-set-1.mp4",
     title: "SHALOM SET",
-    description: <>Coming soon...</>,
+    description: (
+      <>
+        The Peace that surpasses understanding will rule your days <br />
+        <br />
+        Shalom set is a A fitted blouse with a drape from the left shoulder
+        paired with pants.
+      </>
+    ),
     link: "nuach/shalom-set",
   },
   {
     id: "tamara-dress",
-    mediaSrc: "tamara-dress-1.MP4",
+    mediaSrc: "tamara-dress-1.mp4",
     title: "TAMARA DRESS",
-    description: <>Coming soon...</>,
+    description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {
     id: "tirzah-dress",
-    mediaSrc: "tirzah-dress-1.MP4",
+    mediaSrc: "tirzah-dress-1.mp4",
     title: "TIRZAH DRESS",
     description: (
       <>
