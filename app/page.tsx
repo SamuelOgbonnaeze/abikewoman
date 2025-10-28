@@ -1,12 +1,10 @@
 import AdBanner from "@/components/ad-banner";
-import { AnuCollection } from "@/components/anu-collection";
 import Banner from "@/components/banner";
 import { BridalsCollection } from "@/components/bridals";
 import Hero from "@/components/hero";
 import { IgbatuntunCollection } from "@/components/igbatuntun-collection";
 import { LatestReleases } from "@/components/latest-release";
-
-import { ReadyToWear } from "@/components/ready-to-wear";
+import { NuachCollection } from "@/components/nuach-collection";
 
 export default function Home() {
   return (
@@ -17,11 +15,12 @@ export default function Home() {
       </div>
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
         <LatestReleases />
+        <NuachCollection />
         <IgbatuntunCollection />
+      </div>
+      <Banner />
+      <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
         <BridalsCollection />
-        <Banner />
-        <AnuCollection />
-        <ReadyToWear />
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { ProductCard } from "./product-card";
 const igbatuntunCollectionData = [
   {
     id: "ire-set",
-    imageSrc: "ire-set-1.jpg",
+    mediaSrc: "ire-set-1.jpg",
     title: "Ire Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -11,7 +11,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "amani-dress",
-    imageSrc: "amani-7.jpg",
+    mediaSrc: "amani-7.jpg",
     title: "Amani Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -19,7 +19,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ayomide-set",
-    imageSrc: "ayomide-3.jpg",
+    mediaSrc: "ayomide-3.jpg",
     title: "Ayomide Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -27,7 +27,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ibukun-set",
-    imageSrc: "ibukun-2.jpeg",
+    mediaSrc: "ibukun-2.jpeg",
     title: "Ibukun Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -35,7 +35,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "isinmi-dress",
-    imageSrc: "isinmi-dress-1.jpg",
+    mediaSrc: "isinmi-dress-1.jpg",
     title: "Isinmi Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -44,7 +44,7 @@ const igbatuntunCollectionData = [
 
   {
     id: "ife-set",
-    imageSrc: "ife-11.jpg",
+    mediaSrc: "ife-11.jpg",
     title: "Ife Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -52,7 +52,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "irawo-dress",
-    imageSrc: "irawo-dress-2.jpg",
+    mediaSrc: "irawo-dress-2.jpg",
     title: "Irawo Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -60,7 +60,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "irawo-set",
-    imageSrc: "irawo-set-1.jpg",
+    mediaSrc: "irawo-set-1.jpg",
     title: "Irawo Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -68,7 +68,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "iyanu-dress",
-    imageSrc: "iyanu-dress-7.jpg",
+    mediaSrc: "iyanu-dress-7.jpg",
     title: "Iyanu Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -76,7 +76,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "kuku-set",
-    imageSrc: "kuku-set-1.jpg",
+    mediaSrc: "kuku-set-1.jpg",
     title: "Kuku Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -84,7 +84,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "oreoluwa-dress",
-    imageSrc: "oreoluwa-dress-1.jpg",
+    mediaSrc: "oreoluwa-dress-1.jpg",
     title: "Oreoluwa Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -92,7 +92,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "one-thing",
-    imageSrc: "one-thing-dress-1.jpg",
+    mediaSrc: "one-thing-dress-1.jpg",
     title: "One Thing Dress",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -100,7 +100,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "favor-set",
-    imageSrc: "favor-2.jpg",
+    mediaSrc: "favor-2.jpg",
     title: "Favor Set",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -118,7 +118,7 @@ export const IgbatuntunCollection = () => {
         {igbatuntunCollectionData.map((item) => (
           <ProductCard
             key={item.id}
-            imageSrc={item.imageSrc}
+            mediaSrc={item.mediaSrc}
             title={item.title}
             description={item.description}
             link={item.link}

@@ -40,27 +40,14 @@ export const Navigation = () => {
             <NativeSelectOption value="">Collections</NativeSelectOption>
 
             <NativeSelectOptGroup label="Collections">
+              <NativeSelectOption value="/#nuach">
+                Nuach Collection
+              </NativeSelectOption>
               <NativeSelectOption value="/#igbatuntun">
                 Igbatuntun Collection
               </NativeSelectOption>
             </NativeSelectOptGroup>
           </NativeSelect>
-
-          {/* <Link href="/#bridals">
-            <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">
-              Bridals
-            </p>
-          </Link>
-          <Link href="/#ire">
-            <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">
-              Collections
-            </p>
-          </Link>
-          <Link href="/#rtw">
-            <p className="font-openSans font-bold text-[12px] lg:text-[16px] text-[#D3B1C2] hover:text-[#720439] leading-[22px] ">
-              Ready to wear
-            </p>
-          </Link> */}
         </div>
         {/*  */}
         <Link href="/">
