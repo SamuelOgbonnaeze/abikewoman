@@ -3,7 +3,7 @@
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 interface ProductCardProps {
   mediaSrc: string;
@@ -19,14 +19,48 @@ export const ProductCard = ({
   link,
 }: Readonly<ProductCardProps>) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(false);
 
-  // Auto-detect if it's a video based on file extension
   const isVideo = mediaSrc ? /\.(mp4|webm|ogg|mov)$/i.test(mediaSrc) : false;
   const fullPath = mediaSrc?.startsWith("/") ? mediaSrc : `/${mediaSrc || ""}`;
 
+  // Intersection Observer to detect when video is near viewport
+  useEffect(() => {
+    if (!isVideo || !videoRef.current) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShouldLoad(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "100px", // Start loading 100px before entering viewport
+        threshold: 0.01,
+      }
+    );
+
+    observer.observe(videoRef.current);
+
+    return () => observer.disconnect();
+  }, [isVideo]);
+
+  // Load video when shouldLoad is true
+  useEffect(() => {
+    if (shouldLoad && isVideo && videoRef.current) {
+      videoRef.current.load();
+    }
+  }, [shouldLoad, isVideo]);
+
   const handleMouseEnter = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
+    if (videoRef.current && isLoaded) {
+      videoRef.current.play().catch((error) => {
+        console.log("Video play failed:", error);
+      });
     }
   };
 
@@ -45,15 +79,24 @@ export const ProductCard = ({
     >
       <div className="relative">
         {isVideo ? (
-          <video
-            ref={videoRef}
-            src={fullPath}
-            className="w-full h-[170px] lg:h-[470px] object-cover"
-            loop
-            muted
-            playsInline
-            preload="metadata" // Loads metadata + first frame without loading entire video
-          />
+          <>
+            <video
+              ref={videoRef}
+              src={shouldLoad ? fullPath : undefined}
+              className="w-full h-[170px] lg:h-[470px] object-cover"
+              loop
+              muted
+              playsInline
+              preload="auto"
+              onLoadedData={() => setIsLoaded(true)}
+              onCanPlayThrough={() => setIsLoaded(true)}
+            />
+            {!isLoaded && (
+              <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+                <div className="w-12 h-12 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+              </div>
+            )}
+          </>
         ) : (
           <Image
             src={fullPath}

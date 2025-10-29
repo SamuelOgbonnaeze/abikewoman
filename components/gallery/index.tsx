@@ -31,9 +31,9 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   controls
                   loop
-                  muted
                   playsInline
                   autoPlay
+                  preload="auto"
                 />
               ) : (
                 <Image
