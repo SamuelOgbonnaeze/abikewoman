@@ -4,7 +4,7 @@ const igbatuntunCollectionData = [
   {
     id: "ire-set",
     mediaSrc: "ire-set-1.jpg",
-    title: "Ire Set",
+    title: "IRE SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/ire-set",
@@ -12,7 +12,7 @@ const igbatuntunCollectionData = [
   {
     id: "amani-dress",
     mediaSrc: "amani-7.jpg",
-    title: "Amani Dress",
+    title: "AMANI DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/amani-dress",
@@ -20,7 +20,7 @@ const igbatuntunCollectionData = [
   {
     id: "ayomide-set",
     mediaSrc: "ayomide-3.jpg",
-    title: "Ayomide Set",
+    title: "AYOMIDE SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/ayomide-set",
@@ -28,7 +28,7 @@ const igbatuntunCollectionData = [
   {
     id: "ibukun-set",
     mediaSrc: "ibukun-2.jpeg",
-    title: "Ibukun Set",
+    title: "IBUKUN SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/ibukun-set",
@@ -36,7 +36,7 @@ const igbatuntunCollectionData = [
   {
     id: "isinmi-dress",
     mediaSrc: "isinmi-dress-1.jpg",
-    title: "Isinmi Dress",
+    title: "ISINMI DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/isinmi-dress",
@@ -45,7 +45,7 @@ const igbatuntunCollectionData = [
   {
     id: "ife-set",
     mediaSrc: "ife-11.jpg",
-    title: "Ife Set",
+    title: "IFE SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/ife-set",
@@ -53,7 +53,7 @@ const igbatuntunCollectionData = [
   {
     id: "irawo-dress",
     mediaSrc: "irawo-dress-2.jpg",
-    title: "Irawo Dress",
+    title: "IRAWO DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/irawo-dress",
@@ -61,7 +61,7 @@ const igbatuntunCollectionData = [
   {
     id: "irawo-set",
     mediaSrc: "irawo-set-1.jpg",
-    title: "Irawo Set",
+    title: "IRAWO SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/irawo-set",
@@ -69,7 +69,7 @@ const igbatuntunCollectionData = [
   {
     id: "iyanu-dress",
     mediaSrc: "iyanu-dress-7.jpg",
-    title: "Iyanu Dress",
+    title: "IYANU DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/iyanu-dress",
@@ -77,7 +77,7 @@ const igbatuntunCollectionData = [
   {
     id: "kuku-set",
     mediaSrc: "kuku-set-1.jpg",
-    title: "Kuku Set",
+    title: "KUKU SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/kuku-set",
@@ -85,7 +85,7 @@ const igbatuntunCollectionData = [
   {
     id: "oreoluwa-dress",
     mediaSrc: "oreoluwa-dress-1.jpg",
-    title: "Oreoluwa Dress",
+    title: "OREOLUWA DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/oreoluwa-dress",
@@ -93,7 +93,7 @@ const igbatuntunCollectionData = [
   {
     id: "one-thing",
     mediaSrc: "one-thing-dress-1.jpg",
-    title: "One Thing Dress",
+    title: "ONE THING DRESS",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/one-thing",
@@ -101,7 +101,7 @@ const igbatuntunCollectionData = [
   {
     id: "favor-set",
     mediaSrc: "favor-2.jpg",
-    title: "Favor Set",
+    title: "FAVOR SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun/favor-set",

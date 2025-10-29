@@ -142,7 +142,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "6", url: "/ire-set-6.jpg" },
       { id: "7", url: "/ire-set-7.jpg" },
     ],
-    title: "Ire Set",
+    title: "IRE SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -163,7 +163,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "10", url: "/amani-10.jpg" },
       { id: "11", url: "/amani-11.jpg" },
     ],
-    title: "Amani Dress",
+    title: "AMANI DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -183,7 +183,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "9", url: "/ayomide-9.jpg" },
       { id: "10", url: "/ayomide-10.jpg" },
     ],
-    title: "Ayomide Set",
+    title: "AYOMIDE SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -195,7 +195,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "1", url: "/favor-1.jpg" },
       { id: "2", url: "/favor-2.jpg" },
     ],
-    title: "Favor Set",
+    title: "FAVOR SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -209,7 +209,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "3", url: "/ibukun-3.jpeg" },
       { id: "4", url: "/ibukun-4.jpeg" },
     ],
-    title: "Ibukun Set",
+    title: "IBUKUN SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -230,7 +230,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "10", url: "/ife-10.jpg" },
       { id: "11", url: "/ife-11.jpg" },
     ],
-    title: "Ife Set",
+    title: "IFE SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -242,7 +242,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "1", url: "/irawo-dress-1.jpg" },
       { id: "2", url: "/irawo-dress-2.jpg" },
     ],
-    title: "Irawo Dress",
+    title: "IRAWO DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -262,7 +262,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "9", url: "/irawo-set-9.jpg" },
       { id: "10", url: "/irawo-set-10.jpg" },
     ],
-    title: "Irawo Set",
+    title: "IRAWO SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -283,7 +283,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "10", url: "/iyanu-dress-10.jpg" },
       { id: "11", url: "/iyanu-dress-11.jpg" },
     ],
-    title: "Iyanu Dress",
+    title: "IYANU DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -303,7 +303,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "9", url: "/kuku-set-9.jpg" },
       { id: "10", url: "/kuku-set-10.jpg" },
     ],
-    title: "Kuku Set",
+    title: "KUKU SET",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -320,7 +320,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "6", url: "/oreoluwa-dress-6.jpg" },
       { id: "7", url: "/oreoluwa-dress-7.jpg" },
     ],
-    title: "Oreoluwa Dress",
+    title: "OREOLUWA DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -340,7 +340,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "7", url: "/one-thing-dress-9.jpg" },
       { id: "7", url: "/one-thing-dress-10.jpg" },
     ],
-    title: "One Thing Dress",
+    title: "ONE THING DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -371,7 +371,7 @@ export const collectionsData: CollectionItem[] = [
       { id: "20", url: "/isinmi-dress-20.jpg" },
       { id: "21", url: "/isinmi-dress-21.jpg" },
     ],
-    title: "Isinmi Dress",
+    title: "ISINMI DRESS",
     category: "Igbatuntun Collection",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
