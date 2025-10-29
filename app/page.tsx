@@ -1,6 +1,6 @@
 import AdBanner from "@/components/ad-banner";
 import Banner from "@/components/banner";
-// import { BridalsCollection } from "@/components/bridals";
+import { BridalsCollection } from "@/components/bridals";
 import Hero from "@/components/hero";
 import { IgbatuntunCollection } from "@/components/igbatuntun-collection";
 import { LatestReleases } from "@/components/latest-release";
@@ -22,7 +22,7 @@ export default function Home() {
         <Banner />
       </div>
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
-        {/* <BridalsCollection /> */}
+        <BridalsCollection />
       </div>
     </div>
   );

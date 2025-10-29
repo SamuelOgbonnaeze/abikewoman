@@ -49,7 +49,6 @@ export const Navigation = () => {
         <div className="hidden md:flex items-center gap-x-[20px] lg:gap-x-[40px] ">
           <NativeSelect onChange={handleSelectChange}>
             <NativeSelectOption value="">Collections</NativeSelectOption>
-
             <NativeSelectOptGroup label="Collections">
               <NativeSelectOption value="/#nuach">
                 Nuach Collection
@@ -57,6 +56,11 @@ export const Navigation = () => {
               <NativeSelectOption value="/#igbatuntun">
                 Igbatuntun Collection
               </NativeSelectOption>
+            </NativeSelectOptGroup>
+
+            <NativeSelectOption value="">Bridals</NativeSelectOption>
+            <NativeSelectOptGroup label="Bridals">
+              <NativeSelectOption value="/#bridals">Bridals</NativeSelectOption>
             </NativeSelectOptGroup>
           </NativeSelect>
         </div>

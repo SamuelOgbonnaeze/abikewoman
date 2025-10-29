@@ -28,11 +28,20 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-1",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-12.JPG" },
+      { id: "2", url: "/bridals-14.JPG" },
+      { id: "3", url: "/bridals-8.JPG" },
+      { id: "4", url: "/bridals-10.JPG" },
+      { id: "5", url: "/bridals-7.JPG" },
+      { id: "6", url: "/bridals-4.JPG" },
+      { id: "7", url: "/bridals-9.JPG" },
+      { id: "8", url: "/bridals-11.JPG" },
+      { id: "9", url: "/bridals-18.JPG" },
+      { id: "10", url: "/bridals-16.JPG" },
+      { id: "11", url: "/bridals-6.JPG" },
+      { id: "12", url: "/bridals-15.JPG" },
     ],
-    title: "Classic Lace Gown First",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "A timeless lace bridal gown featuring delicate floral patterns and a flowing silhouette.",
@@ -41,11 +50,17 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-2",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-33.JPG" },
+      { id: "2", url: "/bridals-32.JPG" },
+      { id: "3", url: "/bridals-37.JPG" },
+      { id: "4", url: "/bridals-34.JPG" },
+      { id: "5", url: "/bridals-31.JPG" },
+      { id: "6", url: "/bridals-5.JPG" },
+      { id: "7", url: "/bridals-28.JPG" },
+      { id: "8", url: "/bridals-29.JPG" },
+      { id: "9", url: "/bridals-30.JPG" },
     ],
-    title: "Modern Mermaid Dress",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "This figure-hugging mermaid dress is perfect for brides seeking a sleek, contemporary look.",
@@ -54,11 +69,13 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-3",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-26.JPG" },
+      { id: "2", url: "/bridals-44.JPG" },
+      { id: "3", url: "/bridals-27.JPG" },
+      { id: "4", url: "/bridals-3.JPG" },
+      { id: "5", url: "/bridals-1.JPG" },
     ],
-    title: "Off-Shoulder Ball Gown",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "A dreamy ball gown with off-shoulder sleeves and a full tulle skirt for a fairytale moment.",
@@ -67,11 +84,12 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-4",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-42.JPG" },
+      { id: "2", url: "/bridals-41.JPG" },
+      { id: "3", url: "/bridals-40.JPG" },
+      { id: "4", url: "/bridals-38.JPG" },
     ],
-    title: "Vintage-Inspired Dress",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "Charming vintage-inspired dress with lace detailing and a romantic neckline.",
@@ -80,11 +98,11 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-5",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-23.JPG" },
+      { id: "2", url: "/bridals-22.JPG" },
+      { id: "3", url: "/bridals-24.JPG" },
     ],
-    title: "Silk A-Line Gown",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "Sleek and simple silk A-line gown with a minimalist design and elegant flow.",
@@ -93,41 +111,15 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "bridal-6",
     media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
+      { id: "1", url: "/bridals-2.JPG" },
+      { id: "2", url: "/bridals-21.JPG" },
+      { id: "3", url: "/bridals-43.JPG" },
     ],
-    title: "Bohemian Chic Dress",
+    title: "BRIDAL WEAR",
     category: "Bridals",
     description:
       "Free-spirited boho bridal dress with flowing fabrics and earthy details.",
     link: "bridals/bridal-6",
-  },
-  {
-    id: "bridal-7",
-    media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Strapless Satin Gown",
-    category: "Bridals",
-    description:
-      "Elegant strapless satin gown with clean lines and a dramatic train.",
-    link: "bridals/bridal-7",
-  },
-  {
-    id: "bridal-8",
-    media: [
-      { id: "1", url: "/hero_4.jpg" },
-      { id: "2", url: "/hero_3.jpg" },
-      { id: "3", url: "/hero_2.jpg" },
-    ],
-    title: "Tulle and Beaded Bodice",
-    category: "Bridals",
-    description:
-      "Soft tulle skirt paired with a sparkling beaded bodice for the ultimate bridal glamour.",
-    link: "bridals/bridal-8",
   },
 
   // ===== Igbatuntun Collection =====
