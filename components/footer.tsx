@@ -1,11 +1,24 @@
+"use client"
 import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+
 const Footer = () => {
   const currentYear = () => {
     const now = new Date();
     return now.getFullYear();
+  };
+
+  const handleContact = () => {
+    const phoneNumber = "2347038072466";
+    const message = encodeURIComponent(`Hello, The AbikeWoman! `);
+
+    // WhatsApp URL format
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -15,7 +28,13 @@ const Footer = () => {
     >
       <div className="flex flex-col md:flex-row justify-between mb-[40px] ">
         <div className="flex flex-col">
-          <Image src="/logo-ls.png" width={125} height={42} alt="Logo" priority />
+          <Image
+            src="/logo-ls.png"
+            width={125}
+            height={42}
+            alt="Logo"
+            priority
+          />
           <div className="flex flex-col gap-y-4 mt-6">
             <p className="w-[250px] text-sm tracking-[0.25px] font-semibold ">
               The AbikeWoman
@@ -35,6 +54,9 @@ const Footer = () => {
               >
                 <FaFacebook size={24} />
               </Link>
+              <div onClick={handleContact}>
+                <FaWhatsapp size={24} />
+              </div>
             </div>
           </div>
         </div>

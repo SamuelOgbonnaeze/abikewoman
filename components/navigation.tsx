@@ -21,6 +21,17 @@ export const Navigation = () => {
     }
   };
 
+  const handleContact = () => {
+    const phoneNumber = "2347038072466";
+    const message = encodeURIComponent(`Hello, The AbikeWoman! `);
+
+    // WhatsApp URL format
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="w-full  py-2 px-[30px] lg:px-[72px] bg-[#3D021E] border-b border-[#DFDFDF] ">
       <div className="w-full flex items-center justify-between ">
@@ -50,15 +61,17 @@ export const Navigation = () => {
           </NativeSelect>
         </div>
         {/*  */}
-        <Link href="/">
-          <div className="flex items-center gap-x-1 md:gap-x-4 text-[12px] lg:text-[16px] text-[#D3B1C2]  group">
-            <p className="group-hover:text-[#720439]">Contact now</p>
-            <MessageSquareShare
-              className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
-              size={16}
-            />
-          </div>
-        </Link>
+
+        <div
+          onClick={handleContact}
+          className="flex items-center gap-x-1 md:gap-x-4 text-[12px] lg:text-[16px] text-[#D3B1C2]  group"
+        >
+          <p className="group-hover:text-[#720439]">Contact now</p>
+          <MessageSquareShare
+            className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
+            size={16}
+          />
+        </div>
       </div>
     </div>
   );
