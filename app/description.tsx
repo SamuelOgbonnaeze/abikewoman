@@ -67,14 +67,14 @@ export const AtofaratiDesc = () => {
   );
 };
 
-export const BarabaraDesc = () => {
+export const BabaraDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
       <i className="font-light">
-        Oluwa a seun Barabara l&apos;aye eh ( God will unimaginable things in
-        your life)
+        Oluwa a seun Babara l&apos;aye eh ( God will unimaginable things in your
+        life)
       </i>
-      <p>Barbara dress - under- bust wrap skater dress</p>
+      <p>Babara dress - under- bust wrap skater dress</p>
       <p>Comes in 3 variations;</p>
       <ul className="list-disc ml-6">
         <li>Made in plain crepe mixed with flowered mikado</li>

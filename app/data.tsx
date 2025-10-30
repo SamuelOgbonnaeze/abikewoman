@@ -6,7 +6,7 @@ import {
   AriellaDesc,
   AtofaratiDesc,
   AyomideDesc,
-  BarabaraDesc,
+  BabaraDesc,
   DanielleDesc,
   FavorDesc,
   IbukunDesc,
@@ -445,7 +445,7 @@ export const collectionsData: CollectionItem[] = [
     ],
   },
   {
-    id: "barabara-dress",
+    id: "babara-dress",
     media: [
       { id: "1", url: "/barabara-dress-1.mp4" },
       { id: "2", url: "/barabara-1.jpeg" },
@@ -459,10 +459,10 @@ export const collectionsData: CollectionItem[] = [
       { id: "10", url: "/barabara-9.png" },
       { id: "11", url: "/barabara-10.png" },
     ],
-    title: "BARBARA DRESS",
+    title: "BABARA DRESS",
     category: "Nuach Collection",
-    description: <BarabaraDesc />,
-    link: "nuach/barabara-dress",
+    description: <BabaraDesc />,
+    link: "nuach/babara-dress",
     priceVariations: [
       { style: "Flowered Mikado", price: 63000 },
       { style: "Adire Cotton", price: 52000 },

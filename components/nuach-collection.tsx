@@ -58,17 +58,17 @@ const nuachCollectionData = [
     link: "nuach/atofarati-set",
   },
   {
-    id: "barabara-dress",
+    id: "babara-dress",
     mediaSrc: "barabara-dress-1.mp4",
-    title: "BARABARA DRESS",
+    title: "BABARA DRESS",
     description: (
       <>
-        Oluwa a seun Barbara l&apos;aye eh ( God will do unimaginable things in
+        Oluwa a seun Babara l&apos;aye eh ( God will do unimaginable things in
         your life) <br />
-        Barbara dress - under- bust wrap skater dress
+        Babara dress - under- bust wrap skater dress
       </>
     ),
-    link: "nuach/barabara-dress",
+    link: "nuach/babara-dress",
   },
   {
     id: "danielle-set",
