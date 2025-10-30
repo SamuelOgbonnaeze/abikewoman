@@ -1,63 +1,81 @@
+// hooks/use-cart.ts
+
+import { CartItem } from "@/types";
+import toast from "react-hot-toast";
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
-import toast from "react-hot-toast";
-import { CollectionItem } from "@/types";
-
-interface CartItem extends CollectionItem {
-  orderQuantity: number; 
-}
-
 interface CartStore {
   items: CartItem[];
-  addItem: (data: CollectionItem) => void;
-  removeItem: (id: string) => void;
-  updateOrderQuantity: (id: string, quantity: number) => void;
+  addItem: (item: CartItem) => void;
+  removeItem: (id: string, selectedStyle?: string) => void;
   removeAll: () => void;
+  updateQuantity: (
+    id: string,
+    selectedStyle: string | undefined,
+    quantity: number
+  ) => void;
 }
 
 const useCart = create(
   persist<CartStore>(
     (set, get) => ({
       items: [],
-      addItem: (data: CollectionItem) => {
+
+      addItem: (data: CartItem) => {
         const currentItems = get().items;
-        const existingItem = currentItems.find((item) => item.id === data.id);
 
-        if (existingItem) {
-          return toast("Item already in cart.");
+        // Check if item with same id AND style already exists
+        const existingItemIndex = currentItems.findIndex(
+          (item) =>
+            item.id === data.id && item.selectedStyle === data.selectedStyle
+        );
+
+        if (existingItemIndex !== -1) {
+          // Item exists, update quantity
+          toast.success("Item already in cart");
+        } else {
+          // New item, add to cart
+          set({ items: [...currentItems, { ...data, quantity: 1 }] });
+          toast.success("Item is added to cart");
         }
-
-        // Add the product with an initial orderQuantity of 1
-        const newItem: CartItem = { ...data, orderQuantity: 1 };
-        set({ items: [...get().items, newItem] });
-        toast.success("Item is added to cart.");
       },
-      removeItem: (id: string) => {
-        set({ items: get().items.filter((item) => item.id !== id) });
+
+      removeItem: (id: string, selectedStyle?: string) => {
+        set({
+          items: get().items.filter(
+            (item) => !(item.id === id && item.selectedStyle === selectedStyle)
+          ),
+        });
         toast.success("Item is removed from cart");
       },
-      updateOrderQuantity: (id: string, quantity: number) => {
-        const currentItems = get().items;
-        const itemIndex = currentItems.findIndex((item) => item.id === id);
 
-        if (itemIndex === -1) {
-          return toast.error("Item not found in cart.");
-        }
-
-        if (quantity < 1 ) {
-          return toast.error("Invalid quantity.");
-        }
-
-        const updatedItems = [...currentItems];
-        updatedItems[itemIndex] = {
-          ...updatedItems[itemIndex],
-          orderQuantity: quantity, // Only update the orderQuantity
-        };
-
-        set({ items: updatedItems });
-      },
       removeAll: () => set({ items: [] }),
+
+      updateQuantity: (
+        id: string,
+        selectedStyle: string | undefined,
+        quantity: number
+      ) => {
+        const currentItems = get().items;
+        const itemIndex = currentItems.findIndex(
+          (item) => item.id === id && item.selectedStyle === selectedStyle
+        );
+
+        if (itemIndex !== -1) {
+          const updatedItems = [...currentItems];
+          if (quantity <= 0) {
+            // Remove item if quantity is 0 or less
+            updatedItems.splice(itemIndex, 1);
+          } else {
+            updatedItems[itemIndex] = {
+              ...updatedItems[itemIndex],
+              quantity,
+            };
+          }
+          set({ items: updatedItems });
+        }
+      },
     }),
     {
       name: "cart-storage",

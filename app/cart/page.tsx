@@ -1,5 +1,6 @@
 "use client";
-import CartItem from "@/components/cart-item";
+
+import CartItemComponent from "@/components/cart-item";
 import Container from "@/components/container";
 import Summary from "@/components/summary";
 import useCart from "@/hooks/use-cart";
@@ -21,7 +22,10 @@ const CartPage = () => {
               )}
               <ul>
                 {cart.items.map((item) => (
-                  <CartItem key={item.id} data={item} />
+                  <CartItemComponent
+                    key={`${item.id}-${item.selectedStyle || "default"}`}
+                    data={item}
+                  />
                 ))}
               </ul>
             </div>

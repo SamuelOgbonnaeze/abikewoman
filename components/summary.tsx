@@ -1,7 +1,6 @@
-"use client ";
+"use client";
 
-import { useState } from "react";
-
+import { useState, useMemo } from "react";
 import useCart from "@/hooks/use-cart";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "./ui/button";
@@ -11,9 +10,19 @@ const Summary = () => {
   const removeAll = useCart((state) => state.removeAll);
 
   const [firstname, setFirstname] = useState("");
+
   const resetForm = () => {
     setFirstname("");
   };
+
+  // Compute total amount of all items
+  const totalAmount = useMemo(() => {
+    return items.reduce((total, item) => {
+      const price = item.selectedPrice ?? 0;
+      const quantity = item.quantity ?? 1;
+      return total + price * quantity;
+    }, 0);
+  }, [items]);
 
   const onCheckout = async () => {
     const phoneNumber = "2347038072466";
@@ -22,14 +31,14 @@ const Summary = () => {
     const itemsList = items
       .map((item, index) => {
         return `${index + 1}. ${item.title} (${item.category}) - Quantity: ${
-          item.orderQuantity
-        }`;
+          item.quantity ?? 1
+        } - ₦${(item.selectedPrice ?? 0).toLocaleString()}`;
       })
       .join("\n");
 
-    // Build the complete message
+    //  Build the complete message with total amount included
     const message = encodeURIComponent(
-      `Hi, The AbikeWoman! My name is ${firstname} and I would like to pre-order the following items:\n\n${itemsList}\n\nThank you!`
+      `Hi, The AbikeWoman! My name is ${firstname} and I would like to pre-order the following items:\n\n${itemsList}\n\nTotal Amount: ₦${totalAmount.toLocaleString()}\n\nThank you!`
     );
 
     // WhatsApp URL format
@@ -43,12 +52,12 @@ const Summary = () => {
 
   return (
     <div className="mt-16 rounded-lg px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8 bg-[#3D021E] bg-opacity-50 text-white">
-      <h2 className="text-lg font-medium ">Order Checkout</h2>
+      <h2 className="text-lg font-medium">Order Checkout</h2>
       <div className="mt-6 space-y-4">
-        <div className="flex flex-col items-center justify-between border-t border-gray-200 ">
+        <div className="flex flex-col items-center justify-between border-t border-gray-200">
           <div className="flex w-full text-base font-medium gap-x-2 sm:gap-x-4 pt-4">
             <span className="sm:w-[150px]">
-              <label>First Name:</label>
+              <label htmlFor="name">First Name:</label>
             </span>
             <input
               type="text"
@@ -59,9 +68,17 @@ const Summary = () => {
             />
           </div>
         </div>
+
+        {/* Display total amount */}
+        <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
+          <p>Total</p>
+          <p>₦{totalAmount.toLocaleString()}</p>
+        </div>
+
         <Button
           onClick={onCheckout}
           className="bg-gray-100 w-full text-black text-center hover:bg-[#3D021E]/90 hover:text-white hover:cursor-pointer transition-colors"
+          disabled={firstname === ""}
         >
           <FaWhatsapp size={24} />
           Pre-Order

@@ -364,7 +364,8 @@ export const collectionsData: CollectionItem[] = [
     description: <Isinmi2Desc />,
     link: "igbatuntun-collection/isinmi-2-dress",
   },
-  //  Nuach Collection
+
+  // ===== Nuach Collection =====
   {
     id: "alheri-set",
     media: [
@@ -380,6 +381,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <AlheriDesc />,
     link: "nuach/alheri-set",
+    price: 49000,
   },
   {
     id: "alora-dress",
@@ -396,6 +398,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <AloraDesc />,
     link: "nuach/alora-dress",
+    price: 55000,
   },
   {
     id: "ariella-dress",
@@ -413,6 +416,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <AriellaDesc />,
     link: "nuach/ariella-dress",
+    price: 60500,
   },
   {
     id: "atofarati-set",
@@ -433,6 +437,12 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <AtofaratiDesc />,
     link: "nuach/atofarati-set",
+    priceVariations: [
+      { style: "Adire and Asooke", price: 53000 },
+      { style: "Asooke and Taffeta", price: 56000 },
+      { style: "2 Colored Taffeta", price: 50000 },
+      { style: "Full Asooke", price: 85000 },
+    ],
   },
   {
     id: "barabara-dress",
@@ -449,10 +459,15 @@ export const collectionsData: CollectionItem[] = [
       { id: "10", url: "/barabara-9.png" },
       { id: "11", url: "/barabara-10.png" },
     ],
-    title: "BARABARA DRESS",
+    title: "BARBARA DRESS",
     category: "Nuach Collection",
     description: <BarabaraDesc />,
     link: "nuach/barabara-dress",
+    priceVariations: [
+      { style: "Flowered Mikado", price: 63000 },
+      { style: "Adire Cotton", price: 52000 },
+      { style: "Adire Crepe", price: 52000 },
+    ],
   },
   {
     id: "danielle-set",
@@ -473,6 +488,10 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <DanielleDesc />,
     link: "nuach/danielle-set",
+    priceVariations: [
+      { style: "Dress Set", price: 76000 },
+      { style: "Skirt Set", price: 61500 },
+    ],
   },
   {
     id: "ileri-boubou",
@@ -488,6 +507,11 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <IlerioluwaDesc />,
     link: "nuach/ileri-boubou",
+    priceVariations: [
+      { style: "Set", price: 53000 },
+      { style: "Boubou in Mikado", price: 38500 },
+      { style: "Boubou in Adire", price: 40000 },
+    ],
   },
   {
     id: "iye-dress",
@@ -510,6 +534,11 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <IyeDesc />,
     link: "nuach/iye-dress",
+    priceVariations: [
+      { style: "Fitted (Plain Color)", price: 51000 },
+      { style: "Fitted (Adire)", price: 52500 },
+      { style: "Flair (Adire)", price: 62000 },
+    ],
   },
   {
     id: "keziah-set",
@@ -530,6 +559,12 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <KeziahDesc />,
     link: "nuach/keziah-set",
+    priceVariations: [
+      { style: "2 Colored Taffeta", price: 51500 },
+      { style: "Adire (Pant Set)", price: 50500 },
+      { style: "Adire (Skirt Set)", price: 49000 },
+      { style: "Plain Color (Pant Set)", price: 48000 },
+    ],
   },
   {
     id: "shalom-set",
@@ -545,6 +580,10 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <ShalomDesc />,
     link: "nuach/shalom-set",
+    priceVariations: [
+      { style: "In Adire", price: 55000 },
+      { style: "Plain Color & Sunray", price: 52000 },
+    ],
   },
   {
     id: "tamara-dress",
@@ -553,6 +592,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <TamaraDesc />,
     link: "nuach/tamara-dress",
+    price: 42000,
   },
   {
     id: "tirzah-dress",
@@ -574,5 +614,19 @@ export const collectionsData: CollectionItem[] = [
     category: "Nuach Collection",
     description: <TirzahDesc />,
     link: "nuach/tirzah-dress",
+    priceVariations: [
+      { style: "Plain Color Long Dress", price: 60000 },
+      { style: "Adire Silk", price: 55000 },
+      { style: "Adire Crepe Boubou", price: 41500 },
+    ],
+  },
+  {
+    id: "hana-set",
+    media: [],
+    title: "HANA SET",
+    category: "Nuach Collection",
+    description: "HANA SET",
+    link: "nuach/hana-set",
+    price: 67000,
   },
 ];

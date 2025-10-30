@@ -1,53 +1,56 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Image from "next/image";
 import { X } from "lucide-react";
 
 import useCart from "@/hooks/use-cart";
-import { CollectionItem } from "@/types";
+import { CartItem } from "@/types";
 import IconButton from "./ui/icon-button";
 
 interface CartItemProps {
-  data: CollectionItem;
+  data: CartItem;
 }
 
-const CartItem: React.FC<CartItemProps> = ({ data }) => {
+const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
   const cart = useCart();
-  const cartItem = cart.items.find((item) => item.id === data.id);
-  const [orderQuantity, setOrderQuantity] = useState(
-    cartItem?.orderQuantity || 1
-  );
+  const [orderQuantity, setOrderQuantity] = useState(data.quantity || 1);
   const [toastTimeout, setToastTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const incrementQuantity = () => {
-    const newQuantity = orderQuantity + 1;
+  const price = data.selectedPrice ?? data.price ?? 0;
+  const subtotal = price * orderQuantity;
+
+  // Update cart quantity when it changes locally
+  const updateQuantity = (newQuantity: number) => {
     setOrderQuantity(newQuantity);
-    cart.updateOrderQuantity(data.id, newQuantity);
+    cart.updateQuantity(data.id, data.selectedStyle, newQuantity);
+  };
+
+  const incrementQuantity = () => {
+    updateQuantity(orderQuantity + 1);
+    showToastWithDelay();
   };
 
   const decrementQuantity = () => {
     if (orderQuantity > 1) {
-      const newQuantity = orderQuantity - 1;
-      setOrderQuantity(newQuantity);
-      cart.updateOrderQuantity(data.id, newQuantity);
+      updateQuantity(orderQuantity - 1);
+      showToastWithDelay();
     }
   };
 
   const showToastWithDelay = () => {
-    // Clear previous timeout
     if (toastTimeout) clearTimeout(toastTimeout);
-
-    // Create a new timeout for the toast
     const timeout = setTimeout(() => {
       toast.success("Order quantity updated");
     }, 500);
-
     setToastTimeout(timeout);
   };
 
+  // Keep local state in sync if cart updates from elsewhere
   useEffect(() => {
-    // Cleanup timeout on component unmount
+    setOrderQuantity(data.quantity || 1);
+  }, [data.quantity]);
+
+  useEffect(() => {
     return () => {
       if (toastTimeout) clearTimeout(toastTimeout);
     };
@@ -59,8 +62,8 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
         {data.media && data.media.length > 0 ? (
           <Image
             fill
-            src={data.media[1].url}
-            alt="Product Image"
+            src={data.media[1]?.url || data.media[0].url}
+            alt={data.title}
             className="object-cover object-center"
           />
         ) : (
@@ -69,23 +72,43 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
           </div>
         )}
       </div>
+
       <div className="relative ml-4 flex flex-1 flex-col justify-between sm:ml-6">
         <div className="absolute z-10 right-0 top-0">
           <IconButton
-            onClick={() => cart.removeItem(data.id)}
+            onClick={() => cart.removeItem(data.id, data.selectedStyle)}
             icon={<X size={15} />}
           />
         </div>
-        <div className="sm:py-8 items-center">
+
+        <div className="sm:py-8">
           <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-2 sm:pr-0">
-            <div className="flex justify-between">
+            <div>
               <p className="text-lg font-semibold text-black">{data.title}</p>
+
+              {/* Show selected style if present */}
+              {data.selectedStyle && (
+                <p className="text-sm text-gray-600">
+                  Style: {data.selectedStyle}
+                </p>
+              )}
+
+              {/* Price per unit */}
+              <p className="text-sm text-gray-800 mt-1">
+                Price: ₦{price.toLocaleString()}
+              </p>
+
+              {/* Subtotal */}
+              <p className="text-base font-semibold text-[#3D021E] mt-1">
+                Subtotal: ₦{subtotal.toLocaleString()}
+              </p>
             </div>
           </div>
+
+          {/* Quantity Controls */}
           <div className="mt-4 flex items-center">
             <button
               onClick={decrementQuantity}
-              onMouseUp={showToastWithDelay} // Trigger toast on mouse release
               className="px-3 py-1 border border-gray-300 rounded-l-md bg-gray-100 hover:bg-gray-200 text-gray-700"
               disabled={orderQuantity <= 1}
             >
@@ -99,7 +122,6 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
             />
             <button
               onClick={incrementQuantity}
-              onMouseUp={showToastWithDelay} // Trigger toast on mouse release
               className="px-3 py-1 border border-gray-300 rounded-r-md bg-gray-100 hover:bg-gray-200 text-gray-700"
             >
               +
@@ -111,4 +133,4 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
   );
 };
 
-export default CartItem;
+export default CartItemComponent;
