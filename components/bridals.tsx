@@ -4,49 +4,43 @@ const bridalsCollectionData = [
   {
     id: "bridal-1",
     mediaSrc: "bridals-12.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "A timeless lace bridal gown featuring delicate floral patterns and a flowing silhouette.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-1",
   },
   {
     id: "bridal-2",
     mediaSrc: "bridals-33.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "This figure-hugging mermaid dress is perfect for brides seeking a sleek, contemporary look.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-2",
   },
   {
     id: "bridal-3",
     mediaSrc: "bridals-26.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "A dreamy ball gown with off-shoulder sleeves and a full tulle skirt for a fairytale moment.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-3",
   },
   {
     id: "bridal-4",
     mediaSrc: "bridals-42.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "Charming vintage-inspired dress with lace detailing and a romantic neckline.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-4",
   },
   {
     id: "bridal-5",
     mediaSrc: "bridals-23.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "Sleek and simple silk A-line gown with a minimalist design and elegant flow.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-5",
   },
   {
     id: "bridal-6",
     mediaSrc: "bridals-2.JPG",
-    title: "BRIDAL WEAR",
-    description:
-      "Free-spirited boho bridal dress with flowing fabrics and earthy details.",
+    title: "BRIDALS BY THEABIKEWOMAN",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-6",
   },
 ];

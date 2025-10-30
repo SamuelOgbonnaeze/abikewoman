@@ -1,13 +1,26 @@
 import {
   AlheriDesc,
   AloraDesc,
+  AmaniDesc,
   AriellaDesc,
   AtofaratiDesc,
+  AyomideDesc,
   BarabaraDesc,
   DanielleDesc,
+  FavorDesc,
+  IbukunDesc,
+  IfeDesc,
   IlerioluwaDesc,
+  IrawoSetDesc,
+  IreDesc,
+  Isinmi1Desc,
+  Isinmi2Desc,
+  IyanuDesc,
   IyeDesc,
   KeziahDesc,
+  KukuDesc,
+  OneThingDesc,
+  OreoluwaDesc,
   ShalomDesc,
   TamaraDesc,
   TirzahDesc,
@@ -41,10 +54,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "11", url: "/bridals-6.JPG" },
       { id: "12", url: "/bridals-15.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "A timeless lace bridal gown featuring delicate floral patterns and a flowing silhouette.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-1",
   },
   {
@@ -60,10 +72,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "8", url: "/bridals-29.JPG" },
       { id: "9", url: "/bridals-30.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "This figure-hugging mermaid dress is perfect for brides seeking a sleek, contemporary look.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-2",
   },
   {
@@ -75,10 +86,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "4", url: "/bridals-3.JPG" },
       { id: "5", url: "/bridals-1.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "A dreamy ball gown with off-shoulder sleeves and a full tulle skirt for a fairytale moment.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-3",
   },
   {
@@ -89,10 +99,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "3", url: "/bridals-40.JPG" },
       { id: "4", url: "/bridals-38.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "Charming vintage-inspired dress with lace detailing and a romantic neckline.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-4",
   },
   {
@@ -102,10 +111,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "2", url: "/bridals-22.JPG" },
       { id: "3", url: "/bridals-24.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "Sleek and simple silk A-line gown with a minimalist design and elegant flow.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-5",
   },
   {
@@ -115,10 +123,9 @@ export const collectionsData: CollectionItem[] = [
       { id: "2", url: "/bridals-21.JPG" },
       { id: "3", url: "/bridals-43.JPG" },
     ],
-    title: "BRIDAL WEAR",
+    title: "BRIDALS BY THEABIKEWOMAN",
     category: "Bridals",
-    description:
-      "Free-spirited boho bridal dress with flowing fabrics and earthy details.",
+    description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-6",
   },
 
@@ -136,8 +143,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "IRE SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <IreDesc />,
     link: "igbatuntun-collection/ire-set",
   },
   {
@@ -157,8 +163,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "AMANI DRESS",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <AmaniDesc />,
     link: "igbatuntun-collection/amani-dress",
   },
   {
@@ -177,8 +182,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "AYOMIDE SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <AyomideDesc />,
     link: "igbatuntun-collection/ayomide-set",
   },
   {
@@ -189,8 +193,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "FAVOR SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <FavorDesc />,
     link: "igbatuntun-collection/favor-set",
   },
   {
@@ -203,8 +206,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "IBUKUN SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <IbukunDesc />,
     link: "igbatuntun-collection/ibukun-set",
   },
   {
@@ -224,8 +226,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "IFE SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <IfeDesc />,
     link: "igbatuntun-collection/ife-set",
   },
   {
@@ -256,8 +257,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "IRAWO SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <IrawoSetDesc />,
     link: "igbatuntun-collection/irawo-set",
   },
   {
@@ -277,8 +277,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "IYANU DRESS",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <IyanuDesc />,
     link: "igbatuntun-collection/iyanu-dress",
   },
   {
@@ -297,8 +296,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "KUKU SET",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <KukuDesc />,
     link: "igbatuntun-collection/kuku-set",
   },
   {
@@ -314,8 +312,7 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "OREOLUWA DRESS",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <OreoluwaDesc />,
     link: "igbatuntun-collection/oreoluwa-dress",
   },
   {
@@ -334,40 +331,47 @@ export const collectionsData: CollectionItem[] = [
     ],
     title: "ONE THING DRESS",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
+    description: <OneThingDesc />,
     link: "igbatuntun-collection/one-thing",
   },
   {
-    id: "isinmi-dress",
+    id: "isinmi-1-dress",
     media: [
       { id: "1", url: "/isinmi-dress-1.jpg" },
+      { id: "2", url: "/isinmi-dress-5.jpg" },
+      { id: "3", url: "/isinmi-dress-6.jpg" },
+      { id: "4", url: "/isinmi-dress-8.jpg" },
+      { id: "5", url: "/isinmi-dress-10.jpg" },
+      { id: "6", url: "/isinmi-dress-11.jpg" },
+      { id: "7", url: "/isinmi-dress-12.jpg" },
+      { id: "8", url: "/isinmi-dress-15.jpg" },
+      { id: "9", url: "/isinmi-dress-17.jpg" },
+      { id: "10", url: "/isinmi-dress-18.jpg" },
+      { id: "11", url: "/isinmi-dress-20.jpg" },
+    ],
+    title: "ISINMI 1 DRESS",
+    category: "Igbatuntun Collection",
+    description: <Isinmi1Desc />,
+    link: "igbatuntun-collection/isinmi-1-dress",
+  },
+  {
+    id: "isinmi-2-dress",
+    media: [
       { id: "2", url: "/isinmi-dress-2.jpg" },
       { id: "3", url: "/isinmi-dress-3.jpg" },
       { id: "4", url: "/isinmi-dress-4.jpg" },
-      { id: "5", url: "/isinmi-dress-5.jpg" },
-      { id: "6", url: "/isinmi-dress-6.jpg" },
       { id: "7", url: "/isinmi-dress-7.jpg" },
-      { id: "8", url: "/isinmi-dress-8.jpg" },
       { id: "9", url: "/isinmi-dress-9.jpg" },
-      { id: "10", url: "/isinmi-dress-10.jpg" },
-      { id: "11", url: "/isinmi-dress-11.jpg" },
-      { id: "12", url: "/isinmi-dress-12.jpg" },
       { id: "13", url: "/isinmi-dress-13.jpg" },
       { id: "14", url: "/isinmi-dress-14.jpg" },
-      { id: "15", url: "/isinmi-dress-15.jpg" },
       { id: "16", url: "/isinmi-dress-16.jpg" },
-      { id: "17", url: "/isinmi-dress-17.jpg" },
-      { id: "18", url: "/isinmi-dress-18.jpg" },
       { id: "19", url: "/isinmi-dress-19.jpg" },
-      { id: "20", url: "/isinmi-dress-20.jpg" },
       { id: "21", url: "/isinmi-dress-21.jpg" },
     ],
-    title: "ISINMI DRESS",
+    title: "ISINMI 2 DRESS",
     category: "Igbatuntun Collection",
-    description:
-      "Ire Collection Description goes here. This is some sample text to test layout.",
-    link: "igbatuntun-collection/isinmi-dress",
+    description: <Isinmi2Desc />,
+    link: "igbatuntun-collection/isinmi-2-dress",
   },
   //  Nuach Collection
   {
