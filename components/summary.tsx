@@ -30,9 +30,13 @@ const Summary = () => {
     // Build the items list
     const itemsList = items
       .map((item, index) => {
-        return `${index + 1}. ${item.title} (${item.category}) - Quantity: ${
-          item.quantity ?? 1
-        } - ₦${(item.selectedPrice ?? 0).toLocaleString()}`;
+        const quantity = item.quantity ?? 1;
+        const price = item.selectedPrice ?? 0;
+        const totalPrice = price * quantity;
+
+        return `${index + 1}. ${item.title} (${
+          item.category
+        }) - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
       })
       .join("\n");
 
