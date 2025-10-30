@@ -1,3 +1,4 @@
+import { CollectionItem } from "@/types";
 import {
   AlheriDesc,
   AloraDesc,
@@ -25,16 +26,6 @@ import {
   TamaraDesc,
   TirzahDesc,
 } from "./description";
-import { ReactNode } from "react";
-
-export type CollectionItem = {
-  id: string;
-  media: { id: string; url: string }[];
-  title: string;
-  category: string;
-  description: string | ReactNode;
-  link: string;
-};
 
 export const collectionsData: CollectionItem[] = [
   // ===== Bridals Collection =====

@@ -1,5 +1,8 @@
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "./ui/button";
+import useCart from "@/hooks/use-cart";
+import { MouseEventHandler } from "react";
+import { ShoppingCart } from "lucide-react";
 
 interface InfoProps {
   data: {
@@ -13,6 +16,13 @@ interface InfoProps {
 }
 
 const Info: React.FC<InfoProps> = ({ data }) => {
+  const cart = useCart();
+
+  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+    event.stopPropagation();
+    cart.addItem(data);
+  };
+
   const handlePreOrder = () => {
     const phoneNumber = "2347038072466";
     const message = encodeURIComponent(
@@ -31,13 +41,19 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       <h1 className="text-3xl font-bold text-gray-700">{data.title}</h1>
       <hr className="my-4" />
       <div className="">{data.description}</div>
-      <Button
-        onClick={handlePreOrder}
-        className="bg-[#3D021E] md:w-[250px] text-center hover:bg-[#3D021E]/90 transition-colors"
-      >
-        <FaWhatsapp size={24} />
-        Pre-Order
-      </Button>
+      <div className="flex items-center space-x-6">
+        <Button onClick={onAddToCart} className="flex items-center gap-x-2">
+          <ShoppingCart size={20} />
+          Add to cart
+        </Button>
+        <Button
+          onClick={handlePreOrder}
+          className="bg-[#3D021E] md:w-[250px] text-center hover:bg-[#3D021E]/90 transition-colors"
+        >
+          <FaWhatsapp size={24} />
+          Pre-Order
+        </Button>
+      </div>
     </div>
   );
 };

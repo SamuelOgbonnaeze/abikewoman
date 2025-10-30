@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { MessageSquareShare } from "lucide-react";
+import { MessageSquareShare, ShoppingCart } from "lucide-react";
 import {
   NativeSelect,
   NativeSelectOptGroup,
@@ -11,8 +11,11 @@ import {
 } from "./ui/native-select";
 import { useRouter } from "next/navigation";
 
+import useCart from "@/hooks/use-cart";
+
 export const Navigation = () => {
   const router = useRouter();
+  const cart = useCart();
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const value = event.target.value;
@@ -42,6 +45,7 @@ export const Navigation = () => {
             alt="Logo"
             width={150}
             height={50}
+            className="w-[75px] md:w-[150px]"
             priority
           />
         </Link>
@@ -66,15 +70,31 @@ export const Navigation = () => {
         </div>
         {/*  */}
 
-        <div
-          onClick={handleContact}
-          className="flex items-center gap-x-1 md:gap-x-4 text-[12px] lg:text-[16px] text-[#D3B1C2]  group"
-        >
-          <p className="group-hover:text-[#720439]">Contact now</p>
-          <MessageSquareShare
-            className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
-            size={16}
-          />
+        <div className="flex items-center space-x-4">
+          <div
+            onClick={() => router.push("/cart")}
+            className="flex items-center gap-x-1 text-[12px] lg:text-[16px] text-[#D3B1C2]  group hover:cursor-pointer"
+          >
+            <ShoppingCart
+              size={16}
+             className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
+            />
+            <span className="ml-0.5 md:ml-1 font-medium text-sm text-gray-300">
+              {cart.items.length}
+            </span>
+          </div>
+          <div
+            onClick={handleContact}
+            className="flex items-center gap-x-1 md:gap-x-4 text-[12px] lg:text-[16px] text-[#D3B1C2] hover:cursor-pointer  group"
+          >
+            <p className="group-hover:text-[#720439] hidden md:flex">
+              Contact now
+            </p>
+            <MessageSquareShare
+              className="group-hover:text-[#720439] text-[12px] md:text-[20px]"
+              size={16}
+            />
+          </div>
         </div>
       </div>
     </div>
