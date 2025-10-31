@@ -25,7 +25,10 @@ export const ProductCard = ({
   const [isNavigating, setIsNavigating] = useState(false);
 
   const isVideo = mediaSrc ? /\.(mp4|webm|ogg|mov)$/i.test(mediaSrc) : false;
-  const fullPath = mediaSrc?.startsWith("/") ? mediaSrc : `/${mediaSrc || ""}`;
+  const fullPath =
+    mediaSrc?.startsWith("http") || mediaSrc?.startsWith("/")
+      ? mediaSrc
+      : `/${mediaSrc || ""}`;
 
   // Intersection Observer to detect when video is near viewport
   useEffect(() => {
@@ -158,7 +161,7 @@ export const ProductCard = ({
       {isNavigating && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm">
           <div className="flex items-center ">
-            <Spinner className="size-8"/>
+            <Spinner className="size-8" />
           </div>
         </div>
       )}

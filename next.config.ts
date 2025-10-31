@@ -1,7 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['d1dapjksca996u.cloudfront.net'], // 👈 your CloudFront domain here
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

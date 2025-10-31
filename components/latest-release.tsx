@@ -1,9 +1,23 @@
 import { ProductCard } from "./product-card";
 
 const latestCollectionData = [
+ {
+    id: "adunbarin-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
+    title: "ADUNBARIN SET",
+    description: (
+      <>
+        ADUNBARIN set✨ <br />
+        <br />
+        Adunbarin set is a set made from Adire and Asooke. Kimono paired with
+        pants.
+      </>
+    ),
+    link: "nuach/adunbarin-set",
+  },
   {
     id: "alheri-set",
-    mediaSrc: "alheri-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alheri-set-1.mp4",
     title: "ALHERI SET",
     description: (
       <>
@@ -17,7 +31,7 @@ const latestCollectionData = [
   },
   {
     id: "alora-dress",
-    mediaSrc: "alora-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alora-dress-1.mp4",
     title: "ALORA DRESS",
     description: (
       <>
@@ -31,7 +45,7 @@ const latestCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc: "ariella-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -45,7 +59,7 @@ const latestCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc: "atofarati-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
     title: "ATOFARATI SET",
     description: (
       <>
@@ -58,21 +72,21 @@ const latestCollectionData = [
     link: "nuach/atofarati-set",
   },
   {
-    id: "barabara-dress",
-    mediaSrc: "barabara-dress-1.mp4",
-    title: "BARABARA DRESS",
+    id: "babara-dress",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
+    title: "BABARA DRESS",
     description: (
       <>
-        Oluwa a seun Barbara l&apos;aye eh ( God will do unimaginable things in
+        Oluwa a seun Babara l&apos;aye eh ( God will do unimaginable things in
         your life) <br />
-        Barbara dress - under- bust wrap skater dress
+        Babara dress - under- bust wrap skater dress
       </>
     ),
-    link: "nuach/barabara-dress",
+    link: "nuach/babara-dress",
   },
   {
     id: "danielle-set",
-    mediaSrc: "danielle-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/danielle-set-1.mp4",
     title: "DANIELLE SET",
     description: (
       <>
@@ -84,8 +98,21 @@ const latestCollectionData = [
     link: "nuach/danielle-set",
   },
   {
+    id: "hana-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/hana-set-1.mp4",
+    title: "HANA SET",
+    description: (
+      <>
+        HANA SET <br />
+        <br /> A bask blouse with drape from right shoulder with an embellished
+        trimming on the hem paired with a knee length skirt made in tweed
+      </>
+    ),
+    link: "nuach/hana-set",
+  },
+  {
     id: "ileri-boubou",
-    mediaSrc: "ileri-boubou-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ileri-boubou-1.mp4",
     title: "ILERIOLUWA SET/BOUBOU",
     description: (
       <>
@@ -98,7 +125,7 @@ const latestCollectionData = [
   },
   {
     id: "iye-dress",
-    mediaSrc: "iye-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/iye-dress-1.mp4",
     title: "IYE DRESS",
     description: (
       <>
@@ -112,7 +139,7 @@ const latestCollectionData = [
   },
   {
     id: "keziah-set",
-    mediaSrc: "keziah-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/keziah-set-1.mp4",
     title: "KEZIAH SET",
     description: (
       <>
@@ -125,8 +152,21 @@ const latestCollectionData = [
     link: "nuach/keziah-set",
   },
   {
+    id: "moremi-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/moremi-set-1.mp4",
+    title: "MOREMI SET",
+    description: (
+      <>
+        MOREMI SET <br />
+        <br /> A high low flair blouse paired with A long A-line skirt made in
+        adire crepe. made in
+      </>
+    ),
+    link: "nuach/moremi-set",
+  },
+  {
     id: "shalom-set",
-    mediaSrc: "shalom-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/shalom-set-1.mp4",
     title: "SHALOM SET",
     description: (
       <>
@@ -140,14 +180,14 @@ const latestCollectionData = [
   },
   {
     id: "tamara-dress",
-    mediaSrc: "tamara-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tamara-dress-1.mp4",
     title: "TAMARA DRESS",
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {
     id: "tirzah-dress",
-    mediaSrc: "tirzah-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tirzah-dress-1.mp4",
     title: "TIRZAH DRESS",
     description: (
       <>
@@ -158,6 +198,20 @@ const latestCollectionData = [
       </>
     ),
     link: "nuach/tirzah-dress",
+  },
+  {
+    id: "zuriel-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/zuriel-set-1.mp4",
+    title: "ZURIEL SET",
+    description: (
+      <>
+        Zuriel means GOD is my rock. <br />
+        <br />
+        Zuriel is available in 2 variations : A high low boubou embellished with
+        crystal beads &drople
+      </>
+    ),
+    link: "nuach/zuriel-set",
   },
 ];
 

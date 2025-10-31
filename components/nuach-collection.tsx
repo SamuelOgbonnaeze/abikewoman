@@ -3,7 +3,7 @@ import { ProductCard } from "./product-card";
 const nuachCollectionData = [
   {
     id: "adunbarin-set",
-    mediaSrc: "adunbarin-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
     title: "ADUNBARIN SET",
     description: (
       <>
@@ -17,7 +17,7 @@ const nuachCollectionData = [
   },
   {
     id: "alheri-set",
-    mediaSrc: "alheri-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alheri-set-1.mp4",
     title: "ALHERI SET",
     description: (
       <>
@@ -31,7 +31,7 @@ const nuachCollectionData = [
   },
   {
     id: "alora-dress",
-    mediaSrc: "alora-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alora-dress-1.mp4",
     title: "ALORA DRESS",
     description: (
       <>
@@ -45,7 +45,7 @@ const nuachCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc: "ariella-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -59,7 +59,7 @@ const nuachCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc: "atofarati-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
     title: "ATOFARATI SET",
     description: (
       <>
@@ -73,7 +73,7 @@ const nuachCollectionData = [
   },
   {
     id: "babara-dress",
-    mediaSrc: "barabara-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
     title: "BABARA DRESS",
     description: (
       <>
@@ -86,7 +86,7 @@ const nuachCollectionData = [
   },
   {
     id: "danielle-set",
-    mediaSrc: "danielle-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/danielle-set-1.mp4",
     title: "DANIELLE SET",
     description: (
       <>
@@ -99,7 +99,7 @@ const nuachCollectionData = [
   },
   {
     id: "hana-set",
-    mediaSrc: "hana-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/hana-set-1.mp4",
     title: "HANA SET",
     description: (
       <>
@@ -112,7 +112,7 @@ const nuachCollectionData = [
   },
   {
     id: "ileri-boubou",
-    mediaSrc: "ileri-boubou-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ileri-boubou-1.mp4",
     title: "ILERIOLUWA SET/BOUBOU",
     description: (
       <>
@@ -125,7 +125,7 @@ const nuachCollectionData = [
   },
   {
     id: "iye-dress",
-    mediaSrc: "iye-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/iye-dress-1.mp4",
     title: "IYE DRESS",
     description: (
       <>
@@ -139,7 +139,7 @@ const nuachCollectionData = [
   },
   {
     id: "keziah-set",
-    mediaSrc: "keziah-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/keziah-set-1.mp4",
     title: "KEZIAH SET",
     description: (
       <>
@@ -153,7 +153,7 @@ const nuachCollectionData = [
   },
   {
     id: "moremi-set",
-    mediaSrc: "moremi-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/moremi-set-1.mp4",
     title: "MOREMI SET",
     description: (
       <>
@@ -166,7 +166,7 @@ const nuachCollectionData = [
   },
   {
     id: "shalom-set",
-    mediaSrc: "shalom-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/shalom-set-1.mp4",
     title: "SHALOM SET",
     description: (
       <>
@@ -180,14 +180,14 @@ const nuachCollectionData = [
   },
   {
     id: "tamara-dress",
-    mediaSrc: "tamara-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tamara-dress-1.mp4",
     title: "TAMARA DRESS",
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {
     id: "tirzah-dress",
-    mediaSrc: "tirzah-dress-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tirzah-dress-1.mp4",
     title: "TIRZAH DRESS",
     description: (
       <>
@@ -201,7 +201,7 @@ const nuachCollectionData = [
   },
   {
     id: "zuriel-set",
-    mediaSrc: "zuriel-set-1.mp4",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/zuriel-set-1.mp4",
     title: "ZURIEL SET",
     description: (
       <>
