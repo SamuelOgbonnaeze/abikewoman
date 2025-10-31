@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
@@ -68,17 +68,21 @@ const Footer = () => {
               Collections{" "}
             </p>
             <div className="flex flex-col gap-y-1 md:gap-y-3 text-sm tracking-[0.25px] font-roboto font-normal ">
-              <p>Ire Collection</p>
-              <p>Anu Collection</p>
+              <Link href="/#nuach">
+                <p>Nuach Collection</p>
+              </Link>
+              <Link href="/#igbatuntun">
+                <p>Igbatuntun Collection</p>
+              </Link>
             </div>
           </div>
 
           <div className="flex flex-col text-left gap-y-4 md:gap-y-6">
             <p className="font-medium text-lg tracking-[0.25px] ">Genres </p>
             <div className="flex flex-col gap-y-1 md:gap-y-3 text-sm tracking-[0.25px] font-roboto font-normal ">
-              <p>Bridals</p>
-              <p>Ready to wear</p>
-              <p>Bespoke</p>
+              <Link href="/#bridals">
+                <p>Bridals</p>
+              </Link>
             </div>
           </div>
         </div>
