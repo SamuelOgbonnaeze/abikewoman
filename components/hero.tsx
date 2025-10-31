@@ -8,11 +8,11 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 
 const slides = [
-  { id: 1, bg: "/bridals-1.JPG", overlay: "/Rec_4.png" },
-  { id: 2, bg: "/bridals-2.JPG", overlay: "/Rec_4.png" },
-  { id: 3, bg: "/bridals-4.JPG", overlay: "/Rec_4.png" },
-  { id: 4, bg: "/bridals-5.JPG", overlay: "/Rec_4.png" },
-  { id: 5, bg: "/bridals-6.JPG", overlay: "/Rec_4.png" },
+  { id: 1, bg: "bridals-1.JPG", overlay: "/Rec_4.png" },
+  { id: 2, bg: "bridals-2.JPG", overlay: "/Rec_4.png" },
+  { id: 3, bg: "bridals-4.JPG", overlay: "/Rec_4.png" },
+  { id: 4, bg: "bridals-5.JPG", overlay: "/Rec_4.png" },
+  { id: 5, bg: "bridals-6.JPG", overlay: "/Rec_4.png" },
 ];
 
 const Hero = () => {
@@ -31,7 +31,7 @@ const Hero = () => {
               {/* Background image */}
               <div className="absolute inset-0 z-0">
                 <Image
-                  src={slide.bg}
+                  src={`https://d1dapjksca996u.cloudfront.net/public/${slide.bg}`}
                   alt={`slide-${slide.id}`}
                   className="object-cover"
                   priority
