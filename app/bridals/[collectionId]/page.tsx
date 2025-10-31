@@ -6,7 +6,6 @@ import Info from "@/components/info";
 import { collectionsData } from "@/app/data";
 import { FaCircleArrowLeft } from "react-icons/fa6";
 
-
 const BridalsPage = () => {
   const { collectionId } = useParams();
   const router = useRouter();
