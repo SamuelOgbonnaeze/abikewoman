@@ -1,5 +1,6 @@
 import { CollectionItem } from "@/types";
 import {
+  AdunbarinDesc,
   AlheriDesc,
   AloraDesc,
   AmaniDesc,
@@ -9,6 +10,7 @@ import {
   BabaraDesc,
   DanielleDesc,
   FavorDesc,
+  HanaDesc,
   IbukunDesc,
   IfeDesc,
   IlerioluwaDesc,
@@ -20,11 +22,13 @@ import {
   IyeDesc,
   KeziahDesc,
   KukuDesc,
+  MoremiDesc,
   OneThingDesc,
   OreoluwaDesc,
   ShalomDesc,
   TamaraDesc,
   TirzahDesc,
+  ZurielDesc,
 } from "./description";
 
 export const collectionsData: CollectionItem[] = [
@@ -367,6 +371,24 @@ export const collectionsData: CollectionItem[] = [
 
   // ===== Nuach Collection =====
   {
+    id: "adunbarin-set",
+    media: [
+      { id: "1", url: "/adunbarin-set-1.mp4" },
+      { id: "2", url: "/adunbarin-1.jpg" },
+      { id: "3", url: "/adunbarin-2.jpg" },
+      { id: "4", url: "/adunbarin-3.jpg" },
+      { id: "5", url: "/adunbarin-4.jpg" },
+      { id: "6", url: "/adunbarin-5.jpg" },
+      { id: "7", url: "/adunbarin-6.jpg" },
+      { id: "8", url: "/adunbarin-7.jpg" },
+    ],
+    title: "ADUNBARIN SET",
+    category: "Nuach Collection",
+    description: <AdunbarinDesc />,
+    link: "nuach/adunbarin-set",
+    price: 57000,
+  },
+  {
     id: "alheri-set",
     media: [
       { id: "1", url: "/alheri-set-1.mp4" },
@@ -587,7 +609,12 @@ export const collectionsData: CollectionItem[] = [
   },
   {
     id: "tamara-dress",
-    media: [{ id: "1", url: "/tamara-dress-1.mp4" }],
+    media: [
+      { id: "1", url: "/tamara-dress-1.mp4" },
+      { id: "2", url: "/tamara-1.jpg" },
+      { id: "3", url: "/tamara-3.jpg" },
+      { id: "4", url: "/tamara-2.jpg" },
+    ],
     title: "TAMARA DRESS",
     category: "Nuach Collection",
     description: <TamaraDesc />,
@@ -622,11 +649,58 @@ export const collectionsData: CollectionItem[] = [
   },
   {
     id: "hana-set",
-    media: [],
+    media: [
+      { id: "1", url: "/hana-set-1.mp4" },
+      { id: "2", url: "/hana-1.jpg" },
+      { id: "3", url: "/hana-2.jpg" },
+      { id: "4", url: "/hana-3.jpg" },
+      { id: "5", url: "/hana-4.jpg" },
+      { id: "6", url: "/hana-5.jpg" },
+      { id: "7", url: "/hana-6.jpg" },
+    ],
     title: "HANA SET",
     category: "Nuach Collection",
-    description: "HANA SET",
+    description: <HanaDesc />,
     link: "nuach/hana-set",
     price: 67000,
+  },
+
+  {
+    id: "moremi-set",
+    media: [
+      { id: "1", url: "/moremi-set-1.mp4" },
+      { id: "2", url: "/moremi-1.jpg" },
+      { id: "3", url: "/moremi-2.jpg" },
+      { id: "4", url: "/moremi-3.jpg" },
+      { id: "5", url: "/moremi-4.jpg" },
+      { id: "6", url: "/moremi-5.jpg" },
+    ],
+    title: "MOREMI SET",
+    category: "Nuach Collection",
+    description: <MoremiDesc />,
+    link: "nuach/moremi-set",
+    price: 50000,
+  },
+
+  {
+    id: "zuriel-set",
+    media: [
+      { id: "1", url: "/zuriel-set-1.mp4" },
+      { id: "2", url: "/zuriel-1.jpg" },
+      { id: "3", url: "/zuriel-3.jpg" },
+      { id: "4", url: "/zuriel-2.jpg" },
+      { id: "5", url: "/zuriel-5.jpg" },
+      { id: "6", url: "/zuriel-4.jpg" },
+      { id: "7", url: "/zuriel-6.jpg" },
+      { id: "8", url: "/zuriel-7.jpg" },
+    ],
+    title: "ZURIEL SET",
+    category: "Nuach Collection",
+    description: <ZurielDesc />,
+    link: "nuach/zuriel-set",
+    priceVariations: [
+      { style: "Embellished Crepe", price: 52000 },
+      { style: "Plain and Adire Pants", price: 45000 },
+    ],
   },
 ];

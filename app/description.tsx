@@ -1,3 +1,16 @@
+export const AdunbarinDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
+      <p>
+        Adunbarin set is a set made from Adire and Asooke. Kimono paired with
+        pants.
+      </p>
+      <p>Available in different prints of adire and Asooke.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
 export const AlheriDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
@@ -106,6 +119,20 @@ export const DanielleDesc = () => {
   );
 };
 
+export const HanaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
+      <p>
+        A bask blouse with drape from right shoulder with an embellished
+        trimming on the hem paired with a knee length skirt made in tweed
+      </p>
+      <p>Available in different prints of tweed.</p>
+
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
 export const IlerioluwaDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
@@ -177,6 +204,20 @@ export const KeziahDesc = () => {
   );
 };
 
+export const MoremiDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
+      <p>
+        A high low flair blouse paired with a long A-line skirt made in adire
+        crepe.
+      </p>
+      <p>Available in different prints.</p>
+
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
 export const ShalomDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
@@ -229,6 +270,23 @@ export const TirzahDesc = () => {
         Drape on the neckline & slit in front is constant in all variations.
       </p>
       <p>Available in different colors and prints.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+export const ZurielDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
+      <i className="font-light">Zuriel means GOD is my rock.</i>
+      <p>Zuriel is available in 2 variations :</p>
+      <ul className="list-disc ml-6">
+        <li>
+          A high low boubou embellished with crystal beads &droplets on the
+          chest paired with pants. Made in crepe
+        </li>
+        <li>A high low boubou in plain crepe paired with adire silk pants.</li>
+      </ul>
       <p>Click on WhatsApp button below to pre-order.</p>
     </div>
   );

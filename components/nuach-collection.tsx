@@ -2,6 +2,20 @@ import { ProductCard } from "./product-card";
 
 const nuachCollectionData = [
   {
+    id: "adunbarin-set",
+    mediaSrc: "adunbarin-set-1.mp4",
+    title: "ADUNBARIN SET",
+    description: (
+      <>
+        ADUNBARIN set✨ <br />
+        <br />
+        Adunbarin set is a set made from Adire and Asooke. Kimono paired with
+        pants.
+      </>
+    ),
+    link: "nuach/adunbarin-set",
+  },
+  {
     id: "alheri-set",
     mediaSrc: "alheri-set-1.mp4",
     title: "ALHERI SET",
@@ -84,6 +98,19 @@ const nuachCollectionData = [
     link: "nuach/danielle-set",
   },
   {
+    id: "hana-set",
+    mediaSrc: "hana-set-1.mp4",
+    title: "HANA SET",
+    description: (
+      <>
+        HANA SET <br />
+        <br /> A bask blouse with drape from right shoulder with an embellished
+        trimming on the hem paired with a knee length skirt made in tweed
+      </>
+    ),
+    link: "nuach/hana-set",
+  },
+  {
     id: "ileri-boubou",
     mediaSrc: "ileri-boubou-1.mp4",
     title: "ILERIOLUWA SET/BOUBOU",
@@ -125,6 +152,19 @@ const nuachCollectionData = [
     link: "nuach/keziah-set",
   },
   {
+    id: "moremi-set",
+    mediaSrc: "moremi-set-1.mp4",
+    title: "MOREMI SET",
+    description: (
+      <>
+        MOREMI SET <br />
+        <br /> A high low flair blouse paired with A long A-line skirt made in
+        adire crepe. made in
+      </>
+    ),
+    link: "nuach/moremi-set",
+  },
+  {
     id: "shalom-set",
     mediaSrc: "shalom-set-1.mp4",
     title: "SHALOM SET",
@@ -158,6 +198,20 @@ const nuachCollectionData = [
       </>
     ),
     link: "nuach/tirzah-dress",
+  },
+  {
+    id: "zuriel-set",
+    mediaSrc: "zuriel-set-1.mp4",
+    title: "ZURIEL SET",
+    description: (
+      <>
+        Zuriel means GOD is my rock. <br />
+        <br />
+        Zuriel is available in 2 variations : A high low boubou embellished with
+        crystal beads &drople
+      </>
+    ),
+    link: "nuach/zuriel-set",
   },
 ];
 
