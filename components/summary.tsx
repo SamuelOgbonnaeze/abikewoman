@@ -54,6 +54,36 @@ const Summary = () => {
     resetForm();
   };
 
+  const onPayWithTransfer = async () => {
+    const phoneNumber = "2347038072466";
+
+    // Build the items list
+    const itemsList = items
+      .map((item, index) => {
+        const quantity = item.quantity ?? 1;
+        const price = item.selectedPrice ?? 0;
+        const totalPrice = price * quantity;
+
+        return `${index + 1}. ${item.title} (${
+          item.category
+        }) - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
+      })
+      .join("\n");
+
+    //  Build the complete message with total amount included
+    const message = encodeURIComponent(
+      `Hi, The AbikeWoman! My name is ${firstname} and I have paid for the following items:\n\n${itemsList}\n\nTotal Amount: ₦${totalAmount.toLocaleString()}\n\nThank you!\n\nHere is my receipt`
+    );
+
+    // WhatsApp URL format
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappUrl, "_blank");
+    removeAll();
+    resetForm();
+  };
+
   return (
     <div className="mt-16 rounded-lg px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8 bg-[#3D021E] bg-opacity-50 text-white">
       <h2 className="text-lg font-medium">Order Checkout</h2>
@@ -86,6 +116,34 @@ const Summary = () => {
         >
           <FaWhatsapp size={24} />
           Pre-Order
+        </Button>
+
+        <div className="flex items-center justify-center">
+          <span className="text-xs text-gray-300">— or —</span>
+        </div>
+
+        {/* Transfer Option */}
+        <div className="border border-gray-300 rounded-lg p-3 text-sm text-center ">
+          <p className="mb-2 font-semibold text-sm">Bank Transfer Details:</p>
+          <p>
+            Account Name: <span className="font-medium">THE ABIKEWOMAN</span>
+          </p>
+          <p>
+            Bank: <span className="font-medium">GUARANTY TRUST BANK</span>
+          </p>
+          <p>
+            Account Number: <span className="font-medium">0696134745</span>
+          </p>
+        </div>
+
+        {/* Pay with Transfer Button */}
+        <Button
+          onClick={onPayWithTransfer}
+          className="bg-[#25D366] w-full text-white hover:bg-[#128C7E] hover:cursor-pointer transition-colors"
+          disabled={firstname === ""}
+        >
+          <FaWhatsapp size={20} className="mr-2" />
+          Pay with Transfer & Send Receipt
         </Button>
       </div>
     </div>
