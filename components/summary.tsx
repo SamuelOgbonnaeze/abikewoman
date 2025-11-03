@@ -34,9 +34,20 @@ const Summary = () => {
         const price = item.selectedPrice ?? 0;
         const totalPrice = price * quantity;
 
-        return `${index + 1}. ${item.title} (${
-          item.category
-        }) - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
+        // Build item details with style and size if available
+        let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
+
+        if (item.selectedStyle) {
+          itemDetails += ` - Style: ${item.selectedStyle}`;
+        }
+
+        if (item.selectedSize) {
+          itemDetails += ` - Size: ${item.selectedSize}`;
+        }
+
+        itemDetails += ` - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
+
+        return itemDetails;
       })
       .join("\n");
 
@@ -64,9 +75,20 @@ const Summary = () => {
         const price = item.selectedPrice ?? 0;
         const totalPrice = price * quantity;
 
-        return `${index + 1}. ${item.title} (${
-          item.category
-        }) - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
+        // Build item details with style and size if available
+        let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
+
+        if (item.selectedStyle) {
+          itemDetails += ` - Style: ${item.selectedStyle}`;
+        }
+
+        if (item.selectedSize) {
+          itemDetails += ` - Size: ${item.selectedSize}`;
+        }
+
+        itemDetails += ` - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
+
+        return itemDetails;
       })
       .join("\n");
 
