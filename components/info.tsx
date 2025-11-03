@@ -22,22 +22,27 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   const cart = useCart();
   const hasVariations = data.priceVariations && data.priceVariations.length > 0;
 
-  // State for selected variation
+  // Available sizes
+  const availableSizes = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
+
+  // State for selected variation and size
   const [selectedVariation, setSelectedVariation] =
     useState<PriceVariation | null>(
       hasVariations ? data?.priceVariations![0] : null
     );
+  const [selectedSize, setSelectedSize] = useState<number | null>(null);
 
   const currentPrice = hasVariations ? selectedVariation?.price : data.price;
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
 
-    // Create cart item with selected style
+    // Create cart item with selected style and size
     const cartItem = {
       ...data,
       selectedStyle: hasVariations ? selectedVariation?.style : undefined,
       selectedPrice: currentPrice,
+      selectedSize: selectedSize ?? undefined,
       quantity: 1,
     };
 
@@ -56,6 +61,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       }\nPrice: ₦${selectedVariation.price.toLocaleString()}`;
     } else if (currentPrice) {
       productDetails += `\n\nPrice: ₦${currentPrice.toLocaleString()}`;
+    }
+
+    // Add size information
+    if (selectedSize) {
+      productDetails += `\nSize: ${selectedSize}`;
     }
 
     productDetails += `\n\nProduct Link: ${window.location.href}`;
@@ -119,6 +129,28 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         </div>
       )}
 
+      {/* Size Selection */}
+      <div className="space-y-3">
+        <label className="text-sm font-semibold text-gray-700">
+          Select Size:
+        </label>
+        <div className="flex gap-2 flex-wrap">
+          {availableSizes.map((size) => (
+            <button
+              key={size}
+              onClick={() => setSelectedSize(size)}
+              className={`min-w-[60px] px-4 py-3 border-2 rounded-lg font-medium transition-all ${
+                selectedSize === size
+                  ? "border-[#3D021E] bg-[#3D021E] text-white"
+                  : "border-gray-300 text-gray-700 hover:border-gray-400"
+              }`}
+            >
+              {size}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Description */}
       <div className="text-gray-600">{data.description}</div>
 
@@ -127,7 +159,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <Button
           onClick={onAddToCart}
           className="flex items-center justify-center gap-x-2 flex-1"
-          disabled={hasVariations && !selectedVariation}
+          disabled={(hasVariations && !selectedVariation) || !selectedSize}
         >
           <ShoppingCart size={20} />
           Add to cart
@@ -135,12 +167,21 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <Button
           onClick={handlePreOrder}
           className="bg-[#3D021E] flex-1 flex items-center justify-center gap-x-2 text-center hover:bg-[#3D021E]/90 transition-colors"
-          disabled={hasVariations && !selectedVariation}
+          disabled={(hasVariations && !selectedVariation) || !selectedSize}
         >
           <FaWhatsapp size={24} />
           Pre-Order via WhatsApp
         </Button>
       </div>
+
+      {/* Validation Message */}
+      {!selectedSize && (
+        <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+          <p className="text-sm text-blue-800">
+            Please select a size to continue.
+          </p>
+        </div>
+      )}
 
       {/* Stock Status (if needed) */}
       {hasVariations &&

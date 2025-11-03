@@ -93,6 +93,13 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
                 </p>
               )}
 
+              {/* Show selected size if present */}
+              {data.selectedSize && (
+                <p className="text-sm text-gray-600">
+                  Size: {data.selectedSize}
+                </p>
+              )}
+
               {/* Price per unit */}
               <p className="text-sm text-gray-800 mt-1">
                 Price: ₦{price.toLocaleString()}

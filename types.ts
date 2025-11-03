@@ -25,5 +25,6 @@ export type CollectionItem = {
 export interface CartItem extends CollectionItem {
   selectedStyle?: string;
   selectedPrice?: number;
+  selectedSize?: number;
   quantity: number;
 }
