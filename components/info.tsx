@@ -176,10 +176,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
       {/* Validation Message */}
       {!selectedSize && (
-        <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+        <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg flex flex-col space-y-1">
           <p className="text-sm text-blue-800">
             Please select a size to continue.
           </p>
+          <p className="font-bold italic text-xs text-gray-400">Please note that sizes from 18 and upwards attract additional costs</p>
         </div>
       )}
 
