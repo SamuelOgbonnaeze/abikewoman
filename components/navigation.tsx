@@ -47,6 +47,7 @@ export const Navigation = () => {
             height={50}
             className="w-[75px] md:w-[150px]"
             priority
+            unoptimized
           />
         </Link>
         {/*  */}

@@ -10,6 +10,7 @@ const Banner = () => {
         fill
         className="object-cover inset-0 z-0"
         priority
+        unoptimized
       />
 
       {/* Overlay image */}
@@ -19,6 +20,7 @@ const Banner = () => {
         fill
         className="object-cover inset-0 z-10 opacity-60"
         priority
+        unoptimized
       />
 
       {/* Text content */}

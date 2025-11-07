@@ -30,6 +30,7 @@ export const GalleryTab: React.FC<GalleryTabProps> = ({ image }) => {
                 alt=""
                 className="object-cover object-center"
                 priority
+                unoptimized
               />
             )}
           </span>

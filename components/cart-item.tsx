@@ -65,6 +65,7 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
             src={data.media[1]?.url || data.media[0].url}
             alt={data.title}
             className="object-cover object-center"
+            unoptimized
           />
         ) : (
           <div className="h-full w-full bg-gray-200 flex items-center justify-center text-gray-500">

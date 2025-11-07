@@ -115,6 +115,7 @@ export const ProductCard = ({
               height={384}
               className="w-full h-[170px] lg:h-[470px] object-cover"
               priority
+              unoptimized
             />
           )}
 

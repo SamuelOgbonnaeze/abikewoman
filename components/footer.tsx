@@ -34,6 +34,7 @@ const Footer = () => {
             height={42}
             alt="Logo"
             priority
+            unoptimized
           />
           <div className="flex flex-col gap-y-4 mt-6">
             <p className="w-[250px] text-sm tracking-[0.25px] font-semibold ">
