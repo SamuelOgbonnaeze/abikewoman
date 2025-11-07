@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navigation } from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navigation />
         <main className="flex-grow w-full">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
