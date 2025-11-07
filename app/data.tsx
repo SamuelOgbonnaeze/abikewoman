@@ -9,6 +9,7 @@ import {
   AyomideDesc,
   BabaraDesc,
   DanielleDesc,
+  EwaDesc,
   FavorDesc,
   HanaDesc,
   IbukunDesc,
@@ -713,5 +714,25 @@ export const collectionsData: CollectionItem[] = [
       { style: "Embellished Crepe", price: 52000 },
       { style: "Plain and Adire Pants", price: 45000 },
     ],
+  },
+
+  {
+    id: "ewa-set",
+    media: [
+      { id: "1", url: `${CDNUrl}/ewa-set-1.jpg` },
+      { id: "2", url: `${CDNUrl}/ewa-set-4.jpg` },
+      { id: "3", url: `${CDNUrl}/ewa-set-2.jpg` },
+      { id: "4", url: `${CDNUrl}/ewa-set-7.jpg` },
+      { id: "5", url: `${CDNUrl}/ewa-set-3.jpg` },
+      { id: "6", url: `${CDNUrl}/ewa-set-5.jpg` },
+      { id: "7", url: `${CDNUrl}/ewa-set-6.jpg` },
+      { id: "8", url: `${CDNUrl}/ewa-set-8.jpg` },
+      { id: "9", url: `${CDNUrl}/ewa-set-9.jpg` },
+    ],
+    title: "EWA SET",
+    category: "Nuach Collection",
+    description: <EwaDesc />,
+    link: "nuach/ewa-set",
+    price: 50000,
   },
 ];

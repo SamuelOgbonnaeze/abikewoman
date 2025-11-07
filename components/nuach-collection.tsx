@@ -3,7 +3,8 @@ import { ProductCard } from "./product-card";
 const nuachCollectionData = [
   {
     id: "adunbarin-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
     title: "ADUNBARIN SET",
     description: (
       <>
@@ -45,7 +46,8 @@ const nuachCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -59,7 +61,8 @@ const nuachCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
     title: "ATOFARATI SET",
     description: (
       <>
@@ -73,7 +76,8 @@ const nuachCollectionData = [
   },
   {
     id: "babara-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
     title: "BABARA DRESS",
     description: (
       <>
@@ -96,6 +100,19 @@ const nuachCollectionData = [
       </>
     ),
     link: "nuach/danielle-set",
+  },
+  {
+    id: "ewa-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-set-1.jpg",
+    title: "EWA SET",
+    description: (
+      <>
+        May the beauty and the colors of his glory be upon you. <br /><br /> EWA SET(kimono &
+        pants) is beautifully and carefully made from patches of adire silk and
+        chiffon.
+      </>
+    ),
+    link: "nuach/ewa-set",
   },
   {
     id: "hana-set",

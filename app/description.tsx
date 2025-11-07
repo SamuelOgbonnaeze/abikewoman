@@ -292,6 +292,18 @@ export const ZurielDesc = () => {
   );
 };
 
+
+export const EwaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">
+      <i className="font-light">May the beauty and the colors of his glory be upon you.</i>
+      <p>EWA SET(kimono & pants) is beautifully and carefully made from patches of adire silk and chiffon.</p>
+      <p>Available in different combinations.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
 //Igbatuntun Collection description
 
 export const IrawoSetDesc = () => {
