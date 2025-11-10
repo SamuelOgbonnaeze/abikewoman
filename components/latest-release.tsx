@@ -185,6 +185,19 @@ const latestCollectionData = [
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
+   {
+    id: "ewa-set",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-set-1.jpg",
+    title: "EWA SET",
+    description: (
+      <>
+        May the beauty and the colors of his glory be upon you. <br /><br /> EWA SET(kimono &
+        pants) is beautifully and carefully made from patches of adire silk and
+        chiffon.
+      </>
+    ),
+    link: "nuach/ewa-set",
+  },
   {
     id: "tirzah-dress",
     mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tirzah-dress-1.mp4",
