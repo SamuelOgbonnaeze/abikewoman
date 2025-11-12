@@ -115,6 +115,20 @@ const nuachCollectionData = [
     link: "nuach/ewa-set",
   },
   {
+    id: "ewa-boubou",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-boubou-1.jpg",
+    title: "EWA BOUBOU",
+    description: (
+      <>
+        EWA BOUBOU <br />
+        <br />
+        Made from adire silk, different prints merged together to create a
+        colorful vibrant boubou.
+      </>
+    ),
+    link: "nuach/ewa-boubou",
+  },
+  {
     id: "hana-set",
     mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/hana-set-1.mp4",
     title: "HANA SET",

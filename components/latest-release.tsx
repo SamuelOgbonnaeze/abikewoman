@@ -1,9 +1,10 @@
 import { ProductCard } from "./product-card";
 
 const latestCollectionData = [
- {
+  {
     id: "adunbarin-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
     title: "ADUNBARIN SET",
     description: (
       <>
@@ -45,7 +46,8 @@ const latestCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -59,7 +61,8 @@ const latestCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
     title: "ATOFARATI SET",
     description: (
       <>
@@ -73,7 +76,8 @@ const latestCollectionData = [
   },
   {
     id: "babara-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
+    mediaSrc:
+      "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
     title: "BABARA DRESS",
     description: (
       <>
@@ -185,18 +189,32 @@ const latestCollectionData = [
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
-   {
+  {
     id: "ewa-set",
     mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-set-1.jpg",
     title: "EWA SET",
     description: (
       <>
-        May the beauty and the colors of his glory be upon you. <br /><br /> EWA SET(kimono &
-        pants) is beautifully and carefully made from patches of adire silk and
-        chiffon.
+        May the beauty and the colors of his glory be upon you. <br />
+        <br /> EWA SET(kimono & pants) is beautifully and carefully made from
+        patches of adire silk and chiffon.
       </>
     ),
     link: "nuach/ewa-set",
+  },
+  {
+    id: "ewa-boubou",
+    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-boubou-1.jpg",
+    title: "EWA BOUBOU",
+    description: (
+      <>
+        EWA BOUBOU <br />
+        <br />
+        Made from adire silk, different prints merged together to create a
+        colorful vibrant boubou.
+      </>
+    ),
+    link: "nuach/ewa-boubou",
   },
   {
     id: "tirzah-dress",
