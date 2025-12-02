@@ -33,7 +33,7 @@ import {
   ZurielDesc,
 } from "./description";
 
-const CDNUrl = "https://d1dapjksca996u.cloudfront.net/public";
+const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 export const collectionsData: CollectionItem[] = [
   // ===== Bridals Collection =====
