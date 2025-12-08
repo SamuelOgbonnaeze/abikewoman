@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['d1dapjksca996u.cloudfront.net'], 
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "d1dapjksca996u.cloudfront.net",
+      },
+    ],
     unoptimized: true,
   },
 };
