@@ -42,7 +42,6 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                   alt="Image"
                   className="object-cover object-center"
                   priority
-                  unoptimized
                 />
               )}
             </div>

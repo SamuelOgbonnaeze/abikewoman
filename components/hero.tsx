@@ -36,7 +36,6 @@ const Hero = () => {
                   className="object-cover"
                   priority
                   fill
-                  unoptimized
                 />
               </div>
 
@@ -48,7 +47,6 @@ const Hero = () => {
                 height={753}
                 className="absolute w-full md:w-[1000px] h-[195px] md:h-[400px] lg:w-full lg:h-full object-cover inset-0 z-10 opacity-10"
                 priority
-                unoptimized
               />
             </div>
           </SwiperSlide>

@@ -248,11 +248,11 @@ const nuachCollectionData = [
 
 export const NuachCollection = () => {
   return (
-    <div id="nuach" className=" mt-4">
+    <div id="nuach" className="mt-4 max-w-[1440px] mx-auto w-full">
       <p className=" text-lg lg:text-[36px] font-normal leading-[14px]">
         Nuach Collection
       </p>
-      <div className="mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4">
+      <div className="mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4 justify-items-center">
         {nuachCollectionData.map((item) => (
           <ProductCard
             key={item.id}

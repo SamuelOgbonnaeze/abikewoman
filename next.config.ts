@@ -7,7 +7,6 @@ const nextConfig = {
         hostname: "d1dapjksca996u.cloudfront.net",
       },
     ],
-    unoptimized: true,
   },
 };
 
