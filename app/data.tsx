@@ -391,6 +391,8 @@ export const collectionsData: CollectionItem[] = [
     description: <AdunbarinDesc />,
     link: "nuach/adunbarin-set",
     price: 57000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
   {
     id: "alheri-set",
@@ -408,6 +410,8 @@ export const collectionsData: CollectionItem[] = [
     description: <AlheriDesc />,
     link: "nuach/alheri-set",
     price: 49000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
   {
     id: "alora-dress",
@@ -425,6 +429,8 @@ export const collectionsData: CollectionItem[] = [
     description: <AloraDesc />,
     link: "nuach/alora-dress",
     price: 55000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
   {
     id: "ariella-dress",
@@ -444,6 +450,8 @@ export const collectionsData: CollectionItem[] = [
     description: <AriellaDesc />,
     link: "nuach/ariella-dress",
     price: 60500,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
   {
     id: "atofarati-set",
@@ -465,10 +473,10 @@ export const collectionsData: CollectionItem[] = [
     description: <AtofaratiDesc />,
     link: "nuach/atofarati-set",
     priceVariations: [
-      { style: "Adire and Asooke", price: 53000 },
-      { style: "Asooke and Taffeta", price: 56000 },
-      { style: "2 Colored Taffeta", price: 50000 },
-      { style: "Full Asooke", price: 85000 },
+      { style: "Adire and Asooke", price: 53000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Asooke and Taffeta", price: 56000, priceGBP: undefined, priceCAD: undefined },
+      { style: "2 Colored Taffeta", price: 50000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Full Asooke", price: 85000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -493,9 +501,9 @@ export const collectionsData: CollectionItem[] = [
     description: <BabaraDesc />,
     link: "nuach/babara-dress",
     priceVariations: [
-      { style: "Flowered Mikado", price: 63000 },
-      { style: "Adire Cotton", price: 52000 },
-      { style: "Adire Crepe", price: 52000 },
+      { style: "Flowered Mikado", price: 63000, priceGBP: 23.50, priceCAD: 45.50 },
+      { style: "Adire Cotton", price: 52000, priceGBP: 24.50, priceCAD: 46.50 },
+      { style: "Adire Crepe", price: 52000, priceGBP: 25.50, priceCAD: 47.50 },
     ],
   },
   {
@@ -518,8 +526,8 @@ export const collectionsData: CollectionItem[] = [
     description: <DanielleDesc />,
     link: "nuach/danielle-set",
     priceVariations: [
-      { style: "Dress Set", price: 76000 },
-      { style: "Skirt Set", price: 61500 },
+      { style: "Dress Set", price: 76000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Skirt Set", price: 61500, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -539,9 +547,9 @@ export const collectionsData: CollectionItem[] = [
     description: <IlerioluwaDesc />,
     link: "nuach/ileri-boubou",
     priceVariations: [
-      { style: "Set", price: 53000 },
-      { style: "Boubou in Mikado", price: 38500 },
-      { style: "Boubou in Adire", price: 40000 },
+      { style: "Set", price: 53000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Boubou in Mikado", price: 38500, priceGBP: undefined, priceCAD: undefined },
+      { style: "Boubou in Adire", price: 40000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -566,9 +574,9 @@ export const collectionsData: CollectionItem[] = [
     description: <IyeDesc />,
     link: "nuach/iye-dress",
     priceVariations: [
-      { style: "Fitted (Plain Color)", price: 51000 },
-      { style: "Fitted (Adire)", price: 52500 },
-      { style: "Flair (Adire)", price: 62000 },
+      { style: "Fitted (Plain Color)", price: 51000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Fitted (Adire)", price: 52500, priceGBP: undefined, priceCAD: undefined },
+      { style: "Flair (Adire)", price: 62000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -591,10 +599,10 @@ export const collectionsData: CollectionItem[] = [
     description: <KeziahDesc />,
     link: "nuach/keziah-set",
     priceVariations: [
-      { style: "2 Colored Taffeta", price: 51500 },
-      { style: "Adire (Pant Set)", price: 50500 },
-      { style: "Adire (Skirt Set)", price: 49000 },
-      { style: "Plain Color (Pant Set)", price: 48000 },
+      { style: "2 Colored Taffeta", price: 51500, priceGBP: undefined, priceCAD: undefined },
+      { style: "Adire (Pant Set)", price: 50500, priceGBP: undefined, priceCAD: undefined },
+      { style: "Adire (Skirt Set)", price: 49000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Plain Color (Pant Set)", price: 48000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -612,8 +620,8 @@ export const collectionsData: CollectionItem[] = [
     description: <ShalomDesc />,
     link: "nuach/shalom-set",
     priceVariations: [
-      { style: "In Adire", price: 55000 },
-      { style: "Plain Color & Sunray", price: 52000 },
+      { style: "In Adire", price: 55000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Plain Color & Sunray", price: 52000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -633,6 +641,8 @@ export const collectionsData: CollectionItem[] = [
     description: <TamaraDesc />,
     link: "nuach/tamara-dress",
     price: 42000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
   {
     id: "tirzah-dress",
@@ -655,9 +665,9 @@ export const collectionsData: CollectionItem[] = [
     description: <TirzahDesc />,
     link: "nuach/tirzah-dress",
     priceVariations: [
-      { style: "Plain Color Long Dress", price: 60000 },
-      { style: "Adire Silk", price: 55000 },
-      { style: "Adire Crepe Boubou", price: 41500 },
+      { style: "Plain Color Long Dress", price: 60000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Adire Silk", price: 55000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Adire Crepe Boubou", price: 41500, priceGBP: undefined, priceCAD: undefined },
     ],
   },
   {
@@ -676,6 +686,8 @@ export const collectionsData: CollectionItem[] = [
     description: <HanaDesc />,
     link: "nuach/hana-set",
     price: 67000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
 
   {
@@ -693,6 +705,8 @@ export const collectionsData: CollectionItem[] = [
     description: <MoremiDesc />,
     link: "nuach/moremi-set",
     price: 50000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
 
   {
@@ -712,8 +726,8 @@ export const collectionsData: CollectionItem[] = [
     description: <ZurielDesc />,
     link: "nuach/zuriel-set",
     priceVariations: [
-      { style: "Embellished Crepe", price: 52000 },
-      { style: "Plain and Adire Pants", price: 45000 },
+      { style: "Embellished Crepe", price: 52000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Plain and Adire Pants", price: 45000, priceGBP: undefined, priceCAD: undefined },
     ],
   },
 
@@ -735,6 +749,8 @@ export const collectionsData: CollectionItem[] = [
     description: <EwaDesc />,
     link: "nuach/ewa-set",
     price: 50000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
 
   {
@@ -757,5 +773,7 @@ export const collectionsData: CollectionItem[] = [
     description: <EwaBouBouDesc />,
     link: "nuach/ewa-boubou",
     price: 43000,
+    priceGBP: undefined, // TODO: set GBP price
+    priceCAD: undefined, // TODO: set CAD price
   },
 ];

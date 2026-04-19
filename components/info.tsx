@@ -14,6 +14,8 @@ interface InfoProps {
     link: string;
     category: string;
     price?: number;
+    priceGBP?: number;
+    priceCAD?: number;
     priceVariations?: PriceVariation[];
   };
 }
@@ -25,14 +27,40 @@ const Info: React.FC<InfoProps> = ({ data }) => {
   // Available sizes
   const availableSizes = [6, 8, 10, 12, 14, 16, 18, 20, 22, 24];
 
-  // State for selected variation and size
+  // State for selected variation, size, and currency
   const [selectedVariation, setSelectedVariation] =
     useState<PriceVariation | null>(
       hasVariations ? data?.priceVariations![0] : null
     );
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
+  const [currency, setCurrency] = useState<"NGN" | "GBP" | "CAD">("NGN");
 
-  const currentPrice = hasVariations ? selectedVariation?.price : data.price;
+  // Only show the currency selector when at least one GBP or CAD price is set
+  const hasForeignPricing = hasVariations
+    ? data.priceVariations!.some(
+        (v) => v.priceGBP != null || v.priceCAD != null
+      )
+    : data.priceGBP != null || data.priceCAD != null;
+
+  const currencySymbol = currency === "GBP" ? "£" : currency === "CAD" ? "$" : "₦";
+
+  const formatPrice = (price: number) => {
+    return price.toLocaleString(undefined, {
+      minimumFractionDigits: currency === "NGN" ? 0 : 2,
+      maximumFractionDigits: currency === "NGN" ? 0 : 2,
+    });
+  };
+
+  const currentPrice = (() => {
+    if (currency === "GBP") {
+      return hasVariations ? selectedVariation?.priceGBP : data.priceGBP;
+    }
+    if (currency === "CAD") {
+      return hasVariations ? selectedVariation?.priceCAD : data.priceCAD;
+    }
+    // Default: NGN
+    return hasVariations ? selectedVariation?.price : data.price;
+  })();
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
@@ -42,6 +70,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       ...data,
       selectedStyle: hasVariations ? selectedVariation?.style : undefined,
       selectedPrice: currentPrice,
+      selectedCurrency: currency,
       selectedSize: selectedSize ?? undefined,
       quantity: 1,
     };
@@ -58,9 +87,11 @@ const Info: React.FC<InfoProps> = ({ data }) => {
     if (hasVariations && selectedVariation) {
       productDetails += `\n\nStyle: ${
         selectedVariation.style
-      }\nPrice: ₦${selectedVariation.price.toLocaleString()}`;
-    } else if (currentPrice) {
-      productDetails += `\n\nPrice: ₦${currentPrice.toLocaleString()}`;
+      }\nPrice: ${currencySymbol}${currentPrice != null ? formatPrice(currentPrice) : "TBC"}`;
+    } else if (currentPrice != null) {
+      productDetails += `\n\nPrice: ${currencySymbol}${formatPrice(currentPrice)}`;
+    } else if (currency !== "NGN") {
+      productDetails += `\n\nPrice: TBC (contact us for ${currency} pricing)`;
     }
 
     // Add size information
@@ -82,21 +113,50 @@ const Info: React.FC<InfoProps> = ({ data }) => {
 
       <hr className="my-2" />
 
+      {/* Currency Selector — only shown when foreign prices are set */}
+      {hasForeignPricing && (
+        <fieldset className="space-y-2">
+          <legend className="text-sm font-semibold text-gray-700">
+            Currency:
+          </legend>
+          <div className="flex items-center gap-5">
+            {(["NGN", "GBP", "CAD"] as const).map((c) => (
+              <label
+                key={c}
+                className="flex items-center gap-2 cursor-pointer"
+              >
+                <input
+                  type="radio"
+                  name="currency"
+                  value={c}
+                  checked={currency === c}
+                  onChange={() => setCurrency(c)}
+                  className="w-4 h-4 text-[#3D021E] focus:ring-[#3D021E]"
+                />
+                <span className="text-sm font-medium text-gray-700">
+                  {c === "NGN" ? "₦ Naira" : c === "GBP" ? "£ GBP" : "$ CAD"}
+                </span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      )}
+
       {/* Price Display */}
       <div className="flex items-baseline gap-2">
         <span className="text-2xl font-bold text-gray-900">
-          {currentPrice
-            ? `₦${currentPrice.toLocaleString()}`
+          {currentPrice != null
+            ? `${currencySymbol}${formatPrice(currentPrice)}`
             : "Price on request"}
         </span>
       </div>
 
       {/* Style Variations - Radio Buttons */}
       {hasVariations && (
-        <div className="space-y-3">
-          <label className="text-sm font-semibold text-gray-700">
+        <fieldset className="space-y-3">
+          <legend className="text-sm font-semibold text-gray-700">
             Select Style:
-          </label>
+          </legend>
           <div className="space-y-2">
             {data.priceVariations?.map((variation) => (
               <label
@@ -121,19 +181,31 @@ const Info: React.FC<InfoProps> = ({ data }) => {
                   </span>
                 </div>
                 <span className="text-sm font-semibold text-gray-900">
-                  ₦{variation.price.toLocaleString()}
+                  {(() => {
+                    const vPrice =
+                      currency === "GBP"
+                        ? variation.priceGBP
+                        : currency === "CAD"
+                        ? variation.priceCAD
+                        : variation.price;
+                    return vPrice != null
+                      ? `${currencySymbol}${formatPrice(vPrice)}`
+                      : currency !== "NGN"
+                      ? "TBC"
+                      : `₦${formatPrice(variation.price)}`;
+                  })()}
                 </span>
               </label>
             ))}
           </div>
-        </div>
+        </fieldset>
       )}
 
       {/* Size Selection */}
-      <div className="space-y-3">
-        <label className="text-sm font-semibold text-gray-700">
+      <fieldset className="space-y-3">
+        <legend className="text-sm font-semibold text-gray-700">
           Select Size:
-        </label>
+        </legend>
         <div className="flex gap-2 flex-wrap">
           {availableSizes.map((size) => (
             <button
@@ -149,7 +221,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             </button>
           ))}
         </div>
-      </div>
+      </fieldset>
 
       {/* Description */}
       <div className="text-gray-600">{data.description}</div>
@@ -159,7 +231,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
         <Button
           onClick={onAddToCart}
           className="flex items-center justify-center gap-x-2 flex-1"
-          disabled={(hasVariations && !selectedVariation) || !selectedSize}
+          disabled={currentPrice == null || (hasVariations && !selectedVariation) || !selectedSize}
         >
           <ShoppingCart size={20} />
           Add to cart
