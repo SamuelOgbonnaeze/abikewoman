@@ -120,7 +120,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
             Currency:
           </legend>
           <div className="flex items-center gap-5">
-            {(["NGN", "GBP", "CAD"] as const).map((c) => (
+            {(["NGN", "CAD", "GBP"] as const).map((c) => (
               <label
                 key={c}
                 className="flex items-center gap-2 cursor-pointer"
