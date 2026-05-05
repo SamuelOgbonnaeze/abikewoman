@@ -15,14 +15,27 @@ const Summary = () => {
     setFirstname("");
   };
 
-  // Compute total amount of all items
-  const totalAmount = useMemo(() => {
-    return items.reduce((total, item) => {
+  // Group totals by currency — never mix ₦ + £ + $ into a single number
+  const currencyTotals = useMemo(() => {
+    return items.reduce<Record<string, number>>((acc, item) => {
+      const currency = item.selectedCurrency ?? "NGN";
       const price = item.selectedPrice ?? 0;
       const quantity = item.quantity ?? 1;
-      return total + price * quantity;
-    }, 0);
+      acc[currency] = (acc[currency] ?? 0) + price * quantity;
+      return acc;
+    }, {});
   }, [items]);
+
+  const currencySymbol = (c: string) =>
+    c === "GBP" ? "£" : c === "CAD" ? "$" : "₦";
+
+  const formatAmount = (amount: number, currency: string) =>
+    amount.toLocaleString(undefined, {
+      minimumFractionDigits: currency === "NGN" ? 0 : 2,
+      maximumFractionDigits: currency === "NGN" ? 0 : 2,
+    });
+
+  const hasMixedCurrencies = Object.keys(currencyTotals).length > 1;
 
   const onCheckout = async () => {
     const phoneNumber = "2347038072466";
@@ -33,33 +46,31 @@ const Summary = () => {
         const quantity = item.quantity ?? 1;
         const price = item.selectedPrice ?? 0;
         const totalPrice = price * quantity;
+        const currency = item.selectedCurrency ?? "NGN";
+        const sym = currencySymbol(currency);
+        const formattedTotal = formatAmount(totalPrice, currency);
 
-        // Build item details with style and size if available
         let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
-
-        if (item.selectedStyle) {
-          itemDetails += ` - Style: ${item.selectedStyle}`;
-        }
-
-        if (item.selectedSize) {
-          itemDetails += ` - Size: ${item.selectedSize}`;
-        }
-
-        itemDetails += ` - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
-
+        if (item.selectedStyle) itemDetails += ` - Style: ${item.selectedStyle}`;
+        if (item.selectedSize) itemDetails += ` - Size: ${item.selectedSize}`;
+        itemDetails += ` - Qty: ${quantity} - ${sym}${formattedTotal}`;
         return itemDetails;
       })
       .join("\n");
 
-    //  Build the complete message with total amount included
+    const totalsBreakdown = Object.entries(currencyTotals)
+      .map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)} (${c})`)
+      .join(" + ");
+
+    const totalLine = hasMixedCurrencies
+      ? `Total: ${totalsBreakdown} (paid separately)`
+      : `Total: ${Object.entries(currencyTotals).map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)}`).join("")}`;
+
     const message = encodeURIComponent(
-      `Hi, The AbikeWoman! My name is ${firstname} and I would like to pre-order the following items:\n\n${itemsList}\n\nTotal Amount: ₦${totalAmount.toLocaleString()}\n\nThank you!`
+      `Hi, The AbikeWoman! My name is ${firstname} and I would like to pre-order the following items:\n\n${itemsList}\n\n${totalLine}\n\nThank you!`
     );
 
-    // WhatsApp URL format
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank");
     removeAll();
     resetForm();
@@ -74,33 +85,31 @@ const Summary = () => {
         const quantity = item.quantity ?? 1;
         const price = item.selectedPrice ?? 0;
         const totalPrice = price * quantity;
+        const currency = item.selectedCurrency ?? "NGN";
+        const sym = currencySymbol(currency);
+        const formattedTotal = formatAmount(totalPrice, currency);
 
-        // Build item details with style and size if available
         let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
-
-        if (item.selectedStyle) {
-          itemDetails += ` - Style: ${item.selectedStyle}`;
-        }
-
-        if (item.selectedSize) {
-          itemDetails += ` - Size: ${item.selectedSize}`;
-        }
-
-        itemDetails += ` - Quantity: ${quantity} - ₦${totalPrice.toLocaleString()}`;
-
+        if (item.selectedStyle) itemDetails += ` - Style: ${item.selectedStyle}`;
+        if (item.selectedSize) itemDetails += ` - Size: ${item.selectedSize}`;
+        itemDetails += ` - Qty: ${quantity} - ${sym}${formattedTotal}`;
         return itemDetails;
       })
       .join("\n");
 
-    //  Build the complete message with total amount included
+    const totalsBreakdown = Object.entries(currencyTotals)
+      .map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)} (${c})`)
+      .join(" + ");
+
+    const totalLine = hasMixedCurrencies
+      ? `Total: ${totalsBreakdown} (paid separately)`
+      : `Total: ${Object.entries(currencyTotals).map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)}`).join("")}`;
+
     const message = encodeURIComponent(
-      `Hi, The AbikeWoman! My name is ${firstname} and I have paid for the following items:\n\n${itemsList}\n\nTotal Amount: ₦${totalAmount.toLocaleString()}\n\nThank you!\n\nHere is my receipt`
+      `Hi, The AbikeWoman! My name is ${firstname} and I have paid for the following items:\n\n${itemsList}\n\n${totalLine}\n\nThank you!\n\nHere is my receipt`
     );
 
-    // WhatsApp URL format
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-    // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank");
     removeAll();
     resetForm();
@@ -125,11 +134,33 @@ const Summary = () => {
           </div>
         </div>
 
-        {/* Display total amount */}
-        <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
-          <p>Total</p>
-          <p>₦{totalAmount.toLocaleString()}</p>
-        </div>
+        {/* Per-currency totals — never mix incompatible currencies */}
+        {Object.keys(currencyTotals).length === 0 ? (
+          <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
+            <p>Total</p>
+            <p>₦0</p>
+          </div>
+        ) : hasMixedCurrencies ? (
+          <div className="border-t border-gray-200 pt-4 space-y-1">
+            <p className="text-sm font-semibold mb-2">Order Totals</p>
+            {Object.entries(currencyTotals).map(([c, t]) => (
+              <div key={c} className="flex justify-between text-sm">
+                <span>{c}</span>
+                <span className="font-semibold">{currencySymbol(c)}{formatAmount(t, c)}</span>
+              </div>
+            ))}
+            <p className="text-xs text-gray-300 pt-1">Multiple currencies — each settled separately</p>
+          </div>
+        ) : (
+          <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
+            <p>Total</p>
+            <p>
+              {Object.entries(currencyTotals).map(([c, t]) => (
+                <span key={c}>{currencySymbol(c)}{formatAmount(t, c)}</span>
+              ))}
+            </p>
+          </div>
+        )}
 
         <Button
           onClick={onCheckout}

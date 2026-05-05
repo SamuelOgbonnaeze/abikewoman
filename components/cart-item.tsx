@@ -18,6 +18,15 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
 
   const price = data.selectedPrice ?? data.price ?? 0;
   const subtotal = price * orderQuantity;
+  const currencySymbol =
+    data.selectedCurrency === "GBP" ? "£" :
+    data.selectedCurrency === "CAD" ? "$" : "₦";
+
+  const formatPrice = (n: number) =>
+    n.toLocaleString(undefined, {
+      minimumFractionDigits: data.selectedCurrency === "NGN" || !data.selectedCurrency ? 0 : 2,
+      maximumFractionDigits: data.selectedCurrency === "NGN" || !data.selectedCurrency ? 0 : 2,
+    });
 
   // Update cart quantity when it changes locally
   const updateQuantity = (newQuantity: number) => {
@@ -102,12 +111,12 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
 
               {/* Price per unit */}
               <p className="text-sm text-gray-800 mt-1">
-                Price: ₦{price.toLocaleString()}
+                Price: {currencySymbol}{formatPrice(price)}
               </p>
 
               {/* Subtotal */}
               <p className="text-base font-semibold text-[#3D021E] mt-1">
-                Subtotal: ₦{subtotal.toLocaleString()}
+                Subtotal: {currencySymbol}{formatPrice(subtotal)}
               </p>
             </div>
           </div>
