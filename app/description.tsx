@@ -1,3 +1,88 @@
+export const EdenDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        Eden is where beauty began. A gown made for the woman stepping into
+        love, rest, and forever.
+      </i>
+      <p>
+        The Eden Dress is a vision of timeless romance; a celebration of purity,
+        elegance, and the quiet luxury of a bride in her fullness.
+      </p>
+      <p>
+        Eden shimmers with meticulous craftsmanship — each crystal and pearl on
+        the upper bodice placed with intention. The built-up neckline and
+        extended beaded lace sleeves add a soft grace, resting gently on skin.
+      </p>
+      <p>
+        Its A-line silhouette is refined and modern, brought to life with a side
+        slit and feminine frills that fall effortlessly over the leg, creating
+        movement and allure.
+      </p>
+      <p>
+        And for the bride who desires a moment of grandeur, Eden features a
+        detachable train skirt: allowing you to transition from ceremony majesty
+        to reception ease, without losing the magic.
+      </p>
+      <p>Available for sale and rentals.</p>
+    </div>
+  );
+};
+
+export const BeulaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        Beulah is beloved, she is cherished, and it shows. A gown made for the
+        woman stepping into love, commitment, and a lifetime of grace.
+      </i>
+      <p>
+        The Beulah Dress embodies devotion, elegance, and the quiet power of a
+        bride in her element.
+      </p>
+      <p>
+        A trumpet silhouette hugs the body, flowing seamlessly into a mermaid
+        flare that moves with every step. The gown is crafted from hand-beaded
+        lace, with a neckline adorned in broken beads, crystals, and pearls;
+        each detail catching the light.
+      </p>
+      <p>
+        Delicate embellishments trace the bodice and skirt, while the tailored
+        silhouette ensures the bride radiates poise and sophistication.
+      </p>
+      <p>Available for sale and rentals.</p>
+    </div>
+  );
+};
+
+export const ZaharaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        Zahara means &ldquo;flowering, radiant bloom.&rdquo; A gown made for the
+        bride who steps into her moment fully — seen, celebrated, and
+        unforgettable.
+      </i>
+      <p>
+        The Zahara Dress is a dream in bloom; radiant, regal, and
+        unapologetically grand.
+      </p>
+      <p>Designed as a classic ball gown, Zahara is crafted to make an entrance.</p>
+      <p>
+        A layer of hand beaded illusion mesh sits beneath the off-shoulder
+        neckline, framing the collarbones with quiet drama and evoking feminine
+        grace.
+      </p>
+      <p>
+        The full skirt cascades into a voluminous silhouette, bringing to life a
+        modern fairytale: one where the bride is both delicate and powerful,
+        classic and modern.
+      </p>
+      <p>Available for sale and rentals.</p>
+    </div>
+  );
+};
+
 export const AdunbarinDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700 ">

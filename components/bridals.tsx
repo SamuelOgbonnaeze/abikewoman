@@ -2,6 +2,27 @@ import { ProductCard } from "./product-card";
 
 const bridalsCollectionData = [
   {
+    id: "eden-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/eden.mp4`,
+    title: "EDEN DRESS",
+    description: "Eden is where beauty began. A gown made for the woman stepping into love, rest, and forever.",
+    link: "bridals/eden-dress",
+  },
+  {
+    id: "beulah-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/beulah.mp4`,
+    title: "BEULAH DRESS",
+    description: "Beulah is beloved, she is cherished, and it shows. A gown made for the woman stepping into love, commitment, and a lifetime of grace.",
+    link: "bridals/beulah-dress",
+  },
+  {
+    id: "zahara-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/zahara.mp4`,
+    title: "ZAHARA DRESS",
+    description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
+    link: "bridals/zahara-dress",
+  },
+  {
     id: "bridal-1",
     mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-12.JPG",
     title: "BRIDALS BY THEABIKEWOMAN",
@@ -48,7 +69,7 @@ const bridalsCollectionData = [
 export const BridalsCollection = () => {
   return (
     <div id="bridals" className="mt-4 max-w-[1440px] mx-auto w-full">
-      <p className="text-lg lg:text-[36px] font-normal leading-[14px]">
+      <p className="text-lg lg:text-[36px] font-normal leading-[14px] dark:text-white">
         Bridals
       </p>
       <div className="mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4 justify-items-center">

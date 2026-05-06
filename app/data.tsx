@@ -8,7 +8,9 @@ import {
   AtofaratiDesc,
   AyomideDesc,
   BabaraDesc,
+  BeulaDesc,
   DanielleDesc,
+  EdenDesc,
   EwaBouBouDesc,
   EwaDesc,
   FavorDesc,
@@ -30,6 +32,7 @@ import {
   ShalomDesc,
   TamaraDesc,
   TirzahDesc,
+  ZaharaDesc,
   ZurielDesc,
 } from "./description";
 
@@ -126,6 +129,36 @@ export const collectionsData: CollectionItem[] = [
     category: "Bridals",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-6",
+  },
+  {
+    id: "eden-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/eden.mp4` },
+    ],
+    title: "EDEN DRESS",
+    category: "Bridals",
+    description: <EdenDesc />,
+    link: "bridals/eden-dress",
+  },
+  {
+    id: "beulah-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/beulah.mp4` },
+    ],
+    title: "BEULAH DRESS",
+    category: "Bridals",
+    description: <BeulaDesc />,
+    link: "bridals/beulah-dress",
+  },
+  {
+    id: "zahara-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/zahara.mp4` },
+    ],
+    title: "ZAHARA DRESS",
+    category: "Bridals",
+    description: <ZaharaDesc />,
+    link: "bridals/zahara-dress",
   },
 
   // ===== Igbatuntun Collection =====
