@@ -1,9 +1,11 @@
 import { ProductCard } from "./product-card";
 
+const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
+
 const igbatuntunCollectionData = [
   {
     id: "amani-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/amani-7.jpg",
+    mediaSrc: `${CDNUrl}/amani-7.jpg`,
     title: "AMANI DRESS",
     description: (
       <>
@@ -17,7 +19,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ayomide-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ayomide-3.jpg",
+    mediaSrc: `${CDNUrl}/ayomide-3.jpg`,
     title: "AYOMIDE SET",
     description: (
       <>
@@ -31,7 +33,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "favor-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/favor-2.jpg",
+    mediaSrc: `${CDNUrl}/favor-2.jpg`,
     title: "FAVOR SET",
     description: (
       <>
@@ -44,7 +46,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ibukun-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ibukun-2.jpeg",
+    mediaSrc: `${CDNUrl}/ibukun-2.jpeg`,
     title: "IBUKUN SET",
     description: (
       <>
@@ -57,7 +59,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ife-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ife-11.jpg",
+    mediaSrc: `${CDNUrl}/ife-10.jpg`,
     title: "IFE SET",
     description: (
       <>
@@ -71,7 +73,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "irawo-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/irawo-dress-2.jpg",
+    mediaSrc: `${CDNUrl}/irawo-dress-2.jpg`,
     title: "IRAWO DRESS",
     description: (
       <>
@@ -84,7 +86,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "irawo-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/irawo-set-1.jpg",
+    mediaSrc: `${CDNUrl}/irawo-set-1.jpg`,
     title: "IRAWO SET",
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
@@ -92,7 +94,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ire-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ire-set-1.jpg",
+    mediaSrc: `${CDNUrl}/ire-set-1.jpg`,
     title: "IRE SET",
     description: (
       <>
@@ -106,7 +108,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "isinmi-1-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/isinmi-dress-1.jpg",
+    mediaSrc: `${CDNUrl}/isinmi-dress-1.jpg`,
     title: "ISINMI 1 DRESS",
     description: (
       <>
@@ -121,7 +123,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "isinmi-2-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/isinmi-dress-2.jpg",
+    mediaSrc: `${CDNUrl}/isinmi-dress-2.jpg`,
     title: "ISINMI 2 DRESS",
     description: (
       <>
@@ -135,7 +137,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "iyanu-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/iyanu-dress-7.jpg",
+    mediaSrc: `${CDNUrl}/iyanu-dress-7.jpg`,
     title: "IYANU DRESS",
     description: (
       <>
@@ -149,7 +151,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "kuku-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/kuku-set-1.jpg",
+    mediaSrc: `${CDNUrl}/kuku-set-1.jpg`,
     title: "KUKU SET",
     description: (
       <>
@@ -163,7 +165,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "one-thing",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/one-thing-dress-1.jpg",
+    mediaSrc: `${CDNUrl}/one-thing-dress-1.jpg`,
     title: "ONE THING DRESS",
     description: (
       <>
@@ -177,7 +179,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "oreoluwa-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/oreoluwa-dress-1.jpg",
+    mediaSrc: `${CDNUrl}/oreoluwa-dress-1.jpg`,
     title: "OREOLUWA DRESS",
     description: (
       <>

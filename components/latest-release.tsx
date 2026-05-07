@@ -1,10 +1,12 @@
 import { ProductCard } from "./product-card";
 
+const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
+
 const latestCollectionData = [
   {
     id: "adunbarin-set",
     mediaSrc:
-      "https://d1dapjksca996u.cloudfront.net/public/adunbarin-set-1.mp4",
+      `${CDNUrl}/adunbarin-set-1.mp4`,
     title: "ADUNBARIN SET",
     description: (
       <>
@@ -18,7 +20,7 @@ const latestCollectionData = [
   },
   {
     id: "alheri-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alheri-set-1.mp4",
+    mediaSrc: `${CDNUrl}/alheri-set-1.mp4`,
     title: "ALHERI SET",
     description: (
       <>
@@ -32,7 +34,7 @@ const latestCollectionData = [
   },
   {
     id: "alora-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/alora-dress-1.mp4",
+    mediaSrc: `${CDNUrl}/alora-dress-1.mp4`,
     title: "ALORA DRESS",
     description: (
       <>
@@ -47,7 +49,7 @@ const latestCollectionData = [
   {
     id: "ariella-dress",
     mediaSrc:
-      "https://d1dapjksca996u.cloudfront.net/public/ariella-dress-1.mp4",
+      `${CDNUrl}/ariella-dress-1.mp4`,
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -62,7 +64,7 @@ const latestCollectionData = [
   {
     id: "atofarati-set",
     mediaSrc:
-      "https://d1dapjksca996u.cloudfront.net/public/atofarati-set-1.mp4",
+      `${CDNUrl}/atofarati-set-1.mp4`,
     title: "ATOFARATI SET",
     description: (
       <>
@@ -77,7 +79,7 @@ const latestCollectionData = [
   {
     id: "babara-dress",
     mediaSrc:
-      "https://d1dapjksca996u.cloudfront.net/public/barabara-dress-1.mp4",
+      `${CDNUrl}/barabara-dress-1.mp4`,
     title: "BABARA DRESS",
     description: (
       <>
@@ -90,7 +92,7 @@ const latestCollectionData = [
   },
   {
     id: "danielle-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/danielle-set-1.mp4",
+    mediaSrc: `${CDNUrl}/danielle-set-1.mp4`,
     title: "DANIELLE SET",
     description: (
       <>
@@ -103,7 +105,7 @@ const latestCollectionData = [
   },
   {
     id: "hana-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/hana-set-1.mp4",
+    mediaSrc: `${CDNUrl}/hana-set-1.mp4`,
     title: "HANA SET",
     description: (
       <>
@@ -116,7 +118,7 @@ const latestCollectionData = [
   },
   {
     id: "ileri-boubou",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ileri-boubou-1.mp4",
+    mediaSrc: `${CDNUrl}/ileri-boubou-1.mp4`,
     title: "ILERIOLUWA SET/BOUBOU",
     description: (
       <>
@@ -129,7 +131,7 @@ const latestCollectionData = [
   },
   {
     id: "iye-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/iye-dress-1.mp4",
+    mediaSrc: `${CDNUrl}/iye-dress-1.mp4`,
     title: "IYE DRESS",
     description: (
       <>
@@ -143,7 +145,7 @@ const latestCollectionData = [
   },
   {
     id: "keziah-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/keziah-set-1.mp4",
+    mediaSrc: `${CDNUrl}/keziah-set-1.mp4`,
     title: "KEZIAH SET",
     description: (
       <>
@@ -157,7 +159,7 @@ const latestCollectionData = [
   },
   {
     id: "moremi-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/moremi-set-1.mp4",
+    mediaSrc: `${CDNUrl}/moremi-set-1.mp4`,
     title: "MOREMI SET",
     description: (
       <>
@@ -170,7 +172,7 @@ const latestCollectionData = [
   },
   {
     id: "shalom-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/shalom-set-1.mp4",
+    mediaSrc: `${CDNUrl}/shalom-set-1.mp4`,
     title: "SHALOM SET",
     description: (
       <>
@@ -184,14 +186,14 @@ const latestCollectionData = [
   },
   {
     id: "tamara-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tamara-dress-1.mp4",
+    mediaSrc: `${CDNUrl}/tamara-dress-1.mp4`,
     title: "TAMARA DRESS",
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {
     id: "ewa-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-set-1.jpg",
+    mediaSrc: `${CDNUrl}/ewa-set-1.jpg`,
     title: "EWA SET",
     description: (
       <>
@@ -204,7 +206,7 @@ const latestCollectionData = [
   },
   {
     id: "ewa-boubou",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/ewa-boubou-1.jpg",
+    mediaSrc: `${CDNUrl}/ewa-boubou-1.jpg`,
     title: "EWA BOUBOU",
     description: (
       <>
@@ -218,7 +220,7 @@ const latestCollectionData = [
   },
   {
     id: "tirzah-dress",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/tirzah-dress-1.mp4",
+    mediaSrc: `${CDNUrl}/tirzah-dress-1.mp4`,
     title: "TIRZAH DRESS",
     description: (
       <>
@@ -232,7 +234,7 @@ const latestCollectionData = [
   },
   {
     id: "zuriel-set",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/zuriel-set-1.mp4",
+    mediaSrc: `${CDNUrl}/zuriel-set-1.mp4`,
     title: "ZURIEL SET",
     description: (
       <>

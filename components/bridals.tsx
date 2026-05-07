@@ -1,5 +1,7 @@
 import { ProductCard } from "./product-card";
 
+const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
+
 const bridalsCollectionData = [
   {
     id: "eden-dress",
@@ -24,42 +26,42 @@ const bridalsCollectionData = [
   },
   {
     id: "bridal-1",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-12.JPG",
+    mediaSrc: `${CDNUrl}/bridals-12.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-1",
   },
   {
     id: "bridal-2",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-33.JPG",
+    mediaSrc: `${CDNUrl}/bridals-33.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-2",
   },
   {
     id: "bridal-3",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-26.JPG",
+    mediaSrc: `${CDNUrl}/bridals-26.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-3",
   },
   {
     id: "bridal-4",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-42.JPG",
+    mediaSrc: `${CDNUrl}/bridals-42.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-4",
   },
   {
     id: "bridal-5",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-23.JPG",
+    mediaSrc: `${CDNUrl}/bridals-23.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-5",
   },
   {
     id: "bridal-6",
-    mediaSrc: "https://d1dapjksca996u.cloudfront.net/public/bridals-2.JPG",
+    mediaSrc: `${CDNUrl}/bridals-2.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-6",
