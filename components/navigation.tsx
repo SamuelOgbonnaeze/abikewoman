@@ -36,7 +36,7 @@ export const Navigation = () => {
   };
 
   return (
-    <div className="w-full  py-2 px-[30px] lg:px-[72px] bg-[#3D021E] border-b border-[#DFDFDF] ">
+    <div className="sticky top-0 z-50 w-full py-2 px-[30px] lg:px-[72px] bg-[#3D021E]/90 backdrop-blur-md border-b border-[#DFDFDF]">
       <div className="w-full flex items-center justify-between ">
         {/*  */}
         <Link href="/">
@@ -52,7 +52,7 @@ export const Navigation = () => {
         {/*  */}
         <div className="hidden md:flex items-center gap-x-[20px] lg:gap-x-[40px] ">
           <NativeSelect onChange={handleSelectChange}>
-            <NativeSelectOption value="">Collections</NativeSelectOption>
+            <NativeSelectOption value="">Select Collection</NativeSelectOption>
             <NativeSelectOptGroup label="Collections">
               <NativeSelectOption value="/#nuach">
                 Nuach Collection
@@ -62,7 +62,6 @@ export const Navigation = () => {
               </NativeSelectOption>
             </NativeSelectOptGroup>
 
-            <NativeSelectOption value="">Bridals</NativeSelectOption>
             <NativeSelectOptGroup label="Bridals">
               <NativeSelectOption value="/#bridals">Bridals</NativeSelectOption>
             </NativeSelectOptGroup>
