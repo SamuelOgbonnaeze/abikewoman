@@ -4,6 +4,26 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const latestCollectionData = [
   {
+    id: "mirabel-dress",
+    mediaSrc: `/mirabel-dress-1.mp4`,
+    title: "MIRABEL DRESS",
+    description: (
+      <>
+        Introducing the MIRABEL Dress; our latest addition to the RTW lineup.🥳🥳 <br />
+        <br />
+        Designed in a floral mesh fabric with a Lycra inner dress, <br />
+        <br />
+        • Lightweight,<br />
+        • Comfortable,<br />
+        • Quietly elegant.<br />
+        <br />
+        You can start planning your next Sunday fit with us,🤭😍<br />
+        We’re just a DM away.🤗
+      </>
+    ),
+    link: "ready-to-wear/mirabel-dress",
+  },
+  {
     id: "adunbarin-set",
     mediaSrc:
       `${CDNUrl}/adunbarin-set-1.mp4`,

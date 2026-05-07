@@ -34,6 +34,7 @@ import {
   TirzahDesc,
   ZaharaDesc,
   ZurielDesc,
+  MirabelDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -826,5 +827,20 @@ export const collectionsData: CollectionItem[] = [
     price: 46000,
     priceGBP: undefined,
     priceCAD: 51.5,
+  },
+  {
+    id: "mirabel-dress",
+    media: [
+      { id: "1", url: `/mirabel-dress-1.mp4` },
+      { id: "2", url: `/mirabel-dress-1.jpg` },
+      { id: "3", url: `/mirabel-dress-2.jpg` },
+    ],
+    title: "MIRABEL DRESS",
+    category: "Ready To Wear",
+    description: <MirabelDesc />,
+    link: "ready-to-wear/mirabel-dress",
+    price: 0,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
 ];

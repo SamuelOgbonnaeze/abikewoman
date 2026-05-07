@@ -65,6 +65,10 @@ export const Navigation = () => {
             <NativeSelectOptGroup label="Bridals">
               <NativeSelectOption value="/#bridals">Bridals</NativeSelectOption>
             </NativeSelectOptGroup>
+
+            <NativeSelectOptGroup label="Ready To Wear">
+              <NativeSelectOption value="/#ready-to-wear">Ready To Wear</NativeSelectOption>
+            </NativeSelectOptGroup>
           </NativeSelect>
         </div>
         {/*  */}

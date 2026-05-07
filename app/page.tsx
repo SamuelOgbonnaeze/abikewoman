@@ -5,6 +5,7 @@ import Hero from "@/components/hero";
 import { IgbatuntunCollection } from "@/components/igbatuntun-collection";
 import { LatestReleases } from "@/components/latest-release";
 import { NuachCollection } from "@/components/nuach-collection";
+import { ReadyToWearCollection } from "@/components/ready-to-wear-collection";
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
       </div>
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
         <BridalsCollection />
+      </div>
+      <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] mt-[65px]">
+        <ReadyToWearCollection />
       </div>
     </div>
   );

@@ -625,3 +625,19 @@ export const FavorDesc = () => {
     </div>
   );
 };
+
+export const MirabelDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <p>Introducing the MIRABEL Dress; our latest addition to the RTW lineup.🥳🥳</p>
+      <p>Designed in a floral mesh fabric with a Lycra inner dress,</p>
+      <ul className="list-disc pl-5 font-normal">
+        <li>Lightweight,</li>
+        <li>Comfortable,</li>
+        <li>Quietly elegant.</li>
+      </ul>
+      <p>You can start planning your next Sunday fit with us,🤭😍</p>
+      <p>We’re just a DM away.🤗</p>
+    </div>
+  );
+};
