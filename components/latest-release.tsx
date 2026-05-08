@@ -5,7 +5,7 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const latestCollectionData = [
   {
     id: "mirabel-dress",
-    mediaSrc: `/mirabel-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",
     description: (
       <>
@@ -25,7 +25,7 @@ const latestCollectionData = [
   },
   {
     id: "sharon-dress",
-    mediaSrc: `/sharon-dress-1.png`,
+    mediaSrc: `${CDNUrl}/sharon-dress-1.png`,
     title: "SHARON DRESS",
     description: (
       <>
@@ -41,21 +41,21 @@ const latestCollectionData = [
   },
   {
     id: "eden-dress",
-    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/eden.mp4`,
+    mediaSrc: `${CDNUrl}/eden.mp4`,
     title: "EDEN DRESS",
     description: "Eden is where beauty began. A gown made for the woman stepping into love, rest, and forever.",
     link: "bridals/eden-dress",
   },
   {
     id: "beulah-dress",
-    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/beulah.mp4`,
+    mediaSrc: `${CDNUrl}/beulah.mp4`,
     title: "BEULAH DRESS",
     description: "Beulah is beloved, she is cherished, and it shows. A gown made for the woman stepping into love, commitment, and a lifetime of grace.",
     link: "bridals/beulah-dress",
   },
   {
     id: "zahara-dress",
-    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/zahara.mp4`,
+    mediaSrc: `${CDNUrl}/zahara.mp4`,
     title: "ZAHARA DRESS",
     description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
     link: "bridals/zahara-dress",

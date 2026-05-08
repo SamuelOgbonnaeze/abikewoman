@@ -5,42 +5,42 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const igbatuntunCollectionData = [
   {
     id: "adebisi-boubou",
-    mediaSrc: `/adebisi-boubou-1.jpg`,
+    mediaSrc: `${CDNUrl}/adebisi-boubou-1.jpg`,
     title: "ADEBISI BOUBOU",
     description: <>ADEBISI BOUBOU</>,
     link: "igbatuntun/adebisi-boubou",
   },
   {
     id: "la-nouvelle-jumpsuit",
-    mediaSrc: `/la-nouvelle-jumpsuit-1.jpg`,
+    mediaSrc: `${CDNUrl}/la-nouvelle-jumpsuit-1.jpg`,
     title: "LA NOUVELLE JUMPSUIT",
     description: <>LA NOUVELLE JUMPSUIT</>,
     link: "igbatuntun/la-nouvelle-jumpsuit",
   },
   {
     id: "adire-velvety",
-    mediaSrc: `/adire-velvety-1.jpg`,
+    mediaSrc: `${CDNUrl}/adire-velvety-1.jpg`,
     title: "ADIRE VELVETY",
     description: <>ADIRE VELVETY</>,
     link: "igbatuntun/adire-velvety",
   },
   {
     id: "adire-2in1-set",
-    mediaSrc: `/adire-2in1-set-1.jpg`,
+    mediaSrc: `${CDNUrl}/adire-2in1-set-1.jpg`,
     title: "ADIRE 2 IN 1 SET",
     description: <>ADIRE 2 IN 1 SET</>,
     link: "igbatuntun/adire-2in1-set",
   },
   {
     id: "extra-ordinary-set",
-    mediaSrc: `/extra-ordinary-set-1.jpg`,
+    mediaSrc: `${CDNUrl}/extra-ordinary-set-1.jpg`,
     title: "EXTRA ORDINARY SET",
     description: <>EXTRA ORDINARY SET</>,
     link: "igbatuntun/extra-ordinary-set",
   },
   {
     id: "aduke-set",
-    mediaSrc: `/aduke-set-1.jpg`,
+    mediaSrc: `${CDNUrl}/aduke-set-1.jpg`,
     title: "ADUKE SET",
     description: (
       <>
@@ -239,7 +239,7 @@ const igbatuntunCollectionData = [
   },
   {
     id: "ayo-set",
-    mediaSrc: `/ayo-set-1.jpg`,
+    mediaSrc: `${CDNUrl}/ayo-set-1.jpg`,
     title: "AYO SET",
     description: (
       <>

@@ -5,7 +5,7 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const readyToWearCollectionData = [
   {
     id: "mirabel-dress",
-    mediaSrc: `/mirabel-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",
     description: (
       <>
