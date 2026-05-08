@@ -2,6 +2,7 @@ import AdBanner from "@/components/ad-banner";
 import Banner from "@/components/banner";
 import { BridalsCollection } from "@/components/bridals";
 import Hero from "@/components/hero";
+import { CategoryChips } from "@/components/category-chips";
 import { IgbatuntunCollection } from "@/components/igbatuntun-collection";
 import { LatestReleases } from "@/components/latest-release";
 import { NuachCollection } from "@/components/nuach-collection";
@@ -11,6 +12,7 @@ export default function Home() {
   return (
     <div className="text-3xl ">
       <Hero />
+      <CategoryChips />
       <div className="px-[63px] md:px-[120px] lg:px-[272px] mb-[48px]">
         <AdBanner />
       </div>

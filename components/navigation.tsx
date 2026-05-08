@@ -4,11 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { MessageSquareShare, ShoppingCart } from "lucide-react";
-import {
-  NativeSelect,
-  NativeSelectOptGroup,
-  NativeSelectOption,
-} from "./ui/native-select";
 import { useRouter } from "next/navigation";
 
 import useCart from "@/hooks/use-cart";
@@ -17,12 +12,6 @@ export const Navigation = () => {
   const router = useRouter();
   const cart = useCart();
 
-  const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = event.target.value;
-    if (value) {
-      router.push(value);
-    }
-  };
 
   const handleContact = () => {
     const phoneNumber = "2347038072466";
@@ -49,28 +38,6 @@ export const Navigation = () => {
             priority
           />
         </Link>
-        {/*  */}
-        <div className="hidden md:flex items-center gap-x-[20px] lg:gap-x-[40px] ">
-          <NativeSelect onChange={handleSelectChange}>
-            <NativeSelectOption value="">Select Collection</NativeSelectOption>
-            <NativeSelectOptGroup label="Collections">
-              <NativeSelectOption value="/#nuach">
-                Nuach Collection
-              </NativeSelectOption>
-              <NativeSelectOption value="/#igbatuntun">
-                Igbatuntun Collection
-              </NativeSelectOption>
-            </NativeSelectOptGroup>
-
-            <NativeSelectOptGroup label="Bridals">
-              <NativeSelectOption value="/#bridals">Bridals</NativeSelectOption>
-            </NativeSelectOptGroup>
-
-            <NativeSelectOptGroup label="Ready To Wear">
-              <NativeSelectOption value="/#ready-to-wear">Ready To Wear</NativeSelectOption>
-            </NativeSelectOptGroup>
-          </NativeSelect>
-        </div>
         {/*  */}
 
         <div className="flex items-center space-x-4">
