@@ -25,6 +25,13 @@ const bridalsCollectionData = [
     link: "bridals/zahara-dress",
   },
   {
+    id: "sharon-dress",
+    mediaSrc: `/sharon-dress-1.png`,
+    title: "SHARON DRESS",
+    description: "Sharon is not just a dress, she is a statement. A dress that was made for the woman who knows exactly the energy she is walking into the room with.✨",
+    link: "bridals/sharon-dress",
+  },
+  {
     id: "bridal-1",
     mediaSrc: `${CDNUrl}/bridals-12.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",

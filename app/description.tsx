@@ -649,3 +649,16 @@ export const AyoDesc = () => {
     </div>
   );
 };
+
+export const SharonDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-normal text-gray-700">
+      <p className="font-bold">SHARON DRESS🤍</p>
+      <p>Sharon is not just a dress, she is a statement.<br />A dress that was made for the woman who knows exactly the energy she is walking into the room with.✨</p>
+      <p>A high neck, fitted dress that holds every curve beautifully, paired with a detachable layered tulle train that brings the full bridal moment. The structured sleeves give it that bold look that leaves an unforgettable statement.</p>
+      <p>A beautiful patterned lace runs through the bodice, adorned with pearls that was placed with intention.</p>
+      <p>You deserve to feel like the most beautiful woman in the room on your wedding day,<br />And Sharon was designed to make you feel every bit of how special the day truly is.</p>
+      <p className="font-bold">Book a consultation today.<br />Available for sale and rental.</p>
+    </div>
+  );
+};

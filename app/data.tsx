@@ -36,6 +36,7 @@ import {
   ZurielDesc,
   MirabelDesc,
   AyoDesc,
+  SharonDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -179,6 +180,24 @@ export const collectionsData: CollectionItem[] = [
     category: "Bridals",
     description: <ZaharaDesc />,
     link: "bridals/zahara-dress",
+  },
+  {
+    id: "sharon-dress",
+    media: [
+      { id: "1", url: `/sharon-dress-1.png` },
+      { id: "2", url: `/sharon-dress-2.png` },
+      { id: "3", url: `/sharon-dress-3.png` },
+      { id: "4", url: `/sharon-dress-4.png` },
+      { id: "5", url: `/sharon-dress-5.png` },
+      { id: "6", url: `/sharon-dress-6.png` },
+      { id: "7", url: `/sharon-dress-7.png` },
+      { id: "8", url: `/sharon-dress-8.png` },
+      { id: "9", url: `/sharon-dress-9.png` },
+    ],
+    title: "SHARON DRESS",
+    category: "Bridals",
+    description: <SharonDesc />,
+    link: "bridals/sharon-dress",
   },
 
   // ===== Igbatuntun Collection =====

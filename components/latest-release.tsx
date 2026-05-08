@@ -4,6 +4,22 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const latestCollectionData = [
   {
+    id: "sharon-dress",
+    mediaSrc: `/sharon-dress-1.png`,
+    title: "SHARON DRESS",
+    description: (
+      <>
+        SHARON DRESS🤍 <br />
+        <br />
+        Sharon is not just a dress, she is a statement. <br />
+        A dress that was made for the woman who knows exactly the energy she is walking into the room with.✨ <br />
+        <br />
+        A high neck, fitted dress that holds every curve beautifully, paired with a detachable layered tulle train that brings the full bridal moment. The structured sleeves give it that bold look that leaves an unforgettable statement.
+      </>
+    ),
+    link: "bridals/sharon-dress",
+  },
+  {
     id: "mirabel-dress",
     mediaSrc: `/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",
@@ -24,48 +40,27 @@ const latestCollectionData = [
     link: "ready-to-wear/mirabel-dress",
   },
   {
-    id: "adunbarin-set",
-    mediaSrc:
-      `${CDNUrl}/adunbarin-set-1.mp4`,
-    title: "ADUNBARIN SET",
-    description: (
-      <>
-        ADUNBARIN set✨ <br />
-        <br />
-        Adunbarin set is a set made from Adire and Asooke. Kimono paired with
-        pants.
-      </>
-    ),
-    link: "nuach/adunbarin-set",
+    id: "eden-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/eden.mp4`,
+    title: "EDEN DRESS",
+    description: "Eden is where beauty began. A gown made for the woman stepping into love, rest, and forever.",
+    link: "bridals/eden-dress",
   },
   {
-    id: "alheri-set",
-    mediaSrc: `${CDNUrl}/alheri-set-1.mp4`,
-    title: "ALHERI SET",
-    description: (
-      <>
-        ( You were made to Live in the Goodness and The Grace of God) <br />{" "}
-        <br />
-        Alheri set - a plain color blouse with puff sleeves with an opening on
-        the left shoulder, paired a miyaki colored pants
-      </>
-    ),
-    link: "nuach/alheri-set",
+    id: "beulah-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/beulah.mp4`,
+    title: "BEULAH DRESS",
+    description: "Beulah is beloved, she is cherished, and it shows. A gown made for the woman stepping into love, commitment, and a lifetime of grace.",
+    link: "bridals/beulah-dress",
   },
   {
-    id: "alora-dress",
-    mediaSrc: `${CDNUrl}/alora-dress-1.mp4`,
-    title: "ALORA DRESS",
-    description: (
-      <>
-        May God continually be your light <br />
-        <br />
-        ALORA DRESS is a fitted midi length dress with 2 opening on shoulders
-        made with either crepe //duchess
-      </>
-    ),
-    link: "nuach/alora-dress",
+    id: "zahara-dress",
+    mediaSrc: `${process.env.NEXT_PUBLIC_CDN_URL}/zahara.mp4`,
+    title: "ZAHARA DRESS",
+    description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
+    link: "bridals/zahara-dress",
   },
+
   {
     id: "ariella-dress",
     mediaSrc:
