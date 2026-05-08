@@ -4,6 +4,13 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const igbatuntunCollectionData = [
   {
+    id: "adebisi-boubou",
+    mediaSrc: `/adebisi-boubou-1.jpg`,
+    title: "ADEBISI BOUBOU",
+    description: <>ADEBISI BOUBOU</>,
+    link: "igbatuntun/adebisi-boubou",
+  },
+  {
     id: "la-nouvelle-jumpsuit",
     mediaSrc: `/la-nouvelle-jumpsuit-1.jpg`,
     title: "LA NOUVELLE JUMPSUIT",

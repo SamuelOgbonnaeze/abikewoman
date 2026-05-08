@@ -739,6 +739,15 @@ export const LaNouvelleDesc = () => {
   );
 };
 
+export const AdebisiDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+
 
 
 

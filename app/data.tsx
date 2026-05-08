@@ -42,6 +42,7 @@ import {
   Adire2in1Desc,
   AdireVelvetyDesc,
   LaNouvelleDesc,
+  AdebisiDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -286,6 +287,19 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <LaNouvelleDesc />,
     link: "igbatuntun/la-nouvelle-jumpsuit",
+  },
+  {
+    id: "adebisi-boubou",
+    media: [
+      { id: "1", url: `/adebisi-boubou-1.jpg` },
+      { id: "2", url: `/adebisi-boubou-2.jpg` },
+      { id: "3", url: `/adebisi-boubou-3.jpg` },
+      { id: "4", url: `/adebisi-boubou-4.jpg` },
+    ],
+    title: "ADEBISI BOUBOU",
+    category: "Igbatuntun Collection",
+    description: <AdebisiDesc />,
+    link: "igbatuntun/adebisi-boubou",
   },
   {
     id: "ire-set",
