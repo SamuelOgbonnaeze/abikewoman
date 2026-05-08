@@ -226,9 +226,9 @@ export const collectionsData: CollectionItem[] = [
     description: <AdukeDesc />,
     link: "igbatuntun/aduke-set",
     priceVariations: [
-      { style: "Aduke Set", price: 0, priceGBP: undefined, priceCAD: undefined },
-      { style: "Aduke Silk Set", price: 0, priceGBP: undefined, priceCAD: undefined },
-      { style: "Aduke 2 Colored Set", price: 0, priceGBP: undefined, priceCAD: undefined },
+      { style: "Aduke Set", price: 60000, priceGBP: undefined, priceCAD: 65 },
+      { style: "Aduke Silk Set", price: 60000, priceGBP: undefined, priceCAD: 65 },
+      { style: "Aduke 2 Colored Set", price: 60000, priceGBP: undefined, priceCAD: 65 },
     ],
   },
   {
@@ -243,6 +243,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <ExtraOrdinaryDesc />,
     link: "igbatuntun/extra-ordinary-set",
+    price: 55000,
+    priceGBP: undefined,
+    priceCAD: 55,
   },
   {
     id: "adire-2in1-set",
@@ -258,6 +261,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <Adire2in1Desc />,
     link: "igbatuntun/adire-2in1-set",
+    price: 60000,
+    priceGBP: undefined,
+    priceCAD: 65,
   },
   {
     id: "adire-velvety",
@@ -272,6 +278,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <AdireVelvetyDesc />,
     link: "igbatuntun/adire-velvety",
+    price: 60000,
+    priceGBP: undefined,
+    priceCAD: 65,
   },
   {
     id: "la-nouvelle-jumpsuit",
@@ -287,6 +296,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <LaNouvelleDesc />,
     link: "igbatuntun/la-nouvelle-jumpsuit",
+    price: 48000,
+    priceGBP: undefined,
+    priceCAD: 54,
   },
   {
     id: "adebisi-boubou",
@@ -300,6 +312,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <AdebisiDesc />,
     link: "igbatuntun/adebisi-boubou",
+    price: 45000,
+    priceGBP: undefined,
+    priceCAD: 50,
   },
   {
     id: "ire-set",
@@ -316,6 +331,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <IreDesc />,
     link: "igbatuntun-collection/ire-set",
+    price: 60000,
+    priceGBP: undefined,
+    priceCAD: 65,
   },
   {
     id: "amani-dress",
@@ -336,6 +354,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <AmaniDesc />,
     link: "igbatuntun-collection/amani-dress",
+    price: 48000,
+    priceGBP: undefined,
+    priceCAD: 54,
   },
   {
     id: "ayomide-set",
@@ -355,6 +376,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <AyomideDesc />,
     link: "igbatuntun-collection/ayomide-set",
+    price: 69000,
+    priceGBP: undefined,
+    priceCAD: 77,
   },
   {
     id: "favor-set",
@@ -366,6 +390,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <FavorDesc />,
     link: "igbatuntun-collection/favor-set",
+    price: 73000,
+    priceGBP: undefined,
+    priceCAD: 80,
   },
   {
     id: "ibukun-set",
@@ -379,6 +406,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <IbukunDesc />,
     link: "igbatuntun-collection/ibukun-set",
+    price: 70000,
+    priceGBP: undefined,
+    priceCAD: 78,
   },
   {
     id: "ife-set",
@@ -399,6 +429,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <IfeDesc />,
     link: "igbatuntun-collection/ife-set",
+    price: 64000,
+    priceGBP: undefined,
+    priceCAD: 73,
   },
   {
     id: "irawo-dress",
@@ -411,6 +444,9 @@ export const collectionsData: CollectionItem[] = [
     description:
       "Ire Collection Description goes here. This is some sample text to test layout.",
     link: "igbatuntun-collection/irawo-dress",
+    price: 75000,
+    priceGBP: undefined,
+    priceCAD: 84,
   },
   {
     id: "irawo-set",
@@ -430,6 +466,11 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <IrawoSetDesc />,
     link: "igbatuntun-collection/irawo-set",
+    priceVariations: [
+      { style: "Irawo jacket set", price: 94000, priceGBP: undefined, priceCAD: 105 },
+      { style: "Irawo blouse set", price: 80000, priceGBP: undefined, priceCAD: 89 },
+      { style: "Irawo dress set", price: 82000, priceGBP: undefined, priceCAD: 92 },
+    ],
   },
   {
     id: "iyanu-dress",
@@ -450,6 +491,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <IyanuDesc />,
     link: "igbatuntun-collection/iyanu-dress",
+    price: 70000,
+    priceGBP: undefined,
+    priceCAD: 78,
   },
   {
     id: "kuku-set",
@@ -469,6 +513,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <KukuDesc />,
     link: "igbatuntun-collection/kuku-set",
+    price: 60000,
+    priceGBP: undefined,
+    priceCAD: 65,
   },
   {
     id: "oreoluwa-dress",
@@ -485,6 +532,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <OreoluwaDesc />,
     link: "igbatuntun-collection/oreoluwa-dress",
+    price: 62000,
+    priceGBP: undefined,
+    priceCAD: 71,
   },
   {
     id: "one-thing",
@@ -504,6 +554,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <OneThingDesc />,
     link: "igbatuntun-collection/one-thing",
+    price: 60000,
+    priceGBP: undefined,
+    priceCAD: 65,
   },
   {
     id: "isinmi-1-dress",
@@ -524,6 +577,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <Isinmi1Desc />,
     link: "igbatuntun-collection/isinmi-1-dress",
+    price: 45000,
+    priceGBP: undefined,
+    priceCAD: 50,
   },
   {
     id: "isinmi-2-dress",
@@ -543,6 +599,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <Isinmi2Desc />,
     link: "igbatuntun-collection/isinmi-2-dress",
+    price: 45000,
+    priceGBP: undefined,
+    priceCAD: 50,
   },
   {
     id: "ayo-set",
@@ -560,8 +619,8 @@ export const collectionsData: CollectionItem[] = [
     description: <AyoDesc />,
     link: "igbatuntun/ayo-set",
     priceVariations: [
-      { style: "Ayo Set", price: 0, priceGBP: undefined, priceCAD: undefined },
-      { style: "Ayo Pant Set", price: 0, priceGBP: undefined, priceCAD: undefined },
+      { style: "Ayo Set", price: 56000, priceGBP: undefined, priceCAD: 63 },
+      { style: "Ayo Pant Set", price: 60000, priceGBP: undefined, priceCAD: 65 },
     ],
   },
 
@@ -979,8 +1038,8 @@ export const collectionsData: CollectionItem[] = [
     category: "Ready To Wear",
     description: <MirabelDesc />,
     link: "ready-to-wear/mirabel-dress",
-    price: 0,
+    price: 65000,
     priceGBP: undefined,
-    priceCAD: undefined,
+    priceCAD: 71,
   },
 ];
