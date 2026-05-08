@@ -40,6 +40,7 @@ import {
   AdukeDesc,
   ExtraOrdinaryDesc,
   Adire2in1Desc,
+  AdireVelvetyDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -255,6 +256,20 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <Adire2in1Desc />,
     link: "igbatuntun/adire-2in1-set",
+  },
+  {
+    id: "adire-velvety",
+    media: [
+      { id: "1", url: `/adire-velvety-1.jpg` },
+      { id: "2", url: `/adire-velvety-2.jpg` },
+      { id: "3", url: `/adire-velvety-3.jpg` },
+      { id: "4", url: `/adire-velvety-4.jpg` },
+      { id: "5", url: `/adire-velvety-5.jpg` },
+    ],
+    title: "ADIRE VELVETY",
+    category: "Igbatuntun Collection",
+    description: <AdireVelvetyDesc />,
+    link: "igbatuntun/adire-velvety",
   },
   {
     id: "ire-set",
