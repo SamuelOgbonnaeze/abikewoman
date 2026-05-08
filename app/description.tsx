@@ -67,7 +67,9 @@ export const ZaharaDesc = () => {
         The Zahara Dress is a dream in bloom; radiant, regal, and
         unapologetically grand.
       </p>
-      <p>Designed as a classic ball gown, Zahara is crafted to make an entrance.</p>
+      <p>
+        Designed as a classic ball gown, Zahara is crafted to make an entrance.
+      </p>
       <p>
         A layer of hand beaded illusion mesh sits beneath the off-shoulder
         neckline, framing the collarbones with quiet drama and evoking feminine
@@ -625,3 +627,127 @@ export const FavorDesc = () => {
     </div>
   );
 };
+
+export const MirabelDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <p>
+        Introducing the MIRABEL Dress; our latest addition to the RTW
+        lineup.🥳🥳
+      </p>
+      <p>Designed in a floral mesh fabric with a Lycra inner dress,</p>
+      <ul className="list-disc pl-5 font-normal">
+        <li>Lightweight,</li>
+        <li>Comfortable,</li>
+        <li>Quietly elegant.</li>
+      </ul>
+      <p>You can start planning your next Sunday fit with us,🤭😍</p>
+      <p>We’re just a DM away.🤗</p>
+    </div>
+  );
+};
+
+export const AyoDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-normal text-gray-700">
+      <p className="font-bold">AYO SET</p>
+      <p>
+        Make a fashion statement with the Ayo Set – a stylish ensemble featuring
+        a matching crop jacket and midi flared skirt available in unique Adire
+        prints Effortlessly chic, each piece stands out on its own. Mix and
+        match for endless style possibilities. 💖🌟
+      </p>
+      <p>Made from ADIRE</p>
+      <p>Send a dm or click on WhatsApp link in bio to place your order</p>
+      <p>Available in different prints</p>
+    </div>
+  );
+};
+
+export const SharonDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-normal text-gray-700">
+      <p className="font-bold">SHARON DRESS🤍</p>
+      <p>
+        Sharon is not just a dress, she is a statement.
+        <br />A dress that was made for the woman who knows exactly the energy
+        she is walking into the room with.✨
+      </p>
+      <p>
+        A high neck, fitted dress that holds every curve beautifully, paired
+        with a detachable layered tulle train that brings the full bridal
+        moment. The structured sleeves give it that bold look that leaves an
+        unforgettable statement.
+      </p>
+      <p>
+        A beautiful patterned lace runs through the bodice, adorned with pearls
+        that was placed with intention.
+      </p>
+      <p>
+        You deserve to feel like the most beautiful woman in the room on your
+        wedding day,
+        <br />
+        And Sharon was designed to make you feel every bit of how special the
+        day truly is.
+      </p>
+      <p className="font-bold">
+        Book a consultation today.
+        <br />
+        Available for sale and rental.
+      </p>
+    </div>
+  );
+};
+
+export const AdukeDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+export const ExtraOrdinaryDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+export const Adire2in1Desc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+export const AdireVelvetyDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+export const LaNouvelleDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+export const AdebisiDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+
+
+
+

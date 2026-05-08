@@ -17,7 +17,7 @@ const slides = [
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[195px] md:h-[400px] lg:h-screen mb-[25px] md:mb-[50px]">
+    <div className="relative w-full h-[195px] md:h-[400px] lg:h-screen">
       <Swiper
         modules={[Autoplay, EffectFade]}
         autoplay={{ delay: 3000, disableOnInteraction: false }}

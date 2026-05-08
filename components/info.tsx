@@ -33,7 +33,7 @@ const Info: React.FC<InfoProps> = ({ data }) => {
       hasVariations ? data?.priceVariations![0] : null
     );
   const [selectedSize, setSelectedSize] = useState<number | null>(null);
-  const [currency, setCurrency] = useState<"NGN" | "GBP" | "CAD">("NGN");
+  const [currency, setCurrency] = useState<"NGN" | "CAD" | "GBP">("NGN");
 
   // Only show the currency selector when at least one GBP or CAD price is set
   const hasForeignPricing = hasVariations
