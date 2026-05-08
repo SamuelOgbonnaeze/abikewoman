@@ -191,6 +191,17 @@ const igbatuntunCollectionData = [
     ),
     link: "igbatuntun/oreoluwa-dress",
   },
+  {
+    id: "ayo-set",
+    mediaSrc: `/ayo-set-1.jpg`,
+    title: "AYO SET",
+    description: (
+      <>
+        {/* Description to be provided later */}
+      </>
+    ),
+    link: "igbatuntun/ayo-set",
+  },
 ];
 
 export const IgbatuntunCollection = () => {

@@ -35,6 +35,7 @@ import {
   ZaharaDesc,
   ZurielDesc,
   MirabelDesc,
+  AyoDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -423,6 +424,22 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <Isinmi2Desc />,
     link: "igbatuntun-collection/isinmi-2-dress",
+  },
+  {
+    id: "ayo-set",
+    media: [
+      { id: "1", url: `/ayo-set-1.jpg` },
+      { id: "2", url: `/ayo-set-2.jpg` },
+      { id: "3", url: `/ayo-set-3.jpg` },
+      { id: "4", url: `/ayo-set-4.jpg` },
+    ],
+    title: "AYO SET",
+    category: "Igbatuntun Collection",
+    description: <AyoDesc />,
+    link: "igbatuntun/ayo-set",
+    price: 0,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
 
   // ===== Nuach Collection =====
