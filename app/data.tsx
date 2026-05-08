@@ -38,6 +38,7 @@ import {
   AyoDesc,
   SharonDesc,
   AdukeDesc,
+  ExtraOrdinaryDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -225,6 +226,19 @@ export const collectionsData: CollectionItem[] = [
       { style: "Aduke Silk Set", price: 0, priceGBP: undefined, priceCAD: undefined },
       { style: "Aduke 2 Colored Set", price: 0, priceGBP: undefined, priceCAD: undefined },
     ],
+  },
+  {
+    id: "extra-ordinary-set",
+    media: [
+      { id: "1", url: `/extra-ordinary-set-1.jpg` },
+      { id: "2", url: `/extra-ordinary-set-2.jpg` },
+      { id: "3", url: `/extra-ordinary-set-3.jpg` },
+      { id: "4", url: `/extra-ordinary-set-4.jpg` },
+    ],
+    title: "EXTRA ORDINARY SET",
+    category: "Igbatuntun Collection",
+    description: <ExtraOrdinaryDesc />,
+    link: "igbatuntun/extra-ordinary-set",
   },
   {
     id: "ire-set",

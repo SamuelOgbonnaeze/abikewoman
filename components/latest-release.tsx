@@ -4,22 +4,6 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const latestCollectionData = [
   {
-    id: "sharon-dress",
-    mediaSrc: `/sharon-dress-1.png`,
-    title: "SHARON DRESS",
-    description: (
-      <>
-        SHARON DRESS🤍 <br />
-        <br />
-        Sharon is not just a dress, she is a statement. <br />
-        A dress that was made for the woman who knows exactly the energy she is walking into the room with.✨ <br />
-        <br />
-        A high neck, fitted dress that holds every curve beautifully, paired with a detachable layered tulle train that brings the full bridal moment. The structured sleeves give it that bold look that leaves an unforgettable statement.
-      </>
-    ),
-    link: "bridals/sharon-dress",
-  },
-  {
     id: "mirabel-dress",
     mediaSrc: `/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",
@@ -38,6 +22,22 @@ const latestCollectionData = [
       </>
     ),
     link: "ready-to-wear/mirabel-dress",
+  },
+  {
+    id: "sharon-dress",
+    mediaSrc: `/sharon-dress-1.png`,
+    title: "SHARON DRESS",
+    description: (
+      <>
+        SHARON DRESS🤍 <br />
+        <br />
+        Sharon is not just a dress, she is a statement. <br />
+        A dress that was made for the woman who knows exactly the energy she is walking into the room with.✨ <br />
+        <br />
+        A high neck, fitted dress that holds every curve beautifully, paired with a detachable layered tulle train that brings the full bridal moment. The structured sleeves give it that bold look that leaves an unforgettable statement.
+      </>
+    ),
+    link: "bridals/sharon-dress",
   },
   {
     id: "eden-dress",
