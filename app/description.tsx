@@ -644,8 +644,14 @@ export const MirabelDesc = () => {
 
 export const AyoDesc = () => {
   return (
-    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
-      {/* Description to be provided later */}
+    <div className="flex flex-col gap-y-4 text-md font-normal text-gray-700">
+      <p className="font-bold">AYO SET</p>
+      <p>
+        Make a fashion statement with the Ayo Set – a stylish ensemble featuring a matching crop jacket and midi flared skirt available in unique Adire prints Effortlessly chic, each piece stands out on its own. Mix and match for endless style possibilities. 💖🌟
+      </p>
+      <p>Made from ADIRE</p>
+      <p>Send a dm or click on WhatsApp link in bio to place your order</p>
+      <p>Available in different prints</p>
     </div>
   );
 };
@@ -659,6 +665,14 @@ export const SharonDesc = () => {
       <p>A beautiful patterned lace runs through the bodice, adorned with pearls that was placed with intention.</p>
       <p>You deserve to feel like the most beautiful woman in the room on your wedding day,<br />And Sharon was designed to make you feel every bit of how special the day truly is.</p>
       <p className="font-bold">Book a consultation today.<br />Available for sale and rental.</p>
+    </div>
+  );
+};
+
+export const AdukeDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
     </div>
   );
 };

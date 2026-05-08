@@ -37,6 +37,7 @@ import {
   MirabelDesc,
   AyoDesc,
   SharonDesc,
+  AdukeDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -201,6 +202,20 @@ export const collectionsData: CollectionItem[] = [
   },
 
   // ===== Igbatuntun Collection =====
+  {
+    id: "aduke-set",
+    media: [
+      { id: "1", url: `/aduke-set-1.jpg` },
+      { id: "2", url: `/aduke-set-2.jpg` },
+      { id: "3", url: `/aduke-set-3.jpg` },
+      { id: "4", url: `/aduke-set-4.jpg` },
+      { id: "5", url: `/aduke-set-5.jpg` },
+    ],
+    title: "ADUKE SET",
+    category: "Igbatuntun Collection",
+    description: <AdukeDesc />,
+    link: "igbatuntun/aduke-set",
+  },
   {
     id: "ire-set",
     media: [

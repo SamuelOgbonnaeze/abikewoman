@@ -4,6 +4,17 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const igbatuntunCollectionData = [
   {
+    id: "aduke-set",
+    mediaSrc: `/aduke-set-1.jpg`,
+    title: "ADUKE SET",
+    description: (
+      <>
+        ADUKE SET
+      </>
+    ),
+    link: "igbatuntun/aduke-set",
+  },
+  {
     id: "amani-dress",
     mediaSrc: `${CDNUrl}/amani-7.jpg`,
     title: "AMANI DRESS",
