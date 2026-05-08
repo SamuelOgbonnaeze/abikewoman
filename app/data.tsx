@@ -39,6 +39,7 @@ import {
   SharonDesc,
   AdukeDesc,
   ExtraOrdinaryDesc,
+  Adire2in1Desc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -239,6 +240,21 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <ExtraOrdinaryDesc />,
     link: "igbatuntun/extra-ordinary-set",
+  },
+  {
+    id: "adire-2in1-set",
+    media: [
+      { id: "1", url: `/adire-2in1-set-1.jpg` },
+      { id: "2", url: `/adire-2in1-set-2.jpg` },
+      { id: "3", url: `/adire-2in1-set-3.jpg` },
+      { id: "4", url: `/adire-2in1-set-4.jpg` },
+      { id: "5", url: `/adire-2in1-set-5.jpg` },
+      { id: "6", url: `/adire-2in1-set-6.jpg` },
+    ],
+    title: "ADIRE 2 IN 1 SET",
+    category: "Igbatuntun Collection",
+    description: <Adire2in1Desc />,
+    link: "igbatuntun/adire-2in1-set",
   },
   {
     id: "ire-set",

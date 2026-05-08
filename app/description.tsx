@@ -715,3 +715,12 @@ export const ExtraOrdinaryDesc = () => {
   );
 };
 
+export const Adire2in1Desc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      {/* Description to be provided later */}
+    </div>
+  );
+};
+
+

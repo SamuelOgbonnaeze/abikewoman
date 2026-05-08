@@ -4,6 +4,13 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const igbatuntunCollectionData = [
   {
+    id: "adire-2in1-set",
+    mediaSrc: `/adire-2in1-set-1.jpg`,
+    title: "ADIRE 2 IN 1 SET",
+    description: <>ADIRE 2 IN 1 SET</>,
+    link: "igbatuntun/adire-2in1-set",
+  },
+  {
     id: "extra-ordinary-set",
     mediaSrc: `/extra-ordinary-set-1.jpg`,
     title: "EXTRA ORDINARY SET",
