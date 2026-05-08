@@ -41,6 +41,7 @@ import {
   ExtraOrdinaryDesc,
   Adire2in1Desc,
   AdireVelvetyDesc,
+  LaNouvelleDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -270,6 +271,21 @@ export const collectionsData: CollectionItem[] = [
     category: "Igbatuntun Collection",
     description: <AdireVelvetyDesc />,
     link: "igbatuntun/adire-velvety",
+  },
+  {
+    id: "la-nouvelle-jumpsuit",
+    media: [
+      { id: "1", url: `/la-nouvelle-jumpsuit-1.jpg` },
+      { id: "2", url: `/la-nouvelle-jumpsuit-2.jpg` },
+      { id: "3", url: `/la-nouvelle-jumpsuit-3.jpg` },
+      { id: "4", url: `/la-nouvelle-jumpsuit-4.jpg` },
+      { id: "5", url: `/la-nouvelle-jumpsuit-5.jpg` },
+      { id: "6", url: `/la-nouvelle-jumpsuit-6.jpg` },
+    ],
+    title: "LA NOUVELLE JUMPSUIT",
+    category: "Igbatuntun Collection",
+    description: <LaNouvelleDesc />,
+    link: "igbatuntun/la-nouvelle-jumpsuit",
   },
   {
     id: "ire-set",
@@ -521,14 +537,18 @@ export const collectionsData: CollectionItem[] = [
       { id: "2", url: `/ayo-set-2.jpg` },
       { id: "3", url: `/ayo-set-3.jpg` },
       { id: "4", url: `/ayo-set-4.jpg` },
+      { id: "5", url: `/ayo-set-5.jpg` },
+      { id: "6", url: `/ayo-set-6.jpg` },
+      { id: "7", url: `/ayo-set-7.jpg` },
     ],
     title: "AYO SET",
     category: "Igbatuntun Collection",
     description: <AyoDesc />,
     link: "igbatuntun/ayo-set",
-    price: 0,
-    priceGBP: undefined,
-    priceCAD: undefined,
+    priceVariations: [
+      { style: "Ayo Set", price: 0, priceGBP: undefined, priceCAD: undefined },
+      { style: "Ayo Pant Set", price: 0, priceGBP: undefined, priceCAD: undefined },
+    ],
   },
 
   // ===== Nuach Collection =====
