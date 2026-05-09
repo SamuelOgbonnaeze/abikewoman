@@ -3,7 +3,6 @@ import Banner from "@/components/banner";
 import { BridalsCollection } from "@/components/bridals";
 import Hero from "@/components/hero";
 import { CategoryChips } from "@/components/category-chips";
-import { IgbatuntunCollection } from "@/components/igbatuntun-collection";
 import { LatestReleases } from "@/components/latest-release";
 import { NuachCollection } from "@/components/nuach-collection";
 import { ReadyToWearCollection } from "@/components/ready-to-wear-collection";
@@ -19,13 +18,10 @@ export default function Home() {
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
         <LatestReleases />
         <NuachCollection />
-        <IgbatuntunCollection />
+        <BridalsCollection />
       </div>
       <div className=" mt-6 md:mt-10">
         <Banner />
-      </div>
-      <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
-        <BridalsCollection />
       </div>
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] mt-[65px]">
         <ReadyToWearCollection />
