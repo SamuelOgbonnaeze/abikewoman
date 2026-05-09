@@ -4,7 +4,6 @@ import React from "react";
 
 const collections = [
   { name: "Nuach Collection", href: "#nuach" },
-  { name: "Igbatuntun Collection", href: "#igbatuntun" },
   { name: "Bridals", href: "#bridals" },
   { name: "Ready To Wear", href: "#ready-to-wear" },
 ];

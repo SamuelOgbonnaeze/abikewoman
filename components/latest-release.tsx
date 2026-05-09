@@ -25,7 +25,7 @@ const latestCollectionData = [
   },
   {
     id: "sharon-dress",
-    mediaSrc: `${CDNUrl}/sharon-dress-1.png`,
+    mediaSrc: `${CDNUrl}/sharon-dress-8.png`,
     title: "SHARON DRESS",
     description: (
       <>
@@ -106,19 +106,6 @@ const latestCollectionData = [
     link: "nuach/babara-dress",
   },
   {
-    id: "danielle-set",
-    mediaSrc: `${CDNUrl}/danielle-set-1.mp4`,
-    title: "DANIELLE SET",
-    description: (
-      <>
-        Danielle set is in 2 variations <br />
-        <br />A dress set - a spaghetti midi length dress paired with a crop
-        jacket made in tweed
-      </>
-    ),
-    link: "nuach/danielle-set",
-  },
-  {
     id: "hana-set",
     mediaSrc: `${CDNUrl}/hana-set-1.mp4`,
     title: "HANA SET",
@@ -130,19 +117,6 @@ const latestCollectionData = [
       </>
     ),
     link: "nuach/hana-set",
-  },
-  {
-    id: "ileri-boubou",
-    mediaSrc: `${CDNUrl}/ileri-boubou-1.mp4`,
-    title: "ILERIOLUWA SET/BOUBOU",
-    description: (
-      <>
-        May the promises of God come to pass in your lives. <br /> <br /> Comes
-        in 3 variations: <br />
-        Kimono and pants Made in adire & Chantilly lace. * Boubou made{" "}
-      </>
-    ),
-    link: "nuach/ileri-boubou",
   },
   {
     id: "iye-dress",
@@ -157,33 +131,6 @@ const latestCollectionData = [
       </>
     ),
     link: "nuach/iye-dress",
-  },
-  {
-    id: "keziah-set",
-    mediaSrc: `${CDNUrl}/keziah-set-1.mp4`,
-    title: "KEZIAH SET",
-    description: (
-      <>
-        Keziah set is a puffy crop top paired with big pants or a flair skirt.{" "}
-        <br />
-        Keziah means sweetness- may you experience sweetness as we wrap up the
-        year.
-      </>
-    ),
-    link: "nuach/keziah-set",
-  },
-  {
-    id: "moremi-set",
-    mediaSrc: `${CDNUrl}/moremi-set-1.mp4`,
-    title: "MOREMI SET",
-    description: (
-      <>
-        MOREMI SET <br />
-        <br /> A high low flair blouse paired with A long A-line skirt made in
-        adire crepe. made in
-      </>
-    ),
-    link: "nuach/moremi-set",
   },
   {
     id: "shalom-set",
@@ -205,61 +152,6 @@ const latestCollectionData = [
     title: "TAMARA DRESS",
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
-  },
-  {
-    id: "ewa-set",
-    mediaSrc: `${CDNUrl}/ewa-set-1.jpg`,
-    title: "EWA SET",
-    description: (
-      <>
-        May the beauty and the colors of his glory be upon you. <br />
-        <br /> EWA SET(kimono & pants) is beautifully and carefully made from
-        patches of adire silk and chiffon.
-      </>
-    ),
-    link: "nuach/ewa-set",
-  },
-  {
-    id: "ewa-boubou",
-    mediaSrc: `${CDNUrl}/ewa-boubou-1.jpg`,
-    title: "EWA BOUBOU",
-    description: (
-      <>
-        EWA BOUBOU <br />
-        <br />
-        Made from adire silk, different prints merged together to create a
-        colorful vibrant boubou.
-      </>
-    ),
-    link: "nuach/ewa-boubou",
-  },
-  {
-    id: "tirzah-dress",
-    mediaSrc: `${CDNUrl}/tirzah-dress-1.mp4`,
-    title: "TIRZAH DRESS",
-    description: (
-      <>
-        Tirzah means delight, pleasantness <br />
-        <br />
-        You walk in elegance and confidence knowing you are clothed with favor
-        from God and men.
-      </>
-    ),
-    link: "nuach/tirzah-dress",
-  },
-  {
-    id: "zuriel-set",
-    mediaSrc: `${CDNUrl}/zuriel-set-1.mp4`,
-    title: "ZURIEL SET",
-    description: (
-      <>
-        Zuriel means GOD is my rock. <br />
-        <br />
-        Zuriel is available in 2 variations : A high low boubou embellished with
-        crystal beads &drople
-      </>
-    ),
-    link: "nuach/zuriel-set",
   },
 ];
 
