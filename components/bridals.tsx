@@ -33,7 +33,7 @@ const bridalsCollectionData = [
   },
   {
     id: "bridal-1",
-    mediaSrc: `${CDNUrl}/bridals-12.JPG`,
+    mediaSrc: `${CDNUrl}/bridals-6.JPG`,
     title: "BRIDALS BY THEABIKEWOMAN",
     description: "BRIDALS BY THEABIKEWOMAN",
     link: "bridals/bridal-1",

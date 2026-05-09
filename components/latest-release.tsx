@@ -24,6 +24,20 @@ const latestCollectionData = [
     link: "ready-to-wear/mirabel-dress",
   },
   {
+    id: "adire-2in1-set",
+    mediaSrc: `${CDNUrl}/adire-2in1-set-1.jpg`,
+    title: "ADIRE 2 IN 1 SET",
+    description: "ADIRE 2 IN 1 SET",
+    link: "ready-to-wear/adire-2in1-set",
+  },
+  {
+    id: "adire-velvety",
+    mediaSrc: `${CDNUrl}/adire-velvety-1.jpg`,
+    title: "ADIRE VELVETY",
+    description: "ADIRE VELVETY",
+    link: "ready-to-wear/adire-velvety",
+  },
+  {
     id: "sharon-dress",
     mediaSrc: `${CDNUrl}/sharon-dress-8.png`,
     title: "SHARON DRESS",
@@ -60,7 +74,6 @@ const latestCollectionData = [
     description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
     link: "bridals/zahara-dress",
   },
-
   {
     id: "ariella-dress",
     mediaSrc:
@@ -92,33 +105,6 @@ const latestCollectionData = [
     link: "nuach/atofarati-set",
   },
   {
-    id: "babara-dress",
-    mediaSrc:
-      `${CDNUrl}/barabara-dress-1.mp4`,
-    title: "BABARA DRESS",
-    description: (
-      <>
-        Oluwa a seun Babara l&apos;aye eh ( God will do unimaginable things in
-        your life) <br />
-        Babara dress - under- bust wrap skater dress
-      </>
-    ),
-    link: "nuach/babara-dress",
-  },
-  {
-    id: "hana-set",
-    mediaSrc: `${CDNUrl}/hana-set-1.mp4`,
-    title: "HANA SET",
-    description: (
-      <>
-        HANA SET <br />
-        <br /> A bask blouse with drape from right shoulder with an embellished
-        trimming on the hem paired with a knee length skirt made in tweed
-      </>
-    ),
-    link: "nuach/hana-set",
-  },
-  {
     id: "iye-dress",
     mediaSrc: `${CDNUrl}/iye-dress-1.mp4`,
     title: "IYE DRESS",
@@ -145,13 +131,6 @@ const latestCollectionData = [
       </>
     ),
     link: "nuach/shalom-set",
-  },
-  {
-    id: "tamara-dress",
-    mediaSrc: `${CDNUrl}/tamara-dress-1.mp4`,
-    title: "TAMARA DRESS",
-    description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
-    link: "nuach/tamara-dress",
   },
 ];
 
