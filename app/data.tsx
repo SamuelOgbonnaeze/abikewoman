@@ -211,13 +211,13 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "ankara-panel-dress",
     media: [
-      { id: "1", url: "/ankara-panel-dress-1.mov" },
-      { id: "2", url: "/ankara-panel-dress-1.heic" },
-      { id: "3", url: "/ankara-panel-dress-2.heic" },
-      { id: "4", url: "/ankara-panel-dress-3.heic" },
-      { id: "5", url: "/ankara-panel-dress-4.heic" },
-      { id: "6", url: "/ankara-panel-dress-5.heic" },
-      { id: "7", url: "/ankara-panel-dress-6.heic" }
+      { id: "1", url: `${CDNUrl}/ankara-panel-dress-1.mp4` },
+      { id: "2", url: `${CDNUrl}/ankara-panel-dress-1.jpg` },
+      { id: "3", url: `${CDNUrl}/ankara-panel-dress-2.jpg` },
+      { id: "4", url: `${CDNUrl}/ankara-panel-dress-3.jpg` },
+      { id: "5", url: `${CDNUrl}/ankara-panel-dress-4.jpg` },
+      { id: "6", url: `${CDNUrl}/ankara-panel-dress-5.jpg` },
+      { id: "7", url: `${CDNUrl}/ankara-panel-dress-6.jpg` }
     ],
     title: "THE ANKARA PANEL DRESS",
     category: "Ready To Wear",

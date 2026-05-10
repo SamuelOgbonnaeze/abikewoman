@@ -4,6 +4,7 @@ import ffmpeg from 'fluent-ffmpeg';
 import ffmpegPath from '@ffmpeg-installer/ffmpeg';
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
 // Set ffmpeg path
 ffmpeg.setFfmpegPath(ffmpegPath.path);
@@ -17,27 +18,36 @@ async function optimizeImages() {
   }
 
   const files = fs.readdirSync(publicDir);
-  const imageFiles = files.filter(file => /\.(jpg|jpeg|png)$/i.test(file));
+  // Now includes .heic files
+  const imageFiles = files.filter(file => /\.(jpg|jpeg|png|heic)$/i.test(file));
 
   console.log('\n🖼️  Optimizing Images...\n');
 
   for (const file of imageFiles) {
     const inputPath = path.join(publicDir, file);
-    const outputPath = path.join(outputDir, file);
+    // Convert .heic → .jpg, keep everything else as-is
+    const outputFileName = file.replace(/\.heic$/i, '.jpg');
+    const outputPath = path.join(outputDir, outputFileName);
     
     try {
-      await sharp(inputPath)
-        .resize(1920, null, { 
-          withoutEnlargement: true,
-        })
-        .jpeg({ quality: 80, progressive: true })
-        .toFile(outputPath);
+      if (/\.heic$/i.test(file)) {
+        // Use macOS sips to convert HEIC → JPEG (sharp lacks HEIC support in this build)
+        execSync(`sips -s format jpeg "${inputPath}" --out "${outputPath}"`, { stdio: 'pipe' });
+      } else {
+        await sharp(inputPath)
+          .resize(1920, null, { 
+            withoutEnlargement: true,
+          })
+          .jpeg({ quality: 80, progressive: true })
+          .toFile(outputPath);
+      }
       
       const originalSize = fs.statSync(inputPath).size;
       const optimizedSize = fs.statSync(outputPath).size;
       const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(2);
       
-      console.log(`${file}: ${(originalSize / 1024 / 1024).toFixed(2)}MB -> ${(optimizedSize / 1024 / 1024).toFixed(2)}MB (${savings}% saved)`);
+      const label = outputFileName !== file ? `${file} → ${outputFileName}` : file;
+      console.log(`${label}: ${(originalSize / 1024 / 1024).toFixed(2)}MB -> ${(optimizedSize / 1024 / 1024).toFixed(2)}MB (${savings}% saved)`);
     } catch (err) {
       console.error(` Failed to optimize ${file}:`, err);
     }
@@ -53,13 +63,16 @@ async function optimizeVideos() {
   }
 
   const files = fs.readdirSync(publicDir);
-  const videoFiles = files.filter(file => /\.mp4$/i.test(file));
+  // Now includes .mov files
+  const videoFiles = files.filter(file => /\.(mp4|mov)$/i.test(file));
 
   console.log('\n🎬 Optimizing Videos...\n');
 
   for (const file of videoFiles) {
     const inputPath = path.join(publicDir, file);
-    const outputPath = path.join(outputDir, file);
+    // Convert .mov → .mp4, keep .mp4 as-is
+    const outputFileName = file.replace(/\.mov$/i, '.mp4');
+    const outputPath = path.join(outputDir, outputFileName);
     
     try {
       await new Promise<void>((resolve, reject) => {
@@ -79,7 +92,8 @@ async function optimizeVideos() {
             const optimizedSize = fs.statSync(outputPath).size;
             const savings = ((1 - optimizedSize / originalSize) * 100).toFixed(2);
             
-            console.log(`✅ ${file}: ${(originalSize / 1024 / 1024).toFixed(2)}MB -> ${(optimizedSize / 1024 / 1024).toFixed(2)}MB (${savings}% saved)`);
+            const label = outputFileName !== file ? `${file} → ${outputFileName}` : file;
+            console.log(`✅ ${label}: ${(originalSize / 1024 / 1024).toFixed(2)}MB -> ${(optimizedSize / 1024 / 1024).toFixed(2)}MB (${savings}% saved)`);
             resolve();
           })
           .on('error', (err: Error) => {
@@ -106,7 +120,8 @@ async function optimizeMedia() {
   const publicDir = path.join(process.cwd(), 'public');
   const outputDir = path.join(process.cwd(), 'public-optimized');
   
-  const originalFiles = fs.readdirSync(publicDir).filter(f => /\.(jpg|jpeg|png|mp4)$/i.test(f));
+  // Include all supported source formats
+  const originalFiles = fs.readdirSync(publicDir).filter(f => /\.(jpg|jpeg|png|heic|mp4|mov)$/i.test(f));
   const totalOriginal = originalFiles.reduce((sum, file) => {
     return sum + fs.statSync(path.join(publicDir, file)).size;
   }, 0);
