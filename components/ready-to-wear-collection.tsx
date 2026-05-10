@@ -4,6 +4,13 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const readyToWearCollectionData = [
   {
+    id: "ankara-panel-dress",
+    mediaSrc: "/ankara-panel-dress-1.mov",
+    title: "THE ANKARA PANEL DRESS",
+    description: <>THE ANKARA PANEL DRESS</>,
+    link: "ready-to-wear/ankara-panel-dress",
+  },
+  {
     id: "mirabel-dress",
     mediaSrc: `${CDNUrl}/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",

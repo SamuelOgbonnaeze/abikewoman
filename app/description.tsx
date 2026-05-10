@@ -747,6 +747,26 @@ export const AdebisiDesc = () => {
   );
 };
 
+export const AnkaraPanelDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">THE ANKARA PANEL DRESS✨✨</i>
+      <p>
+        Three different Ankara prints perfectly blended into one stunning gown.
+      </p>
+      <p>
+        Now, add the sparkle of broken & crystal beads on the panel on the
+        chest, catching every bit of light.
+      </p>
+      <p>
+        Finish it off with those Ankara straps dangling , moving every time you
+        do. It’s not just a dress; it’s an experience.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
 
 
 

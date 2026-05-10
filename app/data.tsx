@@ -43,6 +43,7 @@ import {
   AdireVelvetyDesc,
   LaNouvelleDesc,
   AdebisiDesc,
+  AnkaraPanelDressDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -207,6 +208,25 @@ export const collectionsData: CollectionItem[] = [
   },
 
   // ===== Igbatuntun Collection =====
+  {
+    id: "ankara-panel-dress",
+    media: [
+      { id: "1", url: "/ankara-panel-dress-1.mov" },
+      { id: "2", url: "/ankara-panel-dress-1.heic" },
+      { id: "3", url: "/ankara-panel-dress-2.heic" },
+      { id: "4", url: "/ankara-panel-dress-3.heic" },
+      { id: "5", url: "/ankara-panel-dress-4.heic" },
+      { id: "6", url: "/ankara-panel-dress-5.heic" },
+      { id: "7", url: "/ankara-panel-dress-6.heic" }
+    ],
+    title: "THE ANKARA PANEL DRESS",
+    category: "Ready To Wear",
+    description: <AnkaraPanelDressDesc />,
+    link: "ready-to-wear/ankara-panel-dress",
+    price: 65000,
+    priceGBP: undefined,
+    priceCAD: 71,
+  },
   {
     id: "aduke-set",
     media: [
