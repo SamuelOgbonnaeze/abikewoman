@@ -223,9 +223,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Ready To Wear",
     description: <AnkaraPanelDressDesc />,
     link: "ready-to-wear/ankara-panel-dress",
-    price: 65000,
+    price: 73000,
     priceGBP: undefined,
-    priceCAD: 71,
+    priceCAD: 80,
   },
   {
     id: "aduke-set",
@@ -913,7 +913,7 @@ export const collectionsData: CollectionItem[] = [
     link: "nuach/tamara-dress",
     price: 46500,
     priceGBP: undefined,
-    priceCAD: 55,
+    priceCAD: 51,
   },
   {
     id: "tirzah-dress",
