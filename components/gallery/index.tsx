@@ -21,21 +21,25 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
           ))}
         </TabList>
       </div>
-      <TabPanels className="aspect-square w-full">
+      <TabPanels className="w-full">
         {images.map((image) => (
           <TabPanel key={image.id}>
-            <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
-              {isVideo(image.url) ? (
+            {isVideo(image.url) ? (
+              /* Portrait video — natural aspect ratio, no cropping */
+              <div className="relative w-full aspect-[9/16] sm:aspect-[3/4] sm:rounded-lg overflow-hidden bg-black">
                 <video
                   src={image.url}
-                  className="absolute inset-0 w-full h-full object-cover object-center"
+                  className="absolute inset-0 w-full h-full object-contain"
                   controls
                   loop
                   playsInline
                   autoPlay
                   preload="auto"
                 />
-              ) : (
+              </div>
+            ) : (
+              /* Image — keep original square crop behaviour */
+              <div className="aspect-square relative h-full w-full sm:rounded-lg overflow-hidden">
                 <Image
                   fill
                   src={image.url}
@@ -43,8 +47,8 @@ const Gallery: React.FC<GalleryProps> = ({ images }) => {
                   className="object-cover object-center"
                   priority
                 />
-              )}
-            </div>
+              </div>
+            )}
           </TabPanel>
         ))}
       </TabPanels>

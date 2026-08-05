@@ -44,6 +44,10 @@ import {
   LaNouvelleDesc,
   AdebisiDesc,
   AnkaraPanelDressDesc,
+  HadizaDesc,
+  BerylDesc,
+  ArewaDesc,
+  OpalDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1061,5 +1065,51 @@ export const collectionsData: CollectionItem[] = [
     price: 65000,
     priceGBP: undefined,
     priceCAD: 71,
+  },
+
+  // ===== Adelaide Collection =====
+  {
+    id: "arewa-set",
+    media: [
+      { id: "1", url: `${CDNUrl}/arewa_set.mp4` },
+    ],
+    title: "AREWA SET",
+    category: "Adelaide Collection",
+    description: <ArewaDesc />,
+    link: "adelaide/arewa-set",
+  },
+  {
+    id: "beryl-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/beryl_dress.mp4` },
+    ],
+    title: "BERYL DRESS",
+    category: "Adelaide Collection",
+    description: <BerylDesc />,
+    link: "adelaide/beryl-dress",
+  },
+  {
+    id: "hadiza-set",
+    media: [
+      { id: "1", url: `${CDNUrl}/hadiza_set.mp4` },
+    ],
+    title: "HADIZA SET",
+    category: "Adelaide Collection",
+    description: <HadizaDesc />,
+    link: "adelaide/hadiza-set",
+    priceVariations: [
+      { style: "Full Length Skirt", price: 80000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Midi Length Skirt", price: 75000, priceGBP: undefined, priceCAD: undefined },
+    ],
+  },
+  {
+    id: "opal-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/opal_dress.mp4` },
+    ],
+    title: "OPAL DRESS",
+    category: "Adelaide Collection",
+    description: <OpalDesc />,
+    link: "adelaide/opal-dress",
   },
 ];

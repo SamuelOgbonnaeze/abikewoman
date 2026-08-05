@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 const collections = [
+  { name: "Adelaide Collection", href: "#adelaide" },
   { name: "Nuach Collection", href: "#nuach" },
   { name: "Bridals", href: "#bridals" },
   { name: "Ready To Wear", href: "#ready-to-wear" },

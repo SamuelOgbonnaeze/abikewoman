@@ -1,11 +1,20 @@
+import dynamic from "next/dynamic";
 import AdBanner from "@/components/ad-banner";
 import Banner from "@/components/banner";
-import { BridalsCollection } from "@/components/bridals";
 import Hero from "@/components/hero";
 import { CategoryChips } from "@/components/category-chips";
 import { LatestReleases } from "@/components/latest-release";
-import { NuachCollection } from "@/components/nuach-collection";
-import { ReadyToWearCollection } from "@/components/ready-to-wear-collection";
+import { AdelaideCollection } from "@/components/adelaide-collection";
+
+const NuachCollection = dynamic(
+  () => import("@/components/nuach-collection").then((mod) => mod.NuachCollection)
+);
+const BridalsCollection = dynamic(
+  () => import("@/components/bridals").then((mod) => mod.BridalsCollection)
+);
+const ReadyToWearCollection = dynamic(
+  () => import("@/components/ready-to-wear-collection").then((mod) => mod.ReadyToWearCollection)
+);
 
 export default function Home() {
   return (
@@ -17,6 +26,7 @@ export default function Home() {
       </div>
       <div className="flex-col w-full space-y-[65px] px-[8px] md:px-[15px] lg:px-[40px] ">
         <LatestReleases />
+        <AdelaideCollection />
         <NuachCollection />
         <BridalsCollection />
       </div>

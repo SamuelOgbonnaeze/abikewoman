@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import { ProductCard } from "./product-card";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -31,24 +34,10 @@ const latestCollectionData = [
         • Quietly elegant.<br />
         <br />
         You can start planning your next Sunday fit with us,🤭😍<br />
-        We’re just a DM away.🤗
+        We're just a DM away.🤗
       </>
     ),
     link: "ready-to-wear/mirabel-dress",
-  },
-  {
-    id: "adire-2in1-set",
-    mediaSrc: `${CDNUrl}/adire-2in1-set-1.jpg`,
-    title: "ADIRE 2 IN 1 SET",
-    description: "ADIRE 2 IN 1 SET",
-    link: "ready-to-wear/adire-2in1-set",
-  },
-  {
-    id: "adire-velvety",
-    mediaSrc: `${CDNUrl}/adire-velvety-1.jpg`,
-    title: "ADIRE VELVETY",
-    description: "ADIRE VELVETY",
-    link: "ready-to-wear/adire-velvety",
   },
   {
     id: "sharon-dress",
@@ -88,36 +77,6 @@ const latestCollectionData = [
     link: "bridals/zahara-dress",
   },
   {
-    id: "ariella-dress",
-    mediaSrc:
-      `${CDNUrl}/ariella-dress-1.mp4`,
-    title: "ARIELLA DRESS",
-    description: (
-      <>
-        Ariella means Lioness of God <br />
-        <br />
-        In every context you find yourself, you&apos;ve been made to be brave,
-        my woman, live boldly.
-      </>
-    ),
-    link: "nuach/ariella-dress",
-  },
-  {
-    id: "atofarati-set",
-    mediaSrc:
-      `${CDNUrl}/atofarati-set-1.mp4`,
-    title: "ATOFARATI SET",
-    description: (
-      <>
-        Atofarati SET - an uneven wrap blouse paired with a pant <br />
-        <br />
-        May the Lord continually be your support , your defense, rock solid like
-        the mountain.
-      </>
-    ),
-    link: "nuach/atofarati-set",
-  },
-  {
     id: "iye-dress",
     mediaSrc: `${CDNUrl}/iye-dress-1.mp4`,
     title: "IYE DRESS",
@@ -145,13 +104,76 @@ const latestCollectionData = [
     ),
     link: "nuach/shalom-set",
   },
+  // ===== Adelaide Collection =====
+  {
+    id: "arewa-set",
+    mediaSrc: `${CDNUrl}/arewa_set.mp4`,
+    title: "AREWA SET ✨",
+    description: (
+      <>
+        AREWA SET ✨ <br />
+        <br />
+        A bubu-like top paired with A-line skirt with a middle slit. Available
+        in different prints and colors.
+      </>
+    ),
+    link: "adelaide/arewa-set",
+  },
+  {
+    id: "beryl-dress",
+    mediaSrc: `${CDNUrl}/beryl_dress.mp4`,
+    title: "BERYL DRESS 💎",
+    description: (
+      <>
+        BERYL DRESS 💎 <br />
+        <br />
+        An asymmetric bubu made from raw silk. She&apos;s freedom and exquisite.
+        She&apos;s Beryl.
+      </>
+    ),
+    link: "adelaide/beryl-dress",
+  },
+  {
+    id: "hadiza-set",
+    mediaSrc: `${CDNUrl}/hadiza_set.mp4`,
+    title: "HADIZA SET 💕",
+    description: (
+      <>
+        HADIZA SET 💕 <br />
+        <br />
+        A crop shirt made from stripes cotton paired with Asooke skirt with
+        exaggerated hip. For the woman who owns her softness and her power.
+      </>
+    ),
+    link: "adelaide/hadiza-set",
+  },
+  {
+    id: "opal-dress",
+    mediaSrc: `${CDNUrl}/opal_dress.mp4`,
+    title: "OPAL DRESS",
+    description: (
+      <>
+        OPAL DRESS ✨ <br />
+        <br />
+        Made from taffeta (2 colors combined) with sprinkles of gold trimmings.
+        Opal was made for you. Yes you 🥰
+      </>
+    ),
+    link: "adelaide/opal-dress",
+  },
 ];
 
 export const LatestReleases = () => {
-  // Shuffle array and get 4 random items
-  const randomFour = [...latestCollectionData]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4);
+  // Deterministic default during SSR to prevent hydration mismatch
+  const [items, setItems] = useState(() => latestCollectionData.slice(0, 4));
+
+  useEffect(() => {
+    // Shuffle array and get 4 random items after client mount
+    const randomFour = [...latestCollectionData]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 4);
+    setItems(randomFour);
+  }, []);
 
   return (
     <div id="latest" className="mt-4 max-w-[1440px] mx-auto w-full">
@@ -160,7 +182,7 @@ export const LatestReleases = () => {
       </p>
 
       <div className="mt-[38px] grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-3 gap-y-4 justify-items-center">
-        {randomFour.map((item) => (
+        {items.map((item) => (
           <ProductCard
             key={item.id}
             mediaSrc={item.mediaSrc}

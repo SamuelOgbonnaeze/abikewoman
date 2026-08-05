@@ -97,7 +97,7 @@ export const ProductCard = ({
                 loop
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
                 onLoadedData={() => setIsLoaded(true)}
                 onCanPlayThrough={() => setIsLoaded(true)}
               />

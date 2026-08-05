@@ -766,6 +766,67 @@ export const AnkaraPanelDressDesc = () => {
     </div>
   );
 };
+// ===== Adelaide Collection =====
+
+export const HadizaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        For the woman who owns her softness and her power.
+      </i>
+      <p>
+        A crop shirt made from stripes cotton, with soft lace trimming at the
+        hem and a belt to cinch the waist, paired with an Asooke skirt with
+        exaggerated hip.
+      </p>
+      <p>Skirt can come in midi or full length.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+export const BerylDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">She&apos;s freedom and exquisite. She&apos;s Beryl.</i>
+      <p>
+        An asymmetric bubu made from raw silk with a solid embroidery on the
+        neckline and tassels at the hem.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+export const ArewaDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">Elegance meets freedom — that&apos;s Arewa.</i>
+      <p>
+        Arewa set features a bubu-like top with an inner belt to cinch waist in
+        front, paired with an A-line skirt with a middle slit.
+      </p>
+      <p>
+        Made in 2 variations: adire silk and chiffon; or plain chiffon and crepe
+        (2-colored). Available in different prints and colors.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+export const OpalDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">Opal was made for you. Yes, you. 🥰</i>
+      <p>
+        Opal is made from taffeta (2 colors combined) with sprinkles of gold
+        trimmings ✨
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
 
 
 
