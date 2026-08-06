@@ -49,6 +49,7 @@ import {
   ArewaDesc,
   OpalDesc,
   UrbanWrapDressDesc,
+  TheJeanDressDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1110,6 +1111,19 @@ export const collectionsData: CollectionItem[] = [
       { style: "Full Length Skirt", price: 80000, priceGBP: undefined, priceCAD: undefined },
       { style: "Midi Length Skirt", price: 75000, priceGBP: undefined, priceCAD: undefined },
     ],
+  },
+  {
+    id: "the-jean-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/the_jean_dress.mp4` },
+    ],
+    title: "THE JEAN DRESS",
+    category: "Adelaide Collection",
+    description: <TheJeanDressDesc />,
+    link: "adelaide/the-jean-dress",
+    price: 45000,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
   {
     id: "opal-dress",

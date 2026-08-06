@@ -62,6 +62,19 @@ const adelaideCollectionData = [
     link: "adelaide/hadiza-set",
   },
   {
+    id: "the-jean-dress",
+    mediaSrc: `${CDNUrl}/the_jean_dress.mp4`,
+    title: "THE JEAN DRESS ✨",
+    description: (
+      <>
+        A kimono shirt dress made from a unique Jean with guipure lace edges at the hem. <br />
+        <br />
+        Every girl deserves “THE JEAN DRESS” 💙
+      </>
+    ),
+    link: "adelaide/the-jean-dress",
+  },
+  {
     id: "opal-dress",
     mediaSrc: `${CDNUrl}/opal_dress.mp4`,
     title: "OPAL DRESS",

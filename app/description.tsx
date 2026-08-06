@@ -844,6 +844,20 @@ export const UrbanWrapDressDesc = () => {
   );
 };
 
+export const TheJeanDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">Every girl deserves “THE JEAN DRESS”</i>
+      <p>
+        The Jean shirt is a kimono shirt dress, made from a unique Jean that
+        has guipure lace edges at the hem.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+
 
 
 
