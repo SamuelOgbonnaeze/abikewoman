@@ -48,6 +48,7 @@ import {
   BerylDesc,
   ArewaDesc,
   OpalDesc,
+  UrbanWrapDressDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1078,6 +1079,10 @@ export const collectionsData: CollectionItem[] = [
     category: "Adelaide Collection",
     description: <ArewaDesc />,
     link: "adelaide/arewa-set",
+    priceVariations: [
+      { style: "Adire Silk & Chiffon", price: 55000, priceGBP: undefined, priceCAD: undefined },
+      { style: "Chiffon & Crepe", price: 50000, priceGBP: undefined, priceCAD: undefined },
+    ],
   },
   {
     id: "beryl-dress",
@@ -1088,6 +1093,9 @@ export const collectionsData: CollectionItem[] = [
     category: "Adelaide Collection",
     description: <BerylDesc />,
     link: "adelaide/beryl-dress",
+    price: 55000,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
   {
     id: "hadiza-set",
@@ -1112,5 +1120,21 @@ export const collectionsData: CollectionItem[] = [
     category: "Adelaide Collection",
     description: <OpalDesc />,
     link: "adelaide/opal-dress",
+    price: 40000,
+    priceGBP: undefined,
+    priceCAD: undefined,
+  },
+  {
+    id: "urban-wrap-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/urban_wrap_dress.mp4` },
+    ],
+    title: "URBAN WRAP DRESS",
+    category: "Adelaide Collection",
+    description: <UrbanWrapDressDesc />,
+    link: "adelaide/urban-wrap-dress",
+    price: 50000,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
 ];

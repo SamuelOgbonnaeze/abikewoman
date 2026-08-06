@@ -7,19 +7,6 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const latestCollectionData = [
   {
-    id: "ankara-panel-dress",
-    mediaSrc: `${CDNUrl}/ankara_panel_dress.mp4`,
-    title: "THE ANKARA PANEL DRESS",
-    description: (
-      <>
-        THE ANKARA PANEL DRESS✨✨ <br />
-        <br />
-        Three different Ankara prints perfectly blended into one stunning gown.
-      </>
-    ),
-    link: "adelaide/ankara-panel-dress",
-  },
-  {
     id: "mirabel-dress",
     mediaSrc: `${CDNUrl}/mirabel-dress-1.mp4`,
     title: "MIRABEL DRESS",
@@ -90,21 +77,20 @@ const latestCollectionData = [
     ),
     link: "nuach/iye-dress",
   },
+  // ===== Adelaide Collection (Alphabetical) =====
   {
-    id: "shalom-set",
-    mediaSrc: `${CDNUrl}/shalom-set-1.mp4`,
-    title: "SHALOM SET",
+    id: "ankara-panel-dress",
+    mediaSrc: `${CDNUrl}/ankara_panel_dress.mp4`,
+    title: "THE ANKARA PANEL DRESS ✨",
     description: (
       <>
-        The Peace that surpasses understanding will rule your days <br />
+        THE ANKARA PANEL DRESS✨✨ <br />
         <br />
-        Shalom set is a A fitted blouse with a drape from the left shoulder
-        paired with pants.
+        Three different Ankara prints perfectly blended into one stunning gown.
       </>
     ),
-    link: "nuach/shalom-set",
+    link: "adelaide/ankara-panel-dress",
   },
-  // ===== Adelaide Collection =====
   {
     id: "arewa-set",
     mediaSrc: `${CDNUrl}/arewa_set.mp4`,
@@ -160,6 +146,19 @@ const latestCollectionData = [
       </>
     ),
     link: "adelaide/opal-dress",
+  },
+  {
+    id: "urban-wrap-dress",
+    mediaSrc: `${CDNUrl}/urban_wrap_dress.mp4`,
+    title: "URBAN WRAP DRESS ✨",
+    description: (
+      <>
+        URBAN WRAP DRESS ✨ <br />
+        <br />
+        Made from finest Ankara and high grade taffeta with asymmetric sides and tassels on the hem.
+      </>
+    ),
+    link: "adelaide/urban-wrap-dress",
   },
 ];
 

@@ -828,6 +828,23 @@ export const OpalDesc = () => {
   );
 };
 
+export const UrbanWrapDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        Made from one of the finest ankaras and high grade tafetta.
+      </i>
+      <p>
+        Asymmetric from the sides with tassels on the hem with a touch another
+        print of stoned Ankara forming a lapel on the chest.
+      </p>
+      <p>Available in different prints.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+
 
 
 

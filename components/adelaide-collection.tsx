@@ -75,6 +75,19 @@ const adelaideCollectionData = [
     ),
     link: "adelaide/opal-dress",
   },
+  {
+    id: "urban-wrap-dress",
+    mediaSrc: `${CDNUrl}/urban_wrap_dress.mp4`,
+    title: "URBAN WRAP DRESS ✨",
+    description: (
+      <>
+        Made from one of the finest ankaras and high grade tafetta. <br />
+        <br />
+        Asymmetric from the sides with tassels on the hem with a touch another print of stoned Ankara forming a lapel on the chest.
+      </>
+    ),
+    link: "adelaide/urban-wrap-dress",
+  },
 ];
 
 export const AdelaideCollection = () => {
