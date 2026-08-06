@@ -213,25 +213,6 @@ export const collectionsData: CollectionItem[] = [
 
   // ===== Igbatuntun Collection =====
   {
-    id: "ankara-panel-dress",
-    media: [
-      { id: "1", url: `${CDNUrl}/ankara-panel-dress-1.mp4` },
-      { id: "2", url: `${CDNUrl}/ankara-panel-dress-1.jpg` },
-      { id: "3", url: `${CDNUrl}/ankara-panel-dress-2.jpg` },
-      { id: "4", url: `${CDNUrl}/ankara-panel-dress-3.jpg` },
-      { id: "5", url: `${CDNUrl}/ankara-panel-dress-4.jpg` },
-      { id: "6", url: `${CDNUrl}/ankara-panel-dress-5.jpg` },
-      { id: "7", url: `${CDNUrl}/ankara-panel-dress-6.jpg` }
-    ],
-    title: "THE ANKARA PANEL DRESS",
-    category: "Ready To Wear",
-    description: <AnkaraPanelDressDesc />,
-    link: "ready-to-wear/ankara-panel-dress",
-    price: 73000,
-    priceGBP: undefined,
-    priceCAD: 80,
-  },
-  {
     id: "aduke-set",
     media: [
       { id: "9", url: `${CDNUrl}/aduke-set-9.jpg` },
@@ -1068,6 +1049,25 @@ export const collectionsData: CollectionItem[] = [
   },
 
   // ===== Adelaide Collection =====
+  {
+    id: "ankara-panel-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/ankara-panel-dress-1.mp4` },
+      { id: "2", url: `${CDNUrl}/ankara-panel-dress-1.jpg` },
+      { id: "3", url: `${CDNUrl}/ankara-panel-dress-2.jpg` },
+      { id: "4", url: `${CDNUrl}/ankara-panel-dress-3.jpg` },
+      { id: "5", url: `${CDNUrl}/ankara-panel-dress-4.jpg` },
+      { id: "6", url: `${CDNUrl}/ankara-panel-dress-5.jpg` },
+      { id: "7", url: `${CDNUrl}/ankara-panel-dress-6.jpg` }
+    ],
+    title: "THE ANKARA PANEL DRESS",
+    category: "Adelaide Collection",
+    description: <AnkaraPanelDressDesc />,
+    link: "adelaide/ankara-panel-dress",
+    price: 73000,
+    priceGBP: undefined,
+    priceCAD: 80,
+  },
   {
     id: "arewa-set",
     media: [

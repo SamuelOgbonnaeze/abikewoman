@@ -17,7 +17,7 @@ const latestCollectionData = [
         Three different Ankara prints perfectly blended into one stunning gown.
       </>
     ),
-    link: "ready-to-wear/ankara-panel-dress",
+    link: "adelaide/ankara-panel-dress",
   },
   {
     id: "mirabel-dress",

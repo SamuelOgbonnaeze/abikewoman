@@ -6,6 +6,19 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const adelaideCollectionData = [
   {
+    id: "ankara-panel-dress",
+    mediaSrc: `${CDNUrl}/ankara-panel-dress-1.mp4`,
+    title: "THE ANKARA PANEL DRESS ✨",
+    description: (
+      <>
+        THE ANKARA PANEL DRESS✨✨ <br />
+        <br />
+        Three different Ankara prints perfectly blended into one stunning gown.
+      </>
+    ),
+    link: "adelaide/ankara-panel-dress",
+  },
+  {
     id: "arewa-set",
     mediaSrc: `${CDNUrl}/arewa_set.mp4`,
     title: "AREWA SET ✨",
