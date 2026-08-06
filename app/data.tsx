@@ -1052,13 +1052,14 @@ export const collectionsData: CollectionItem[] = [
   {
     id: "ankara-panel-dress",
     media: [
-      { id: "1", url: `${CDNUrl}/ankara-panel-dress-1.mp4` },
-      { id: "2", url: `${CDNUrl}/ankara-panel-dress-1.jpg` },
-      { id: "3", url: `${CDNUrl}/ankara-panel-dress-2.jpg` },
-      { id: "4", url: `${CDNUrl}/ankara-panel-dress-3.jpg` },
-      { id: "5", url: `${CDNUrl}/ankara-panel-dress-4.jpg` },
-      { id: "6", url: `${CDNUrl}/ankara-panel-dress-5.jpg` },
-      { id: "7", url: `${CDNUrl}/ankara-panel-dress-6.jpg` }
+      { id: "1", url: `${CDNUrl}/ankara_panel_dress.mp4` },
+      { id: "2", url: `${CDNUrl}/ankara-panel-dress-1.mp4` },
+      { id: "3", url: `${CDNUrl}/ankara-panel-dress-1.jpg` },
+      { id: "4", url: `${CDNUrl}/ankara-panel-dress-2.jpg` },
+      { id: "5", url: `${CDNUrl}/ankara-panel-dress-3.jpg` },
+      { id: "6", url: `${CDNUrl}/ankara-panel-dress-4.jpg` },
+      { id: "7", url: `${CDNUrl}/ankara-panel-dress-5.jpg` },
+      { id: "8", url: `${CDNUrl}/ankara-panel-dress-6.jpg` }
     ],
     title: "THE ANKARA PANEL DRESS",
     category: "Adelaide Collection",

@@ -7,7 +7,7 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const adelaideCollectionData = [
   {
     id: "ankara-panel-dress",
-    mediaSrc: `${CDNUrl}/ankara-panel-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/ankara_panel_dress.mp4`,
     title: "THE ANKARA PANEL DRESS ✨",
     description: (
       <>
