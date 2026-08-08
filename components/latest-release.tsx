@@ -42,41 +42,6 @@ const latestCollectionData = [
     ),
     link: "bridals/sharon-dress",
   },
-  {
-    id: "eden-dress",
-    mediaSrc: `${CDNUrl}/eden.mp4`,
-    title: "EDEN DRESS",
-    description: "Eden is where beauty began. A gown made for the woman stepping into love, rest, and forever.",
-    link: "bridals/eden-dress",
-  },
-  {
-    id: "beulah-dress",
-    mediaSrc: `${CDNUrl}/beulah.mp4`,
-    title: "BEULAH DRESS",
-    description: "Beulah is beloved, she is cherished, and it shows. A gown made for the woman stepping into love, commitment, and a lifetime of grace.",
-    link: "bridals/beulah-dress",
-  },
-  {
-    id: "zahara-dress",
-    mediaSrc: `${CDNUrl}/zahara.mp4`,
-    title: "ZAHARA DRESS",
-    description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
-    link: "bridals/zahara-dress",
-  },
-  {
-    id: "iye-dress",
-    mediaSrc: `${CDNUrl}/iye-dress-1.mp4`,
-    title: "IYE DRESS",
-    description: (
-      <>
-        ÌYÈ means life - To every abikewoman , May God&apos;s breath of life be
-        upon all that you do. <br />
-        <br />
-        ÌYÈ has 3 variations;
-      </>
-    ),
-    link: "nuach/iye-dress",
-  },
   // ===== Adelaide Collection (Alphabetical) =====
   {
     id: "ankara-panel-dress",
@@ -120,6 +85,19 @@ const latestCollectionData = [
     link: "adelaide/beryl-dress",
   },
   {
+    id: "color-bloom-dress",
+    mediaSrc: `${CDNUrl}/color_bloom_dress.mp4`,
+    title: "COLOR BLOOM DRESS 🌺",
+    description: (
+      <>
+        THE COLOR BLOOM DRESS 🌺 <br />
+        <br />
+        Made from raw silk and organdy with an inner belt to cinch the waist and beading details on chest.
+      </>
+    ),
+    link: "adelaide/color-bloom-dress",
+  },
+  {
     id: "hadiza-set",
     mediaSrc: `${CDNUrl}/hadiza_set.mp4`,
     title: "HADIZA SET 💕",
@@ -132,6 +110,19 @@ const latestCollectionData = [
       </>
     ),
     link: "adelaide/hadiza-set",
+  },
+  {
+    id: "lerin-set",
+    mediaSrc: `${CDNUrl}/lerin_set.mp4`,
+    title: "LERIN SET ✨",
+    description: (
+      <>
+        LERIN SET ✨ <br />
+        <br />
+        A crop shirt paired with a cowl pant made from 2 prints of adire crepe.
+      </>
+    ),
+    link: "adelaide/lerin-set",
   },
   {
     id: "the-jean-dress",

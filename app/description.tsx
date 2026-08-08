@@ -857,6 +857,34 @@ export const TheJeanDressDesc = () => {
   );
 };
 
+export const ColorBloomDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">THE COLOR BLOOM DRESS 🌺</i>
+      <p>
+        Made from raw silk and organdy with an inner belt to cinch the waist.
+        Peep the beading detail on the right side of the chest✨✨
+      </p>
+      <p>Available in different colors.</p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+export const LerinSetDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">LERIN SET</i>
+      <p>
+        Lerin set is a crop shirt paired with a cowl pant. Made from 2 prints
+        of adire crepe.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+
 
 
 

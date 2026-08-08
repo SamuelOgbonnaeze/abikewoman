@@ -47,6 +47,19 @@ const adelaideCollectionData = [
     link: "adelaide/beryl-dress",
   },
   {
+    id: "color-bloom-dress",
+    mediaSrc: `${CDNUrl}/color_bloom_dress.mp4`,
+    title: "COLOR BLOOM DRESS 🌺",
+    description: (
+      <>
+        Made from raw silk and organdy with an inner belt to cinch the waist. Peep the beading detail on the right side of the chest✨✨ <br />
+        <br />
+        Available in different colors.
+      </>
+    ),
+    link: "adelaide/color-bloom-dress",
+  },
+  {
     id: "hadiza-set",
     mediaSrc: `${CDNUrl}/hadiza_set.mp4`,
     title: "HADIZA SET 💕",
@@ -60,6 +73,17 @@ const adelaideCollectionData = [
       </>
     ),
     link: "adelaide/hadiza-set",
+  },
+  {
+    id: "lerin-set",
+    mediaSrc: `${CDNUrl}/lerin_set.mp4`,
+    title: "LERIN SET ✨",
+    description: (
+      <>
+        A crop shirt paired with a cowl pant made from 2 prints of adire crepe.
+      </>
+    ),
+    link: "adelaide/lerin-set",
   },
   {
     id: "the-jean-dress",

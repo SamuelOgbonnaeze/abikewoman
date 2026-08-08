@@ -50,6 +50,8 @@ import {
   OpalDesc,
   UrbanWrapDressDesc,
   TheJeanDressDesc,
+  ColorBloomDressDesc,
+  LerinSetDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1099,6 +1101,19 @@ export const collectionsData: CollectionItem[] = [
     priceCAD: undefined,
   },
   {
+    id: "color-bloom-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/color_bloom_dress.mp4` },
+    ],
+    title: "COLOR BLOOM DRESS",
+    category: "Adelaide Collection",
+    description: <ColorBloomDressDesc />,
+    link: "adelaide/color-bloom-dress",
+    price: 50000,
+    priceGBP: undefined,
+    priceCAD: undefined,
+  },
+  {
     id: "hadiza-set",
     media: [
       { id: "1", url: `${CDNUrl}/hadiza_set.mp4` },
@@ -1111,6 +1126,19 @@ export const collectionsData: CollectionItem[] = [
       { style: "Full Length Skirt", price: 80000, priceGBP: undefined, priceCAD: undefined },
       { style: "Midi Length Skirt", price: 75000, priceGBP: undefined, priceCAD: undefined },
     ],
+  },
+  {
+    id: "lerin-set",
+    media: [
+      { id: "1", url: `${CDNUrl}/lerin_set.mp4` },
+    ],
+    title: "LERIN SET",
+    category: "Adelaide Collection",
+    description: <LerinSetDesc />,
+    link: "adelaide/lerin-set",
+    price: 57000,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
   {
     id: "the-jean-dress",
