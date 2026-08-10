@@ -52,6 +52,7 @@ import {
   TheJeanDressDesc,
   ColorBloomDressDesc,
   LerinSetDesc,
+  TheBloomSetDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1163,6 +1164,32 @@ export const collectionsData: CollectionItem[] = [
     description: <OpalDesc />,
     link: "adelaide/opal-dress",
     price: 40000,
+    priceGBP: undefined,
+    priceCAD: undefined,
+  },
+  {
+    id: "the-bloom-set",
+    media: [
+      { id: "1", url: `${CDNUrl}/the_bloom_set.mp4` },
+    ],
+    title: "THE BLOOM SET",
+    category: "Adelaide Collection",
+    description: <TheBloomSetDesc />,
+    link: "adelaide/the-bloom-set",
+    price: 75000,
+    priceGBP: undefined,
+    priceCAD: undefined,
+  },
+  {
+    id: "the-jean-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/the_jean_dress.mp4` },
+    ],
+    title: "THE JEAN DRESS",
+    category: "Adelaide Collection",
+    description: <TheJeanDressDesc />,
+    link: "adelaide/the-jean-dress",
+    price: 45000,
     priceGBP: undefined,
     priceCAD: undefined,
   },

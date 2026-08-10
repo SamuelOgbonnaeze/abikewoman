@@ -884,6 +884,20 @@ export const LerinSetDesc = () => {
   );
 };
 
+export const TheBloomSetDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">Get your BLOOM set ✨✨✨</i>
+      <p>
+        Features a peplum bubble top made from raw silk paired with brocade
+        palazzo pants.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+
 
 
 

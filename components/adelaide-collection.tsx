@@ -86,19 +86,6 @@ const adelaideCollectionData = [
     link: "adelaide/lerin-set",
   },
   {
-    id: "the-jean-dress",
-    mediaSrc: `${CDNUrl}/the_jean_dress.mp4`,
-    title: "THE JEAN DRESS ✨",
-    description: (
-      <>
-        A kimono shirt dress made from a unique Jean with guipure lace edges at the hem. <br />
-        <br />
-        Every girl deserves “THE JEAN DRESS” 💙
-      </>
-    ),
-    link: "adelaide/the-jean-dress",
-  },
-  {
     id: "opal-dress",
     mediaSrc: `${CDNUrl}/opal_dress.mp4`,
     title: "OPAL DRESS",
@@ -111,6 +98,32 @@ const adelaideCollectionData = [
       </>
     ),
     link: "adelaide/opal-dress",
+  },
+  {
+    id: "the-bloom-set",
+    mediaSrc: `${CDNUrl}/the_bloom_set.mp4`,
+    title: "THE BLOOM SET ✨",
+    description: (
+      <>
+        Features a peplum bubble top made from raw silk paired with brocade palazzo pants. <br />
+        <br />
+        Get your BLOOM set ✨✨✨
+      </>
+    ),
+    link: "adelaide/the-bloom-set",
+  },
+  {
+    id: "the-jean-dress",
+    mediaSrc: `${CDNUrl}/the_jean_dress.mp4`,
+    title: "THE JEAN DRESS ✨",
+    description: (
+      <>
+        A kimono shirt dress made from a unique Jean with guipure lace edges at the hem. <br />
+        <br />
+        Every girl deserves “THE JEAN DRESS” 💙
+      </>
+    ),
+    link: "adelaide/the-jean-dress",
   },
   {
     id: "urban-wrap-dress",
