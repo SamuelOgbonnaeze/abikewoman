@@ -5,8 +5,7 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const nuachCollectionData = [
   {
     id: "adunbarin-set",
-    mediaSrc:
-      `${CDNUrl}/adunbarin-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/adunbarin-1.jpg`,
     title: "ADUNBARIN SET",
     description: (
       <>
@@ -20,7 +19,7 @@ const nuachCollectionData = [
   },
   {
     id: "alheri-set",
-    mediaSrc: `${CDNUrl}/alheri-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/alheri-1.png`,
     title: "ALHERI SET",
     description: (
       <>
@@ -34,7 +33,7 @@ const nuachCollectionData = [
   },
   {
     id: "alora-dress",
-    mediaSrc: `${CDNUrl}/alora-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/alora-1.png`,
     title: "ALORA DRESS",
     description: (
       <>
@@ -48,8 +47,7 @@ const nuachCollectionData = [
   },
   {
     id: "ariella-dress",
-    mediaSrc:
-      `${CDNUrl}/ariella-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/ariella-1.png`,
     title: "ARIELLA DRESS",
     description: (
       <>
@@ -63,8 +61,7 @@ const nuachCollectionData = [
   },
   {
     id: "atofarati-set",
-    mediaSrc:
-      `${CDNUrl}/atofarati-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/atofarati-1.png`,
     title: "ATOFARATI SET",
     description: (
       <>
@@ -78,8 +75,7 @@ const nuachCollectionData = [
   },
   {
     id: "babara-dress",
-    mediaSrc:
-      `${CDNUrl}/barabara-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/barabara-1.jpeg`,
     title: "BABARA DRESS",
     description: (
       <>
@@ -92,7 +88,7 @@ const nuachCollectionData = [
   },
   {
     id: "danielle-set",
-    mediaSrc: `${CDNUrl}/danielle-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/danielle-1.png`,
     title: "DANIELLE SET",
     description: (
       <>
@@ -132,7 +128,7 @@ const nuachCollectionData = [
   },
   {
     id: "hana-set",
-    mediaSrc: `${CDNUrl}/hana-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/hana-1.jpg`,
     title: "HANA SET",
     description: (
       <>
@@ -145,7 +141,7 @@ const nuachCollectionData = [
   },
   {
     id: "ileri-boubou",
-    mediaSrc: `${CDNUrl}/ileri-boubou-1.mp4`,
+    mediaSrc: `${CDNUrl}/ilerioluwa-1.png`,
     title: "ILERIOLUWA SET/BOUBOU",
     description: (
       <>
@@ -158,7 +154,7 @@ const nuachCollectionData = [
   },
   {
     id: "iye-dress",
-    mediaSrc: `${CDNUrl}/iye-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/iye-1.png`,
     title: "IYE DRESS",
     description: (
       <>
@@ -172,7 +168,7 @@ const nuachCollectionData = [
   },
   {
     id: "keziah-set",
-    mediaSrc: `${CDNUrl}/keziah-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/keziah-1.png`,
     title: "KEZIAH SET",
     description: (
       <>
@@ -186,7 +182,7 @@ const nuachCollectionData = [
   },
   {
     id: "moremi-set",
-    mediaSrc: `${CDNUrl}/moremi-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/moremi-1.jpg`,
     title: "MOREMI SET",
     description: (
       <>
@@ -199,7 +195,7 @@ const nuachCollectionData = [
   },
   {
     id: "shalom-set",
-    mediaSrc: `${CDNUrl}/shalom-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/shalom-1.png`,
     title: "SHALOM SET",
     description: (
       <>
@@ -213,14 +209,14 @@ const nuachCollectionData = [
   },
   {
     id: "tamara-dress",
-    mediaSrc: `${CDNUrl}/tamara-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/tamara-1.jpg`,
     title: "TAMARA DRESS",
     description: <>Made in mikado with a touch of Asooke and chantilly lace</>,
     link: "nuach/tamara-dress",
   },
   {
     id: "tirzah-dress",
-    mediaSrc: `${CDNUrl}/tirzah-dress-1.mp4`,
+    mediaSrc: `${CDNUrl}/tirzah-1.png`,
     title: "TIRZAH DRESS",
     description: (
       <>
@@ -234,7 +230,7 @@ const nuachCollectionData = [
   },
   {
     id: "zuriel-set",
-    mediaSrc: `${CDNUrl}/zuriel-set-1.mp4`,
+    mediaSrc: `${CDNUrl}/zuriel-1.jpg`,
     title: "ZURIEL SET",
     description: (
       <>
