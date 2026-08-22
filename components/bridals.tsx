@@ -19,7 +19,7 @@ const bridalsCollectionData = [
   },
   {
     id: "zahara-dress",
-    mediaSrc: `${CDNUrl}/zahara-dress-1.jpg`,
+    mediaSrc: `${CDNUrl}/zahara.mp4`,
     title: "ZAHARA DRESS",
     description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
     link: "bridals/zahara-dress",
