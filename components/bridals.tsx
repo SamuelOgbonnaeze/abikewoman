@@ -5,21 +5,21 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 const bridalsCollectionData = [
   {
     id: "eden-dress",
-    mediaSrc: `${CDNUrl}/eden.mp4`,
+    mediaSrc: `${CDNUrl}/eden-dress-1.jpg`,
     title: "EDEN DRESS",
     description: "Eden is where beauty began. A gown made for the woman stepping into love, rest, and forever.",
     link: "bridals/eden-dress",
   },
   {
     id: "beulah-dress",
-    mediaSrc: `${CDNUrl}/beulah.mp4`,
+    mediaSrc: `${CDNUrl}/beulah-dress-1.jpg`,
     title: "BEULAH DRESS",
     description: "Beulah is beloved, she is cherished, and it shows. A gown made for the woman stepping into love, commitment, and a lifetime of grace.",
     link: "bridals/beulah-dress",
   },
   {
     id: "zahara-dress",
-    mediaSrc: `${CDNUrl}/zahara.mp4`,
+    mediaSrc: `${CDNUrl}/zahara-dress-1.jpg`,
     title: "ZAHARA DRESS",
     description: "Zahara means \"flowering, radiant bloom.\" A gown made for the bride who steps into her moment fully — seen, celebrated, and unforgettable.",
     link: "bridals/zahara-dress",
