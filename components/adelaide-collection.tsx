@@ -86,6 +86,19 @@ const adelaideCollectionData = [
     link: "adelaide/lerin-set",
   },
   {
+    id: "onyx-dress",
+    mediaSrc: `${CDNUrl}/onyx_dress.mp4`,
+    title: "ONYX DRESS ✨",
+    description: (
+      <>
+        A statement shift dress made from Sequin fabric with an inner rope for a defined fit. <br />
+        <br />
+        Onyx dress is that dress for your next event 😉😍
+      </>
+    ),
+    link: "adelaide/onyx-dress",
+  },
+  {
     id: "opal-dress",
     mediaSrc: `${CDNUrl}/opal_dress.mp4`,
     title: "OPAL DRESS",

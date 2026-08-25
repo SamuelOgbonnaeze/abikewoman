@@ -53,6 +53,7 @@ import {
   ColorBloomDressDesc,
   LerinSetDesc,
   TheBloomSetDesc,
+  OnyxDressDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1142,15 +1143,15 @@ export const collectionsData: CollectionItem[] = [
     priceCAD: undefined,
   },
   {
-    id: "the-jean-dress",
+    id: "onyx-dress",
     media: [
-      { id: "1", url: `${CDNUrl}/the_jean_dress.mp4` },
+      { id: "1", url: `${CDNUrl}/onyx_dress.mp4` },
     ],
-    title: "THE JEAN DRESS",
+    title: "ONYX DRESS",
     category: "Adelaide Collection",
-    description: <TheJeanDressDesc />,
-    link: "adelaide/the-jean-dress",
-    price: 45000,
+    description: <OnyxDressDesc />,
+    link: "adelaide/onyx-dress",
+    price: 56000,
     priceGBP: undefined,
     priceCAD: undefined,
   },

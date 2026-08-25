@@ -897,6 +897,23 @@ export const TheBloomSetDesc = () => {
   );
 };
 
+export const OnyxDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <i className="font-light">
+        Onyx dress is that dress for your next event 😉😍
+      </i>
+      <p>
+        Onyx is a statement shift dress made from Sequin fabric. It has an inner
+        rope that allows you to adjust the dress for a defined fit, giving both
+        comfort and elegance.
+      </p>
+      <p>Click on WhatsApp button below to pre-order.</p>
+    </div>
+  );
+};
+
+
 
 
 
