@@ -4,6 +4,19 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const readyToWearCollectionData = [
   {
+    id: "tiaraoluwa-dress",
+    mediaSrc: `${CDNUrl}/tiaraoluwa_dress_1.jpeg`,
+    title: "TIARAOLUWA DRESS",
+    description: (
+      <>
+        TIARAOLUWA DRESS ✨ <br />
+        <br />
+        A shirt dress with gathers on the knee and a belt to cinch the waist, made from adire crepe.
+      </>
+    ),
+    link: "ready-to-wear/tiaraoluwa-dress",
+  },
+  {
     id: "ankara-panel-dress",
     mediaSrc: `${CDNUrl}/ankara-panel-dress-1.mp4`,
     title: "THE ANKARA PANEL DRESS",

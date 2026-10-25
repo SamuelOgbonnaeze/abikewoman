@@ -897,6 +897,18 @@ export const TheBloomSetDesc = () => {
   );
 };
 
+export const TiaraoluwaDressDesc = () => {
+  return (
+    <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">
+      <p>
+        Tiaraoluwa is a shirt dress with gathers on the knee and a belt to
+        cinch the waist, made from adire crepe.
+      </p>
+      <p>Click on WhatsApp button below to order.</p>
+    </div>
+  );
+};
+
 export const OnyxDressDesc = () => {
   return (
     <div className="flex flex-col gap-y-4 text-md font-bold text-gray-700">

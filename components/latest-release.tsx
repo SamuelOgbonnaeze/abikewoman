@@ -7,6 +7,19 @@ const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
 
 const latestCollectionData = [
   {
+    id: "tiaraoluwa-dress",
+    mediaSrc: `${CDNUrl}/tiaraoluwa_dress_1.jpeg`,
+    title: "TIARAOLUWA DRESS ✨",
+    description: (
+      <>
+        TIARAOLUWA DRESS ✨ <br />
+        <br />
+        A shirt dress with gathers on the knee and a belt to cinch the waist, made from adire crepe.
+      </>
+    ),
+    link: "ready-to-wear/tiaraoluwa-dress",
+  },
+  {
     id: "sharon-dress",
     mediaSrc: `${CDNUrl}/sharon-dress-8.png`,
     title: "SHARON DRESS",

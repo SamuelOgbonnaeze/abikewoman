@@ -54,6 +54,7 @@ import {
   LerinSetDesc,
   TheBloomSetDesc,
   OnyxDressDesc,
+  TiaraoluwaDressDesc,
 } from "./description";
 
 const CDNUrl = process.env.NEXT_PUBLIC_CDN_URL;
@@ -1037,6 +1038,23 @@ export const collectionsData: CollectionItem[] = [
     price: 46000,
     priceGBP: undefined,
     priceCAD: 51.5,
+  },
+  {
+    id: "tiaraoluwa-dress",
+    media: [
+      { id: "1", url: `${CDNUrl}/tiaraoluwa_dress_1.jpeg` },
+      { id: "2", url: `${CDNUrl}/tiaraoluwa_dress_2.jpeg` },
+      { id: "3", url: `${CDNUrl}/tiaraoluwa_dress_3.jpeg` },
+      { id: "4", url: `${CDNUrl}/tiaraoluwa_dress_4.jpeg` },
+      { id: "5", url: `${CDNUrl}/tiaraoluwa_dress_5.jpeg` },
+    ],
+    title: "TIARAOLUWA DRESS",
+    category: "Ready To Wear",
+    description: <TiaraoluwaDressDesc />,
+    link: "ready-to-wear/tiaraoluwa-dress",
+    price: 55000,
+    priceGBP: undefined,
+    priceCAD: undefined,
   },
   {
     id: "mirabel-dress",
