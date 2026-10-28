@@ -86,4 +86,15 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/ife-set.jpg",
     fairPrice: 64000,
   },
+  {
+    productId: "aduke-set",
+    title: "ADUKE PJ SET",
+    image: "/naija-made-market/aduke-pj-set.jpg",
+    fairPrice: 60000,
+  },
+  {
+    productId: "adunbarin-set",
+    image: "/naija-made-market/adunbarin-set.jpg",
+    fairPrice: 61000,
+  },
 ];
