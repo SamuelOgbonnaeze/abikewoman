@@ -2,6 +2,12 @@
 
 import { useState, useMemo } from "react";
 import useCart from "@/hooks/use-cart";
+import {
+  Currency,
+  currencySymbol,
+  formatAmount,
+  priceCartItem,
+} from "@/lib/cart-pricing";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "./ui/button";
 
@@ -15,59 +21,51 @@ const Summary = () => {
     setFirstname("");
   };
 
+  // Prices come from the catalogue, never from the stored cart.
+  const lines = useMemo(() => items.map(priceCartItem), [items]);
+  const hasUnpricedItems = lines.some((line) => line.lineTotal === null);
+
   // Group totals by currency — never mix ₦ + £ + $ into a single number
   const currencyTotals = useMemo(() => {
-    return items.reduce<Record<string, number>>((acc, item) => {
-      const currency = item.selectedCurrency ?? "NGN";
-      const price = item.selectedPrice ?? 0;
-      const quantity = item.quantity ?? 1;
-      acc[currency] = (acc[currency] ?? 0) + price * quantity;
+    return lines.reduce<Partial<Record<Currency, number>>>((acc, line) => {
+      if (line.lineTotal === null) return acc;
+      acc[line.currency] = (acc[line.currency] ?? 0) + line.lineTotal;
       return acc;
     }, {});
-  }, [items]);
+  }, [lines]);
 
-  const currencySymbol = (c: string) =>
-    c === "GBP" ? "£" : c === "CAD" ? "$" : "₦";
+  const totalEntries = Object.entries(currencyTotals) as [Currency, number][];
+  const hasMixedCurrencies = totalEntries.length > 1;
 
-  const formatAmount = (amount: number, currency: string) =>
-    amount.toLocaleString(undefined, {
-      minimumFractionDigits: currency === "NGN" ? 0 : 2,
-      maximumFractionDigits: currency === "NGN" ? 0 : 2,
-    });
-
-  const hasMixedCurrencies = Object.keys(currencyTotals).length > 1;
-
-  const onCheckout = async () => {
+  const sendOrder = (intro: string, outro: string) => {
     const phoneNumber = "2347038072466";
 
-    // Build the items list
-    const itemsList = items
-      .map((item, index) => {
-        const quantity = item.quantity ?? 1;
-        const price = item.selectedPrice ?? 0;
-        const totalPrice = price * quantity;
-        const currency = item.selectedCurrency ?? "NGN";
-        const sym = currencySymbol(currency);
-        const formattedTotal = formatAmount(totalPrice, currency);
-
-        let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
-        if (item.selectedStyle) itemDetails += ` - Style: ${item.selectedStyle}`;
-        if (item.selectedSize) itemDetails += ` - Size: ${item.selectedSize}`;
-        itemDetails += ` - Qty: ${quantity} - ${sym}${formattedTotal}`;
+    const itemsList = lines
+      .map((line, index) => {
+        let itemDetails = `${index + 1}. ${line.title}`;
+        if (line.category) itemDetails += ` (${line.category})`;
+        if (line.style) itemDetails += ` - Style: ${line.style}`;
+        if (line.size) itemDetails += ` - Size: ${line.size}`;
+        itemDetails += ` - Qty: ${line.quantity} - `;
+        itemDetails +=
+          line.lineTotal === null
+            ? "price to be confirmed"
+            : `${currencySymbol(line.currency)}${formatAmount(line.lineTotal, line.currency)}`;
         return itemDetails;
       })
       .join("\n");
 
-    const totalsBreakdown = Object.entries(currencyTotals)
+    const totalsBreakdown = totalEntries
       .map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)} (${c})`)
       .join(" + ");
 
-    const totalLine = hasMixedCurrencies
+    let totalLine = hasMixedCurrencies
       ? `Total: ${totalsBreakdown} (paid separately)`
-      : `Total: ${Object.entries(currencyTotals).map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)}`).join("")}`;
+      : `Total: ${totalEntries.map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)}`).join("")}`;
+    if (hasUnpricedItems) totalLine += " (excluding items to be confirmed)";
 
     const message = encodeURIComponent(
-      `Hi, The AbikeWoman! My name is ${firstname} and I would like to pre-order the following items:\n\n${itemsList}\n\n${totalLine}\n\nThank you!`
+      `Hi, The AbikeWoman! My name is ${firstname.trim()} and ${intro}:\n\n${itemsList}\n\n${totalLine}\n\n${outro}`
     );
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
@@ -76,44 +74,14 @@ const Summary = () => {
     resetForm();
   };
 
-  const onPayWithTransfer = async () => {
-    const phoneNumber = "2347038072466";
+  const onCheckout = () =>
+    sendOrder("I would like to pre-order the following items", "Thank you!");
 
-    // Build the items list
-    const itemsList = items
-      .map((item, index) => {
-        const quantity = item.quantity ?? 1;
-        const price = item.selectedPrice ?? 0;
-        const totalPrice = price * quantity;
-        const currency = item.selectedCurrency ?? "NGN";
-        const sym = currencySymbol(currency);
-        const formattedTotal = formatAmount(totalPrice, currency);
-
-        let itemDetails = `${index + 1}. ${item.title} (${item.category})`;
-        if (item.selectedStyle) itemDetails += ` - Style: ${item.selectedStyle}`;
-        if (item.selectedSize) itemDetails += ` - Size: ${item.selectedSize}`;
-        itemDetails += ` - Qty: ${quantity} - ${sym}${formattedTotal}`;
-        return itemDetails;
-      })
-      .join("\n");
-
-    const totalsBreakdown = Object.entries(currencyTotals)
-      .map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)} (${c})`)
-      .join(" + ");
-
-    const totalLine = hasMixedCurrencies
-      ? `Total: ${totalsBreakdown} (paid separately)`
-      : `Total: ${Object.entries(currencyTotals).map(([c, t]) => `${currencySymbol(c)}${formatAmount(t, c)}`).join("")}`;
-
-    const message = encodeURIComponent(
-      `Hi, The AbikeWoman! My name is ${firstname} and I have paid for the following items:\n\n${itemsList}\n\n${totalLine}\n\nThank you!\n\nHere is my receipt`
+  const onPayWithTransfer = () =>
+    sendOrder(
+      "I have paid for the following items",
+      "Thank you!\n\nHere is my receipt"
     );
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, "_blank");
-    removeAll();
-    resetForm();
-  };
 
   return (
     <div className="mt-16 rounded-lg px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8 bg-[#3D021E] bg-opacity-50 text-white">
@@ -135,7 +103,7 @@ const Summary = () => {
         </div>
 
         {/* Per-currency totals — never mix incompatible currencies */}
-        {Object.keys(currencyTotals).length === 0 ? (
+        {totalEntries.length === 0 ? (
           <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
             <p>Total</p>
             <p>₦0</p>
@@ -143,7 +111,7 @@ const Summary = () => {
         ) : hasMixedCurrencies ? (
           <div className="border-t border-gray-200 pt-4 space-y-1">
             <p className="text-sm font-semibold mb-2">Order Totals</p>
-            {Object.entries(currencyTotals).map(([c, t]) => (
+            {totalEntries.map(([c, t]) => (
               <div key={c} className="flex justify-between text-sm">
                 <span>{c}</span>
                 <span className="font-semibold">{currencySymbol(c)}{formatAmount(t, c)}</span>
@@ -155,11 +123,18 @@ const Summary = () => {
           <div className="flex justify-between text-base font-medium border-t border-gray-200 pt-4">
             <p>Total</p>
             <p>
-              {Object.entries(currencyTotals).map(([c, t]) => (
+              {totalEntries.map(([c, t]) => (
                 <span key={c}>{currencySymbol(c)}{formatAmount(t, c)}</span>
               ))}
             </p>
           </div>
+        )}
+
+        {hasUnpricedItems && (
+          <p className="text-xs text-gray-300">
+            Some items aren&apos;t in our catalogue any more; we&apos;ll confirm
+            their price on WhatsApp.
+          </p>
         )}
 
         <Button
