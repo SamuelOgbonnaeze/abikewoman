@@ -145,16 +145,16 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/iye-skater-dress.jpg",
     fairPrice: 68000,
   },
-  // TODO: Babara photos were sent inline in chat, not as files — these use the
-  // site photo until the fair photos are uploaded.
   {
     productId: "babara-dress",
     title: "BABARA DRESS (ADIRE)",
+    image: "/naija-made-market/babara-dress-adire.jpg",
     fairPrice: 57000,
   },
   {
     productId: "babara-dress",
     title: "BABARA DRESS (FLOWERED MIKADO)",
+    image: "/naija-made-market/babara-dress-flowered-mikado.jpg",
     fairPrice: 68500,
   },
 ];
