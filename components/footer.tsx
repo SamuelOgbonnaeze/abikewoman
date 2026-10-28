@@ -3,8 +3,11 @@ import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
+
   const currentYear = () => {
     const now = new Date();
     return now.getFullYear();
@@ -20,6 +23,9 @@ const Footer = () => {
     // Open WhatsApp in a new tab
     window.open(whatsappUrl, "_blank");
   };
+
+  // The fair page is standalone, so it has no shop footer.
+  if (pathname?.startsWith("/naija-made-market")) return null;
 
   return (
     <div

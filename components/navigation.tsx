@@ -12,7 +12,7 @@ export const Navigation = () => {
   const router = useRouter();
   const pathname = usePathname();
   const cart = useCart();
-  // The fair page is standalone, so it hides the shop actions.
+  // The fair page is standalone: no shop actions and no link back to the shop.
   const isFairPage = pathname?.startsWith("/naija-made-market");
 
 
@@ -31,7 +31,7 @@ export const Navigation = () => {
     <div className="sticky top-0 z-50 w-full py-2 px-[30px] lg:px-[72px] bg-[#3D021E]/90 backdrop-blur-md border-b border-[#DFDFDF]">
       <div className="w-full flex items-center justify-between ">
         {/*  */}
-        <Link href="/">
+        {isFairPage ? (
           <Image
             src="/logo-ls.png"
             alt="Logo"
@@ -40,7 +40,18 @@ export const Navigation = () => {
             className="w-[75px] md:w-[150px]"
             priority
           />
-        </Link>
+        ) : (
+          <Link href="/">
+            <Image
+              src="/logo-ls.png"
+              alt="Logo"
+              width={150}
+              height={50}
+              className="w-[75px] md:w-[150px]"
+              priority
+            />
+          </Link>
+        )}
         {/*  */}
 
         {!isFairPage && (
