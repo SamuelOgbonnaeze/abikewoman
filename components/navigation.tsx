@@ -4,13 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { MessageSquareShare, ShoppingCart } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import useCart from "@/hooks/use-cart";
 
 export const Navigation = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const cart = useCart();
+  // The fair page is standalone, so it hides the shop actions.
+  const isFairPage = pathname?.startsWith("/naija-made-market");
 
 
   const handleContact = () => {
@@ -40,6 +43,7 @@ export const Navigation = () => {
         </Link>
         {/*  */}
 
+        {!isFairPage && (
         <div className="flex items-center space-x-4">
           <div
             onClick={() => router.push("/cart")}
@@ -66,6 +70,7 @@ export const Navigation = () => {
             />
           </div>
         </div>
+        )}
       </div>
     </div>
   );
