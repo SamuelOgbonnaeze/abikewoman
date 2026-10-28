@@ -157,4 +157,7 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/babara-dress-flowered-mikado.jpg",
     fairPrice: 68500,
   },
+  // TODO: fair photo was sent inline in chat, not as a file — uses the site
+  // photo until it's uploaded.
+  { productId: "ibukun-set", fairPrice: 70000 },
 ];
