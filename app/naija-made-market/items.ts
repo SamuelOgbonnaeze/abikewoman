@@ -165,4 +165,11 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/ayo-set.jpg",
     fairPrice: 56000,
   },
+  {
+    // Aso Oke trim in the photo matches Isinmi 1 (Isinmi 2 has crepe trim).
+    productId: "isinmi-1-dress",
+    title: "ISINMI DRESS",
+    image: "/naija-made-market/isinmi-dress.jpg",
+    fairPrice: 45000,
+  },
 ];
