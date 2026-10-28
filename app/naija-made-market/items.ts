@@ -118,4 +118,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/moremi-set.jpg",
     fairPrice: 50000,
   },
+  {
+    productId: "amani-dress",
+    image: "/naija-made-market/amani-dress.jpg",
+    fairPrice: 50000,
+  },
 ];
