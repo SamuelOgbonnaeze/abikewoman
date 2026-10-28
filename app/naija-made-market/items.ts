@@ -55,8 +55,11 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/ilerioluwa-boubou.jpg",
     fairPrice: 42500,
   },
-  // No fair photo sent yet — uses the photo already on the site.
-  { productId: "tiaraoluwa-dress", fairPrice: 55000 },
+  {
+    productId: "tiaraoluwa-dress",
+    image: "/naija-made-market/tiaraoluwa-dress.jpg",
+    fairPrice: 55000,
+  },
   {
     productId: "oreoluwa-dress",
     image: "/naija-made-market/oreoluwa-dress.jpg",
