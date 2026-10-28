@@ -156,6 +156,7 @@ const background =
 export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
   const scrollerRef = useRef<HTMLDivElement>(null);
   const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const firstMobileItemRef = useRef<HTMLElement>(null);
   const [active, setActive] = useState(0);
 
   // The name closest to the middle of the scroller is the active one.
@@ -194,9 +195,11 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
     };
   }, [updateActive]);
 
+  // Wraps around, so going past the last piece loops back to the first.
   const goTo = useCallback(
     (index: number) => {
-      const target = Math.max(0, Math.min(items.length - 1, index));
+      const count = items.length;
+      const target = ((index % count) + count) % count;
       rowRefs.current[target]?.scrollIntoView({
         behavior: "smooth",
         block: "center",
@@ -204,6 +207,50 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
     },
     [items.length]
   );
+
+  // Scrolling or swiping past either end of the list loops to the other end.
+  const activeRef = useRef(active);
+  useEffect(() => {
+    activeRef.current = active;
+  }, [active]);
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    let lockedUntil = 0;
+    let touchStartY = 0;
+    const loop = (direction: 1 | -1) => {
+      const last = items.length - 1;
+      const atEnd =
+        scroller.scrollTop + scroller.clientHeight >= scroller.scrollHeight - 2;
+      const atStart = scroller.scrollTop <= 2;
+      if (Date.now() < lockedUntil) return;
+      if (direction === 1 && atEnd && activeRef.current === last) {
+        lockedUntil = Date.now() + 1200;
+        goTo(0);
+      } else if (direction === -1 && atStart && activeRef.current === 0) {
+        lockedUntil = Date.now() + 1200;
+        goTo(last);
+      }
+    };
+    const onWheel = (event: WheelEvent) => {
+      if (event.deltaY !== 0) loop(event.deltaY > 0 ? 1 : -1);
+    };
+    const onTouchStart = (event: TouchEvent) => {
+      touchStartY = event.touches[0].clientY;
+    };
+    const onTouchEnd = (event: TouchEvent) => {
+      const swipe = touchStartY - event.changedTouches[0].clientY;
+      if (Math.abs(swipe) > 40) loop(swipe > 0 ? 1 : -1);
+    };
+    scroller.addEventListener("wheel", onWheel, { passive: true });
+    scroller.addEventListener("touchstart", onTouchStart, { passive: true });
+    scroller.addEventListener("touchend", onTouchEnd, { passive: true });
+    return () => {
+      scroller.removeEventListener("wheel", onWheel);
+      scroller.removeEventListener("touchstart", onTouchStart);
+      scroller.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [goTo, items.length]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -325,18 +372,14 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
             <button
               type="button"
               onClick={() => goTo(active - 1)}
-              disabled={active === 0}
               aria-label="Previous piece"
-              className="disabled:opacity-30"
             >
               <ChevronUp size={18} />
             </button>
             <button
               type="button"
               onClick={() => goTo(active + 1)}
-              disabled={active === items.length - 1}
               aria-label="Next piece"
-              className="disabled:opacity-30"
             >
               <ChevronDown size={18} />
             </button>
@@ -367,7 +410,11 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         <div className="space-y-12 px-5 pb-12">
           {items.map((item, index) => (
-            <article key={item.id}>
+            <article
+              key={item.id}
+              ref={index === 0 ? firstMobileItemRef : undefined}
+              className="scroll-mt-16"
+            >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/20">
                 <ItemMedia item={item} sizes="100vw" priority={index === 0} />
               </div>
@@ -380,6 +427,16 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
               <ItemLinks item={item} className="mt-5" />
             </article>
           ))}
+          <button
+            type="button"
+            onClick={() =>
+              firstMobileItemRef.current?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="flex w-full items-center justify-center gap-2 border border-white/30 py-4 text-xs uppercase tracking-[0.2em] hover:bg-white/10"
+          >
+            <ChevronUp size={16} />
+            Back to the first piece
+          </button>
         </div>
 
         <div className="sticky bottom-0 z-20 flex h-14 items-center justify-center bg-white text-[#3D021E]">

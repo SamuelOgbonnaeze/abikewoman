@@ -1,6 +1,7 @@
 // Everything for the Naija Made Market page lives here.
 // To change what shows on the page, edit `fairItems` below — nothing else.
 // This page is standalone: it doesn't use the main shop catalogue.
+// Pieces are shown in alphabetical order, so the order below doesn't matter.
 
 export const fairInfo = {
   name: "Naija Made Market",

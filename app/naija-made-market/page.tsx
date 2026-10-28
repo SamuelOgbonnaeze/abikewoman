@@ -7,7 +7,12 @@ export const metadata: Metadata = {
   description: `Shop The Abike Woman at ${fairInfo.name}, ${fairInfo.venue}, ${fairInfo.date}, ${fairInfo.time}. See the pieces and fair prices.`,
 };
 
-const items: ShowcaseItem[] = fairItems.map((item, index) => ({
+// Shown in alphabetical order, whatever order they're listed in items.ts.
+const sortedItems = [...fairItems].sort((a, b) =>
+  a.title.localeCompare(b.title, "en", { numeric: true })
+);
+
+const items: ShowcaseItem[] = sortedItems.map((item, index) => ({
   id: `${index}-${item.image}`,
   title: item.title,
   media: item.image,
