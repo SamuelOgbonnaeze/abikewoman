@@ -26,10 +26,14 @@ const formatNaira = (amount: number) =>
     maximumFractionDigits: 0,
   }).format(amount);
 
-const whatsappUrl = (title?: string) => {
-  const text = title
-    ? `Hello, The AbikeWoman! I saw the ${title} for the ${fairInfo.name} and I'd like to reserve it.`
-    : `Hello, The AbikeWoman! I'm coming to the ${fairInfo.name}.`;
+const whatsappUrl = (item?: ShowcaseItem) => {
+  const fair = `${fairInfo.name} (${fairInfo.date}, ${fairInfo.venue})`;
+  const price = item?.fairPrice
+    ? ` at the fair price of ${formatNaira(item.fairPrice)}`
+    : "";
+  const text = item
+    ? `Hello, The AbikeWoman! I'm messaging from the ${fair}. I'd like to reserve the ${item.title}${price}.`
+    : `Hello, The AbikeWoman! I'm messaging from the ${fair}.`;
   return `https://wa.me/${fairInfo.whatsappNumber}?text=${encodeURIComponent(text)}`;
 };
 
@@ -108,7 +112,7 @@ const ItemLinks = ({
     )}
   >
     <a
-      href={whatsappUrl(item.title)}
+      href={whatsappUrl(item)}
       target="_blank"
       rel="noopener noreferrer"
       className="bg-white/15 px-3 py-1.5 hover:bg-white/25"
