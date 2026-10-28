@@ -18,6 +18,8 @@ export type FairItem = {
   productId?: string;
   // For items that are not on the site yet (or to override the above).
   title?: string;
+  // Fair photos live in public/naija-made-market/, e.g.
+  // "/naija-made-market/amani-dress.jpg". Overrides the catalogue photo.
   image?: string;
   // The price at the fair. Use `fairPrices` instead when styles/sizes differ.
   fairPrice?: number;
