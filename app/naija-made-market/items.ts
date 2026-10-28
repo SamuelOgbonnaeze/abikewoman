@@ -28,12 +28,15 @@ export type FairItem = {
   note?: string;
 };
 
-// TODO: replace with the actual pieces going to the fair and their fair prices.
-// The prices below are just the current site prices as placeholders.
 export const fairItems: FairItem[] = [
-  { productId: "tiaraoluwa-dress", fairPrice: 55000 },
-  { productId: "onyx-dress", fairPrice: 56000 },
-  { productId: "amani-dress", fairPrice: 50000 },
-  { productId: "ayomide-set", fairPrice: 69000 },
-  { productId: "adebisi-boubou", fairPrice: 45000 },
+  {
+    productId: "ire-set",
+    image: "/naija-made-market/ire-set.jpg",
+    fairPrice: 60000,
+  },
+  {
+    productId: "extra-ordinary-set",
+    image: "/naija-made-market/extra-ordinary-set.jpg",
+    fairPrice: 55000,
+  },
 ];
