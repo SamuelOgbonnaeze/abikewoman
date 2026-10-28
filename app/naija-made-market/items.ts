@@ -160,4 +160,9 @@ export const fairItems: FairItem[] = [
   // TODO: fair photo was sent inline in chat, not as a file — uses the site
   // photo until it's uploaded.
   { productId: "ibukun-set", fairPrice: 70000 },
+  {
+    productId: "ayo-set",
+    image: "/naija-made-market/ayo-set.jpg",
+    fairPrice: 56000,
+  },
 ];
