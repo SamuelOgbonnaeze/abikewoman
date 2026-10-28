@@ -4,6 +4,7 @@ import Image from "next/image";
 import { X } from "lucide-react";
 
 import useCart from "@/hooks/use-cart";
+import { currencySymbol, formatAmount, priceCartItem } from "@/lib/cart-pricing";
 import { CartItem } from "@/types";
 import IconButton from "./ui/icon-button";
 
@@ -13,21 +14,13 @@ interface CartItemProps {
 
 const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
   const cart = useCart();
-  // Read straight from the cart, which re-renders this item when it changes.
-  const orderQuantity = data.quantity || 1;
   const [toastTimeout, setToastTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const price = data.selectedPrice ?? data.price ?? 0;
-  const subtotal = price * orderQuantity;
-  const currencySymbol =
-    data.selectedCurrency === "GBP" ? "£" :
-    data.selectedCurrency === "CAD" ? "$" : "₦";
-
-  const formatPrice = (n: number) =>
-    n.toLocaleString(undefined, {
-      minimumFractionDigits: data.selectedCurrency === "NGN" || !data.selectedCurrency ? 0 : 2,
-      maximumFractionDigits: data.selectedCurrency === "NGN" || !data.selectedCurrency ? 0 : 2,
-    });
+  // Price, name and style come from the catalogue, never from the stored cart.
+  // Read straight from the cart, which re-renders this item when it changes.
+  const line = priceCartItem(data);
+  const orderQuantity = line.quantity;
+  const symbol = currencySymbol(line.currency);
 
   const updateQuantity = (newQuantity: number) => {
     cart.updateQuantity(data.id, data.selectedStyle, newQuantity);
@@ -87,31 +80,39 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
         <div className="sm:py-8">
           <div className="relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-2 sm:pr-0">
             <div>
-              <p className="text-lg font-semibold text-black">{data.title}</p>
+              <p className="text-lg font-semibold text-black">{line.title}</p>
 
               {/* Show selected style if present */}
-              {data.selectedStyle && (
+              {line.style && (
                 <p className="text-sm text-gray-600">
-                  Style: {data.selectedStyle}
+                  Style: {line.style}
                 </p>
               )}
 
               {/* Show selected size if present */}
-              {data.selectedSize && (
+              {line.size && (
                 <p className="text-sm text-gray-600">
-                  Size: {data.selectedSize}
+                  Size: {line.size}
                 </p>
               )}
 
-              {/* Price per unit */}
-              <p className="text-sm text-gray-800 mt-1">
-                Price: {currencySymbol}{formatPrice(price)}
-              </p>
+              {line.unitPrice === null || line.lineTotal === null ? (
+                <p className="text-sm text-gray-800 mt-1">
+                  Price to be confirmed
+                </p>
+              ) : (
+                <>
+                  {/* Price per unit */}
+                  <p className="text-sm text-gray-800 mt-1">
+                    Price: {symbol}{formatAmount(line.unitPrice, line.currency)}
+                  </p>
 
-              {/* Subtotal */}
-              <p className="text-base font-semibold text-[#3D021E] mt-1">
-                Subtotal: {currencySymbol}{formatPrice(subtotal)}
-              </p>
+                  {/* Subtotal */}
+                  <p className="text-base font-semibold text-[#3D021E] mt-1">
+                    Subtotal: {symbol}{formatAmount(line.lineTotal, line.currency)}
+                  </p>
+                </>
+              )}
             </div>
           </div>
 
