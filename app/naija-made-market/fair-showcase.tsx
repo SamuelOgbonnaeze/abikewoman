@@ -62,7 +62,7 @@ const ItemMedia = ({
       fill
       sizes={sizes}
       priority={priority}
-      className="object-cover"
+      className="object-cover object-bottom"
     />
   );
 
