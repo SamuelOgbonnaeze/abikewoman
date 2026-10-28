@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { GrInstagram } from "react-icons/gr";
@@ -13,12 +12,9 @@ export type ShowcaseItem = {
   id: string;
   title: string;
   media: string;
-  isVideo: boolean;
   fairPrice?: number;
   fairPrices?: { label: string; price: number }[];
-  regularPrice?: number;
   note?: string;
-  link?: string;
 };
 
 const instagramUrl = `https://www.instagram.com/${fairInfo.instagramHandle}/`;
@@ -45,35 +41,21 @@ const ItemMedia = ({
   item: ShowcaseItem;
   sizes: string;
   priority?: boolean;
-}) =>
-  item.isVideo ? (
-    <video
-      src={item.media}
-      className="absolute inset-0 h-full w-full object-cover"
-      autoPlay
-      muted
-      loop
-      playsInline
-    />
-  ) : (
-    <Image
-      src={item.media}
-      alt={item.title}
-      fill
-      sizes={sizes}
-      priority={priority}
-      className="object-cover object-bottom"
-    />
-  );
+}) => (
+  <Image
+    src={item.media}
+    alt={item.title}
+    fill
+    sizes={sizes}
+    priority={priority}
+    className="object-cover object-bottom"
+  />
+);
 
 const PricePanel = ({ item }: { item: ShowcaseItem }) => {
   const lowest = item.fairPrices?.length
     ? Math.min(...item.fairPrices.map((p) => p.price))
     : item.fairPrice;
-  const saving =
-    lowest !== undefined && item.regularPrice && item.regularPrice > lowest
-      ? item.regularPrice - lowest
-      : undefined;
 
   return (
     <div className="border-l border-[#C9844A] pl-5">
@@ -92,14 +74,6 @@ const PricePanel = ({ item }: { item: ShowcaseItem }) => {
           {formatNaira(lowest)}
         </p>
       )}
-      {saving ? (
-        <p className="mt-1 text-sm text-white/60">
-          <s>{formatNaira(item.regularPrice!)}</s>
-          <span className="ml-2 text-[#E2A66B]">
-            Save {formatNaira(saving)}
-          </span>
-        </p>
-      ) : null}
       {item.fairPrices?.length ? (
         <ul className="mt-4 space-y-1.5 text-sm">
           {item.fairPrices.map((p) => (
@@ -133,14 +107,6 @@ const ItemLinks = ({
       className
     )}
   >
-    {item.link ? (
-      <Link
-        href={item.link}
-        className="border-b border-current pb-1 hover:text-[#E2A66B]"
-      >
-        View piece
-      </Link>
-    ) : null}
     <a
       href={whatsappUrl(item.title)}
       target="_blank"
@@ -284,19 +250,17 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         {/* Photo of the active piece */}
         <div className="absolute left-[5vw] top-1/2 z-0 aspect-[4/5] h-[68%] max-w-[30vw] -translate-y-1/2 overflow-hidden bg-black/20">
-          {items.map((item, index) =>
-            item.isVideo && index !== active ? null : (
-              <div
-                key={item.id}
-                className={cn(
-                  "absolute inset-0 transition-opacity duration-700",
-                  index === active ? "opacity-100" : "opacity-0"
-                )}
-              >
-                <ItemMedia item={item} sizes="30vw" priority={index === 0} />
-              </div>
-            )
-          )}
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-700",
+                index === active ? "opacity-100" : "opacity-0"
+              )}
+            >
+              <ItemMedia item={item} sizes="30vw" priority={index === 0} />
+            </div>
+          ))}
         </div>
 
         {/* Names */}

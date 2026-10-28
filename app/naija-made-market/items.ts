@@ -1,5 +1,6 @@
 // Everything for the Naija Made Market page lives here.
 // To change what shows on the page, edit `fairItems` below — nothing else.
+// This page is standalone: it doesn't use the main shop catalogue.
 
 export const fairInfo = {
   name: "Naija Made Market",
@@ -13,14 +14,10 @@ export const fairInfo = {
 };
 
 export type FairItem = {
-  // Id of a product already on the site (see app/data.tsx). Its name, photo,
-  // regular price and product page are pulled in automatically.
-  productId?: string;
-  // For items that are not on the site yet (or to override the above).
-  title?: string;
+  title: string;
   // Fair photos live in public/naija-made-market/, e.g.
-  // "/naija-made-market/amani-dress.jpg". Overrides the catalogue photo.
-  image?: string;
+  // "/naija-made-market/amani-dress.jpg".
+  image: string;
   // The price at the fair. Use `fairPrices` instead when styles/sizes differ.
   fairPrice?: number;
   fairPrices?: { label: string; price: number }[];
@@ -29,180 +26,37 @@ export type FairItem = {
 };
 
 export const fairItems: FairItem[] = [
-  {
-    productId: "ire-set",
-    image: "/naija-made-market/ire-set.jpg",
-    fairPrice: 60000,
-  },
-  {
-    productId: "extra-ordinary-set",
-    image: "/naija-made-market/extra-ordinary-set.jpg",
-    fairPrice: 55000,
-  },
-  {
-    productId: "adire-velvety",
-    image: "/naija-made-market/adire-velvety.jpg",
-    fairPrice: 60000,
-  },
-  {
-    productId: "adire-2in1-set",
-    image: "/naija-made-market/adire-2in1-set.jpg",
-    fairPrice: 60000,
-  },
-  {
-    productId: "ileri-boubou",
-    title: "ILERIOLUWA BOUBOU",
-    image: "/naija-made-market/ilerioluwa-boubou.jpg",
-    fairPrice: 42500,
-  },
-  {
-    productId: "tiaraoluwa-dress",
-    image: "/naija-made-market/tiaraoluwa-dress.jpg",
-    fairPrice: 55000,
-  },
-  {
-    productId: "oreoluwa-dress",
-    image: "/naija-made-market/oreoluwa-dress.jpg",
-    fairPrice: 62000,
-  },
-  {
-    productId: "keziah-set",
-    title: "KEZIAH SKIRT SET",
-    image: "/naija-made-market/keziah-skirt-set.jpg",
-    fairPrice: 53500,
-  },
-  {
-    productId: "arewa-set",
-    image: "/naija-made-market/arewa-set.jpg",
-    fairPrice: 55000,
-  },
-  {
-    productId: "lerin-set",
-    image: "/naija-made-market/lerin-set.jpg",
-    fairPrice: 57000,
-  },
-  {
-    productId: "ife-set",
-    image: "/naija-made-market/ife-set.jpg",
-    fairPrice: 64000,
-  },
-  {
-    productId: "aduke-set",
-    title: "ADUKE PJ SET",
-    image: "/naija-made-market/aduke-pj-set.jpg",
-    fairPrice: 60000,
-  },
-  {
-    productId: "adunbarin-set",
-    image: "/naija-made-market/adunbarin-set.jpg",
-    fairPrice: 61000,
-  },
-  {
-    productId: "atofarati-set",
-    image: "/naija-made-market/atofarati-set.jpg",
-    fairPrice: 57500,
-  },
-  {
-    productId: "iye-dress",
-    title: "IYE FITTED DRESS",
-    image: "/naija-made-market/iye-fitted-dress.jpg",
-    fairPrice: 56000,
-  },
-  {
-    productId: "ewa-set",
-    image: "/naija-made-market/ewa-set.jpg",
-    fairPrice: 54000,
-  },
-  {
-    productId: "moremi-set",
-    image: "/naija-made-market/moremi-set.jpg",
-    fairPrice: 50000,
-  },
-  {
-    productId: "amani-dress",
-    image: "/naija-made-market/amani-dress.jpg",
-    fairPrice: 50000,
-  },
-  {
-    productId: "kuku-set",
-    image: "/naija-made-market/kuku-set.jpg",
-    fairPrice: 60000,
-  },
-  {
-    productId: "shalom-set",
-    image: "/naija-made-market/shalom-set.jpg",
-    fairPrice: 57500,
-  },
-  {
-    productId: "keziah-set",
-    title: "KEZIAH PANT SET",
-    image: "/naija-made-market/keziah-pant-set.jpg",
-    fairPrice: 54500,
-  },
-  {
-    productId: "iye-dress",
-    title: "IYE SKATER DRESS",
-    image: "/naija-made-market/iye-skater-dress.jpg",
-    fairPrice: 68000,
-  },
-  {
-    productId: "babara-dress",
-    title: "BABARA DRESS (ADIRE)",
-    image: "/naija-made-market/babara-dress-adire.jpg",
-    fairPrice: 57000,
-  },
-  {
-    productId: "babara-dress",
-    title: "BABARA DRESS (FLOWERED MIKADO)",
-    image: "/naija-made-market/babara-dress-flowered-mikado.jpg",
-    fairPrice: 68500,
-  },
-  {
-    productId: "ibukun-set",
-    image: "/naija-made-market/ibukun-set.jpg",
-    fairPrice: 70000,
-  },
-  {
-    productId: "ayo-set",
-    image: "/naija-made-market/ayo-set.jpg",
-    fairPrice: 56000,
-  },
-  {
-    // Aso Oke trim in the photo matches Isinmi 1 (Isinmi 2 has crepe trim).
-    productId: "isinmi-1-dress",
-    title: "ISINMI DRESS",
-    image: "/naija-made-market/isinmi-dress.jpg",
-    fairPrice: 45000,
-  },
-  {
-    productId: "ankara-panel-dress",
-    title: "ANKARA PANEL DRESS",
-    image: "/naija-made-market/ankara-panel-dress.jpg",
-    fairPrice: 73000,
-  },
-  {
-    productId: "urban-wrap-dress",
-    image: "/naija-made-market/urban-wrap-dress.jpg",
-    fairPrice: 50000,
-  },
-  {
-    productId: "opal-dress",
-    image: "/naija-made-market/opal-dress.jpg",
-    fairPrice: 40000,
-  },
-  {
-    productId: "beryl-dress",
-    image: "/naija-made-market/beryl-dress.jpg",
-    fairPrice: 55000,
-  },
-  {
-    productId: "hadiza-set",
-    image: "/naija-made-market/hadiza-set.jpg",
-    fairPrice: 75000,
-  },
-  {
-    productId: "color-bloom-dress",
-    image: "/naija-made-market/color-bloom-dress.jpg",
-    fairPrice: 50000,
-  },
+  { title: "IRE SET", image: "/naija-made-market/ire-set.jpg", fairPrice: 60000 },
+  { title: "EXTRA ORDINARY SET", image: "/naija-made-market/extra-ordinary-set.jpg", fairPrice: 55000 },
+  { title: "ADIRE VELVETY", image: "/naija-made-market/adire-velvety.jpg", fairPrice: 60000 },
+  { title: "ADIRE 2 IN 1", image: "/naija-made-market/adire-2in1-set.jpg", fairPrice: 60000 },
+  { title: "ILERIOLUWA BOUBOU", image: "/naija-made-market/ilerioluwa-boubou.jpg", fairPrice: 42500 },
+  { title: "TIARAOLUWA DRESS", image: "/naija-made-market/tiaraoluwa-dress.jpg", fairPrice: 55000 },
+  { title: "OREOLUWA DRESS", image: "/naija-made-market/oreoluwa-dress.jpg", fairPrice: 62000 },
+  { title: "KEZIAH SKIRT SET", image: "/naija-made-market/keziah-skirt-set.jpg", fairPrice: 53500 },
+  { title: "AREWA SET", image: "/naija-made-market/arewa-set.jpg", fairPrice: 55000 },
+  { title: "LERIN SET", image: "/naija-made-market/lerin-set.jpg", fairPrice: 57000 },
+  { title: "IFE SET", image: "/naija-made-market/ife-set.jpg", fairPrice: 64000 },
+  { title: "ADUKE PJ SET", image: "/naija-made-market/aduke-pj-set.jpg", fairPrice: 60000 },
+  { title: "ADUNBARIN SET", image: "/naija-made-market/adunbarin-set.jpg", fairPrice: 61000 },
+  { title: "ATOFARATI SET", image: "/naija-made-market/atofarati-set.jpg", fairPrice: 57500 },
+  { title: "IYE FITTED DRESS", image: "/naija-made-market/iye-fitted-dress.jpg", fairPrice: 56000 },
+  { title: "EWA SET", image: "/naija-made-market/ewa-set.jpg", fairPrice: 54000 },
+  { title: "MOREMI SET", image: "/naija-made-market/moremi-set.jpg", fairPrice: 50000 },
+  { title: "AMANI DRESS", image: "/naija-made-market/amani-dress.jpg", fairPrice: 50000 },
+  { title: "KUKU SET", image: "/naija-made-market/kuku-set.jpg", fairPrice: 60000 },
+  { title: "SHALOM SET", image: "/naija-made-market/shalom-set.jpg", fairPrice: 57500 },
+  { title: "KEZIAH PANT SET", image: "/naija-made-market/keziah-pant-set.jpg", fairPrice: 54500 },
+  { title: "IYE SKATER DRESS", image: "/naija-made-market/iye-skater-dress.jpg", fairPrice: 68000 },
+  { title: "BABARA DRESS (ADIRE)", image: "/naija-made-market/babara-dress-adire.jpg", fairPrice: 57000 },
+  { title: "BABARA DRESS (FLOWERED MIKADO)", image: "/naija-made-market/babara-dress-flowered-mikado.jpg", fairPrice: 68500 },
+  { title: "IBUKUN SET", image: "/naija-made-market/ibukun-set.jpg", fairPrice: 70000 },
+  { title: "AYO SET", image: "/naija-made-market/ayo-set.jpg", fairPrice: 56000 },
+  { title: "ISINMI DRESS", image: "/naija-made-market/isinmi-dress.jpg", fairPrice: 45000 },
+  { title: "ANKARA PANEL DRESS", image: "/naija-made-market/ankara-panel-dress.jpg", fairPrice: 73000 },
+  { title: "URBAN WRAP DRESS", image: "/naija-made-market/urban-wrap-dress.jpg", fairPrice: 50000 },
+  { title: "OPAL DRESS", image: "/naija-made-market/opal-dress.jpg", fairPrice: 40000 },
+  { title: "BERYL DRESS", image: "/naija-made-market/beryl-dress.jpg", fairPrice: 55000 },
+  { title: "HADIZA SET", image: "/naija-made-market/hadiza-set.jpg", fairPrice: 75000 },
+  { title: "COLOR BLOOM DRESS", image: "/naija-made-market/color-bloom-dress.jpg", fairPrice: 50000 },
 ];
