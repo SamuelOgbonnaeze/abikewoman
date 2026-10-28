@@ -366,7 +366,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Ready To Wear",
     description: <AmaniDesc />,
     link: "ready-to-wear/amani-dress",
-    price: 48000,
+    price: 50000,
     priceGBP: undefined,
     priceCAD: 54,
   },
