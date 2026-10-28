@@ -39,4 +39,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/extra-ordinary-set.jpg",
     fairPrice: 55000,
   },
+  {
+    productId: "adire-velvety",
+    image: "/naija-made-market/adire-velvety.jpg",
+    fairPrice: 60000,
+  },
 ];
