@@ -181,4 +181,9 @@ export const fairItems: FairItem[] = [
     title: "ANKARA PANEL DRESS",
     fairPrice: 73000,
   },
+  {
+    productId: "urban-wrap-dress",
+    image: "/naija-made-market/urban-wrap-dress.jpg",
+    fairPrice: 50000,
+  },
 ];
