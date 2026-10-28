@@ -97,4 +97,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/adunbarin-set.jpg",
     fairPrice: 61000,
   },
+  {
+    productId: "atofarati-set",
+    image: "/naija-made-market/atofarati-set.jpg",
+    fairPrice: 57500,
+  },
 ];
