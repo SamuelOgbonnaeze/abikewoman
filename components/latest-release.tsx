@@ -194,6 +194,9 @@ export const LatestReleases = () => {
     const randomFour = [...latestCollectionData]
       .sort(() => Math.random() - 0.5)
       .slice(0, 4);
+    // Intentional: the shuffle must happen after mount, since a random order
+    // during SSR wouldn't match the client and would break hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setItems(randomFour);
   }, []);
 

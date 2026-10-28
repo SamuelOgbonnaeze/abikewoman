@@ -13,7 +13,8 @@ interface CartItemProps {
 
 const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
   const cart = useCart();
-  const [orderQuantity, setOrderQuantity] = useState(data.quantity || 1);
+  // Read straight from the cart, which re-renders this item when it changes.
+  const orderQuantity = data.quantity || 1;
   const [toastTimeout, setToastTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const price = data.selectedPrice ?? data.price ?? 0;
@@ -28,9 +29,7 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
       maximumFractionDigits: data.selectedCurrency === "NGN" || !data.selectedCurrency ? 0 : 2,
     });
 
-  // Update cart quantity when it changes locally
   const updateQuantity = (newQuantity: number) => {
-    setOrderQuantity(newQuantity);
     cart.updateQuantity(data.id, data.selectedStyle, newQuantity);
   };
 
@@ -53,11 +52,6 @@ const CartItemComponent: React.FC<CartItemProps> = ({ data }) => {
     }, 500);
     setToastTimeout(timeout);
   };
-
-  // Keep local state in sync if cart updates from elsewhere
-  useEffect(() => {
-    setOrderQuantity(data.quantity || 1);
-  }, [data.quantity]);
 
   useEffect(() => {
     return () => {
