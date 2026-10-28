@@ -12,6 +12,8 @@ export const fairInfo = {
     "Plots 3 & 4, Water Corporation Road, Oniru Estate, Victoria Island Annex, Lagos",
   instagramHandle: "theabikewoman",
   whatsappNumber: "2347038072466",
+  // Shown in a banner at the top of the page. Set to "" to hide it.
+  offer: "10% off when you buy 2 or more pieces",
 };
 
 export type FairItem = {
