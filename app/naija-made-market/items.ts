@@ -174,4 +174,11 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/isinmi-dress.jpg",
     fairPrice: 45000,
   },
+  // TODO: fair photo was sent inline in chat, not as a file — uses the site
+  // photo until it's uploaded.
+  {
+    productId: "ankara-panel-dress",
+    title: "ANKARA PANEL DRESS",
+    fairPrice: 73000,
+  },
 ];
