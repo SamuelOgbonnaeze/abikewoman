@@ -185,4 +185,7 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/urban-wrap-dress.jpg",
     fairPrice: 50000,
   },
+  // TODO: fair photo was sent inline in chat, not as a file — uses the site
+  // video until it's uploaded.
+  { productId: "opal-dress", fairPrice: 40000 },
 ];
