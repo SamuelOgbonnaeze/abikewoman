@@ -427,17 +427,25 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         {/* Photo of the active piece */}
         <div className="absolute left-[5vw] top-1/2 z-0 aspect-[4/5] h-[68%] max-w-[30vw] -translate-y-1/2 overflow-hidden bg-black/20">
-          {items.map((item, index) => (
-            <div
-              key={item.id}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-700",
-                index === active ? "opacity-100" : "opacity-0"
-              )}
-            >
-              <ItemMedia item={item} sizes="30vw" priority={index === 0} />
-            </div>
-          ))}
+          {items.map((item, index) => {
+            // Only the active photo and its neighbours are mounted; all the
+            // photos share one box, so otherwise all 33 load at once.
+            const distance = Math.abs(index - active);
+            const isNear = Math.min(distance, items.length - distance) <= 1;
+            return (
+              <div
+                key={item.id}
+                className={cn(
+                  "absolute inset-0 transition-opacity duration-700",
+                  index === active ? "opacity-100" : "opacity-0"
+                )}
+              >
+                {isNear ? (
+                  <ItemMedia item={item} sizes="30vw" priority={index === 0} />
+                ) : null}
+              </div>
+            );
+          })}
         </div>
 
         {/* Names */}
