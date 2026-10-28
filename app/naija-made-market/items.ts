@@ -200,4 +200,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/hadiza-set.jpg",
     fairPrice: 75000,
   },
+  {
+    productId: "color-bloom-dress",
+    image: "/naija-made-market/color-bloom-dress.jpg",
+    fairPrice: 50000,
+  },
 ];
