@@ -33,7 +33,7 @@ export const Navigation = () => {
         {/*  */}
         {isFairPage ? (
           <Image
-            src="/logo-ls.png"
+            src="/logo-ls.webp"
             alt="Logo"
             width={150}
             height={50}
@@ -43,7 +43,7 @@ export const Navigation = () => {
         ) : (
           <Link href="/">
             <Image
-              src="/logo-ls.png"
+              src="/logo-ls.webp"
               alt="Logo"
               width={150}
               height={50}

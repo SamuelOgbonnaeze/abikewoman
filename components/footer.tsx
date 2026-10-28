@@ -35,7 +35,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-between mb-[40px] ">
         <div className="flex flex-col">
           <Image
-            src="/logo-ls.png"
+            src="/logo-ls.webp"
             width={125}
             height={42}
             alt="Logo"

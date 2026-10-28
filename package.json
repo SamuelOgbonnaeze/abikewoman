@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "optimize-media": "tsx scripts/optimize-media.ts"
+    "optimize-media": "tsx scripts/optimize-media.ts",
+    "optimize-fair-photos": "tsx scripts/optimize-fair-photos.ts"
   },
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
