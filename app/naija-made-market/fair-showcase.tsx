@@ -7,6 +7,7 @@ import {
   ChevronRight,
   ChevronUp,
   Search,
+  Tag,
 } from "lucide-react";
 import { GrInstagram } from "react-icons/gr";
 import { FaWhatsapp } from "react-icons/fa";
@@ -289,6 +290,20 @@ const SocialLinks = ({ className }: { className?: string }) => (
   </div>
 );
 
+// The fair offer (fairInfo.offer), shown as a strip across the top.
+const OfferBanner = ({ className }: { className?: string }) =>
+  fairInfo.offer ? (
+    <p
+      className={cn(
+        "flex items-center justify-center gap-2 bg-[#C9844A] px-4 text-center text-[11px] font-semibold uppercase tracking-[0.1em] text-[#2a0014] md:text-xs md:tracking-[0.2em]",
+        className
+      )}
+    >
+      <Tag size={14} className="shrink-0" />
+      {fairInfo.offer}
+    </p>
+  ) : null;
+
 // Type part of a name to jump straight to that piece.
 const FairSearch = ({
   items,
@@ -421,7 +436,13 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
           background
         )}
       >
-        <div className="pointer-events-none absolute top-6 left-[5vw] right-[5vw] z-30 flex items-start justify-between gap-8">
+        <OfferBanner className="absolute inset-x-0 top-0 z-30 h-9" />
+        <div
+          className={cn(
+            "pointer-events-none absolute left-[5vw] right-[5vw] z-30 flex items-start justify-between gap-8",
+            fairInfo.offer ? "top-14" : "top-6"
+          )}
+        >
           <FairSearch
             items={items}
             onSelect={goTo}
@@ -533,18 +554,19 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
       {/* ── Mobile: horizontal slider ──────────────────────────────────── */}
       <section className={cn("md:hidden text-white", background)}>
-        <div className="px-5 pt-5">
+        <OfferBanner className="min-h-8 py-1.5" />
+        <div className="px-5 pt-3">
           <h1 className="text-3xl font-medium uppercase leading-none tracking-tight">
             {fairInfo.name}
           </h1>
-          <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-white/70">
+          <p className="mt-1.5 text-[11px] uppercase tracking-[0.2em] text-white/70">
             {fairInfo.date} · {fairInfo.time}
           </p>
           <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-[#E2A66B]">
             {fairInfo.venue}, Oniru
           </p>
-          <FairSearch items={items} onSelect={mobileGoTo} className="mt-4" />
-          <div className="mt-4 flex items-center justify-between">
+          <FairSearch items={items} onSelect={mobileGoTo} className="mt-3" />
+          <div className="mt-2 flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
               {counterText(mobileActive, items.length)}
             </p>
@@ -571,7 +593,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         <div
           ref={mobileScrollerRef}
-          className="relative mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="relative mt-2 flex snap-x snap-mandatory gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div aria-hidden className="w-[calc(7.5vw-1rem)] shrink-0" />
           {items.map((item, index) => (
@@ -588,7 +610,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
                   <ItemMedia item={item} priority={index === 0} />
                 ) : null}
               </div>
-              <h2 className="mt-3 text-2xl font-medium uppercase leading-none tracking-tight">
+              <h2 className="mt-2 text-2xl font-medium uppercase leading-none tracking-tight">
                 {item.title}
               </h2>
               {item.fairPrices?.length || item.note ? (
@@ -599,7 +621,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
                   <ItemLinks item={item} className="mt-3" />
                 </>
               ) : (
-                <div className="mt-3 flex items-end justify-between gap-4 border-l border-[#C9844A] pl-4">
+                <div className="mt-2 flex items-end justify-between gap-4 border-l border-[#C9844A] pl-4">
                   <div>
                     <p className="text-[10px] uppercase tracking-[0.3em] text-[#E2A66B]">
                       Fair price
