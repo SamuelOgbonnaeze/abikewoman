@@ -108,4 +108,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/iye-fitted-dress.jpg",
     fairPrice: 56000,
   },
+  {
+    productId: "ewa-set",
+    image: "/naija-made-market/ewa-set.jpg",
+    fairPrice: 54000,
+  },
 ];
