@@ -49,4 +49,10 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/adire-2in1-set.jpg",
     fairPrice: 60000,
   },
+  {
+    productId: "ileri-boubou",
+    title: "ILERIOLUWA BOUBOU",
+    image: "/naija-made-market/ilerioluwa-boubou.jpg",
+    fairPrice: 42500,
+  },
 ];
