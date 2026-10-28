@@ -362,9 +362,18 @@ const background =
   "bg-[radial-gradient(ellipse_at_65%_35%,#7a1446_0%,#3D021E_45%,#12000a_100%)]";
 
 export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
-  const desktop = useLoopingScroller(items.length, "y");
-  const mobile = useLoopingScroller(items.length, "x");
-  const { active, goTo } = desktop;
+  const {
+    scrollerRef: desktopScrollerRef,
+    itemRefs: desktopItemRefs,
+    active,
+    goTo,
+  } = useLoopingScroller(items.length, "y");
+  const {
+    scrollerRef: mobileScrollerRef,
+    itemRefs: mobileItemRefs,
+    active: mobileActive,
+    goTo: mobileGoTo,
+  } = useLoopingScroller(items.length, "x");
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -433,7 +442,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         {/* Names */}
         <div
-          ref={desktop.scrollerRef}
+          ref={desktopScrollerRef}
           className="absolute inset-x-0 top-0 bottom-16 z-10 snap-y snap-mandatory overflow-y-scroll pl-[18vw] pr-[26vw] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div className="h-[calc(50%-7rem)]" />
@@ -443,7 +452,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
               <div
                 key={item.id}
                 ref={(el) => {
-                  desktop.itemRefs.current[index] = el;
+                  desktopItemRefs.current[index] = el;
                 }}
                 className="flex h-56 snap-center flex-col items-center justify-center text-center"
               >
@@ -520,15 +529,15 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
           <p className="mt-1 text-[11px] uppercase tracking-[0.2em] text-[#E2A66B]">
             {fairInfo.venue}, Oniru
           </p>
-          <FairSearch items={items} onSelect={mobile.goTo} className="mt-4" />
+          <FairSearch items={items} onSelect={mobileGoTo} className="mt-4" />
           <div className="mt-4 flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              {counterText(mobile.active, items.length)}
+              {counterText(mobileActive, items.length)}
             </p>
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => mobile.goTo(mobile.active - 1)}
+                onClick={() => mobileGoTo(mobileActive - 1)}
                 aria-label="Previous piece"
                 className="flex h-10 w-10 items-center justify-center border border-white/30"
               >
@@ -536,7 +545,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
               </button>
               <button
                 type="button"
-                onClick={() => mobile.goTo(mobile.active + 1)}
+                onClick={() => mobileGoTo(mobileActive + 1)}
                 aria-label="Next piece"
                 className="flex h-10 w-10 items-center justify-center border border-white/30"
               >
@@ -547,7 +556,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
         </div>
 
         <div
-          ref={mobile.scrollerRef}
+          ref={mobileScrollerRef}
           className="relative mt-4 flex snap-x snap-mandatory gap-4 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <div aria-hidden className="w-[calc(7.5vw-1rem)] shrink-0" />
@@ -555,7 +564,7 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
             <article
               key={item.id}
               ref={(el) => {
-                mobile.itemRefs.current[index] = el;
+                mobileItemRefs.current[index] = el;
               }}
               aria-label={`${item.title}, ${counterText(index, items.length)}`}
               className="w-[85vw] shrink-0 snap-center"
