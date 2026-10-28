@@ -10,6 +10,13 @@ const nextConfig = {
     ],
   },
 
+  async redirects() {
+    return [
+      // Short link for flyers / QR codes at the fair
+      { source: "/fair", destination: "/naija-made-market", permanent: false },
+    ];
+  },
+
   async headers() {
     return [
       // ── Videos ──────────────────────────────────────────────────────────
