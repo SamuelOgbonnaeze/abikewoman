@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ChevronDown,
@@ -13,11 +12,13 @@ import { GrInstagram } from "react-icons/gr";
 import { FaWhatsapp } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 import { fairInfo } from "./items";
+import { PHOTO_SIZES } from "./photo-sizes";
 
 export type ShowcaseItem = {
   id: string;
   title: string;
   media: string;
+  srcSet?: string;
   fairPrice?: number;
   fairPrices?: { label: string; price: number }[];
   note?: string;
@@ -46,6 +47,13 @@ const whatsappUrl = (item?: ShowcaseItem) => {
     ? `Hello, The AbikeWoman! I'm messaging from the ${fair}. I'd like to reserve the ${item.title}${price}.`
     : `Hello, The AbikeWoman! I'm messaging from the ${fair}.`;
   return `https://wa.me/${fairInfo.whatsappNumber}?text=${encodeURIComponent(text)}`;
+};
+
+// Only the active piece's photo and its neighbours (wrapping, since the list
+// loops) are mounted; the rest load as the visitor browses.
+const isNearby = (index: number, active: number, count: number) => {
+  const distance = Math.abs(index - active);
+  return Math.min(distance, count - distance) <= 1;
 };
 
 const counterText = (index: number, count: number) =>
@@ -167,22 +175,25 @@ const useLoopingScroller = (count: number, axis: Axis) => {
   return { scrollerRef, itemRefs, active, goTo };
 };
 
+// A plain <img> rather than next/image: images are served unoptimized, so
+// next/image can't offer the browser the -640/-480 sizes to choose from.
 const ItemMedia = ({
   item,
-  sizes,
   priority,
 }: {
   item: ShowcaseItem;
-  sizes: string;
   priority?: boolean;
 }) => (
-  <Image
+  // eslint-disable-next-line @next/next/no-img-element
+  <img
     src={item.media}
+    srcSet={item.srcSet}
+    sizes={item.srcSet ? PHOTO_SIZES : undefined}
     alt={item.title}
-    fill
-    sizes={sizes}
-    priority={priority}
-    className="object-cover object-bottom"
+    loading={priority ? "eager" : "lazy"}
+    fetchPriority={priority ? "high" : undefined}
+    decoding="async"
+    className="absolute inset-0 h-full w-full object-cover object-bottom"
   />
 );
 
@@ -427,25 +438,20 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
 
         {/* Photo of the active piece */}
         <div className="absolute left-[5vw] top-1/2 z-0 aspect-[4/5] h-[68%] max-w-[30vw] -translate-y-1/2 overflow-hidden bg-black/20">
-          {items.map((item, index) => {
-            // Only the active photo and its neighbours are mounted; all the
-            // photos share one box, so otherwise all 33 load at once.
-            const distance = Math.abs(index - active);
-            const isNear = Math.min(distance, items.length - distance) <= 1;
-            return (
-              <div
-                key={item.id}
-                className={cn(
-                  "absolute inset-0 transition-opacity duration-700",
-                  index === active ? "opacity-100" : "opacity-0"
-                )}
-              >
-                {isNear ? (
-                  <ItemMedia item={item} sizes="30vw" priority={index === 0} />
-                ) : null}
-              </div>
-            );
-          })}
+          {/* All the photos share one box, so without isNearby all 33 load at once. */}
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-700",
+                index === active ? "opacity-100" : "opacity-0"
+              )}
+            >
+              {isNearby(index, active, items.length) ? (
+                <ItemMedia item={item} priority={index === 0} />
+              ) : null}
+            </div>
+          ))}
         </div>
 
         {/* Names */}
@@ -578,11 +584,9 @@ export const FairShowcase = ({ items }: { items: ShowcaseItem[] }) => {
               className="w-[85vw] shrink-0 snap-center"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/20">
-                <ItemMedia
-                  item={item}
-                  sizes="85vw"
-                  priority={index === 0}
-                />
+                {isNearby(index, mobileActive, items.length) ? (
+                  <ItemMedia item={item} priority={index === 0} />
+                ) : null}
               </div>
               <h2 className="mt-3 text-2xl font-medium uppercase leading-none tracking-tight">
                 {item.title}
