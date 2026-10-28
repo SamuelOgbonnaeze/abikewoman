@@ -55,4 +55,22 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/ilerioluwa-boubou.jpg",
     fairPrice: 42500,
   },
+  // No fair photo sent yet — uses the photo already on the site.
+  { productId: "tiaraoluwa-dress", fairPrice: 55000 },
+  {
+    productId: "oreoluwa-dress",
+    image: "/naija-made-market/oreoluwa-dress.jpg",
+    fairPrice: 62000,
+  },
+  {
+    productId: "keziah-set",
+    title: "KEZIAH SKIRT SET",
+    image: "/naija-made-market/keziah-skirt-set.jpg",
+    fairPrice: 53500,
+  },
+  {
+    productId: "arewa-set",
+    image: "/naija-made-market/arewa-set.jpg",
+    fairPrice: 55000,
+  },
 ];
