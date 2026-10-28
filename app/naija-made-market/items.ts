@@ -133,4 +133,28 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/shalom-set.jpg",
     fairPrice: 57500,
   },
+  {
+    productId: "keziah-set",
+    title: "KEZIAH PANT SET",
+    image: "/naija-made-market/keziah-pant-set.jpg",
+    fairPrice: 54500,
+  },
+  {
+    productId: "iye-dress",
+    title: "IYE SKATER DRESS",
+    image: "/naija-made-market/iye-skater-dress.jpg",
+    fairPrice: 68000,
+  },
+  // TODO: Babara photos were sent inline in chat, not as files — these use the
+  // site photo until the fair photos are uploaded.
+  {
+    productId: "babara-dress",
+    title: "BABARA DRESS (ADIRE)",
+    fairPrice: 57000,
+  },
+  {
+    productId: "babara-dress",
+    title: "BABARA DRESS (FLOWERED MIKADO)",
+    fairPrice: 68500,
+  },
 ];

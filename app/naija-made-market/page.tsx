@@ -22,7 +22,7 @@ const items: ShowcaseItem[] = fairItems.flatMap((item, index) => {
   if (!title || !media) return [];
 
   return {
-    id: item.productId ?? `fair-item-${index}`,
+    id: `${index}-${item.productId ?? "fair-item"}`,
     title,
     media,
     isVideo: isVideo(media),
