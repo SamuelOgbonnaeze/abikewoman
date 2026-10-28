@@ -123,4 +123,9 @@ export const fairItems: FairItem[] = [
     image: "/naija-made-market/amani-dress.jpg",
     fairPrice: 50000,
   },
+  {
+    productId: "kuku-set",
+    image: "/naija-made-market/kuku-set.jpg",
+    fairPrice: 60000,
+  },
 ];
