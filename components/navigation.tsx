@@ -12,8 +12,8 @@ export const Navigation = () => {
   const router = useRouter();
   const pathname = usePathname();
   const cart = useCart();
-  // The fair page is standalone: no shop actions and no link back to the shop.
-  const isFairPage = pathname?.startsWith("/naija-made-market");
+  // The sale catalogue is standalone: no shop actions and no link back to the shop.
+  const isCataloguePage = pathname?.startsWith("/november-sales");
 
 
   const handleContact = () => {
@@ -31,7 +31,7 @@ export const Navigation = () => {
     <div className="sticky top-0 z-50 w-full py-2 px-[30px] lg:px-[72px] bg-[#3D021E]/90 backdrop-blur-md border-b border-[#DFDFDF]">
       <div className="w-full flex items-center justify-between ">
         {/*  */}
-        {isFairPage ? (
+        {isCataloguePage ? (
           <Image
             src="/logo-ls.webp"
             alt="Logo"
@@ -54,7 +54,7 @@ export const Navigation = () => {
         )}
         {/*  */}
 
-        {!isFairPage && (
+        {!isCataloguePage && (
         <div className="flex items-center space-x-4">
           <div
             onClick={() => router.push("/cart")}

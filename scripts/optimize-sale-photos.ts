@@ -1,9 +1,9 @@
-// scripts/optimize-fair-photos.ts
-// Converts fair photos into the WebP sizes the Naija Made Market page serves.
+// scripts/optimize-sale-photos.ts
+// Converts photos into the WebP sizes the November Sales catalogue serves.
 //
-// Usage: npm run optimize-fair-photos -- path/to/amani-dress.jpg [more photos...]
+// Usage: npm run optimize-sale-photos -- path/to/amani-dress.jpg [more photos...]
 //
-// For each photo it writes, to public/naija-made-market/:
+// For each photo it writes, to public/november-sales/:
 //   <name>.webp      800px wide (the image path you put in items.ts)
 //   <name>-640.webp  640px wide
 //   <name>-480.webp  480px wide
@@ -13,13 +13,13 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const OUTPUT_DIR = path.join(process.cwd(), 'public', 'naija-made-market');
-// Keep in sync with FAIR_PHOTO_WIDTHS in app/naija-made-market/page.tsx.
+const OUTPUT_DIR = path.join(process.cwd(), 'public', 'november-sales');
+// Keep in sync with PHOTO_WIDTHS in app/november-sales/page.tsx.
 const WIDTHS = [800, 640, 480];
 
-async function optimizeFairPhotos(inputs: string[]) {
+async function optimizeSalePhotos(inputs: string[]) {
   if (!inputs.length) {
-    console.error('Usage: npm run optimize-fair-photos -- <photo> [more photos...]');
+    console.error('Usage: npm run optimize-sale-photos -- <photo> [more photos...]');
     process.exit(1);
   }
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -38,7 +38,7 @@ async function optimizeFairPhotos(inputs: string[]) {
   }
 }
 
-optimizeFairPhotos(process.argv.slice(2)).catch((error) => {
+optimizeSalePhotos(process.argv.slice(2)).catch((error) => {
   console.error(error);
   process.exit(1);
 });

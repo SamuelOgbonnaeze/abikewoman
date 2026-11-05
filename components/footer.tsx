@@ -24,8 +24,8 @@ const Footer = () => {
     window.open(whatsappUrl, "_blank");
   };
 
-  // The fair page is standalone, so it has no shop footer.
-  if (pathname?.startsWith("/naija-made-market")) return null;
+  // The sale catalogue is standalone, so it has no shop footer.
+  if (pathname?.startsWith("/november-sales")) return null;
 
   return (
     <div
