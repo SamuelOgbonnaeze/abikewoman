@@ -52,8 +52,8 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Short link for flyers / QR codes at the fair
-      { source: "/fair", destination: "/naija-made-market", permanent: false },
+      // Short link for the November Sales catalogue
+      { source: "/november", destination: "/november-sales", permanent: false },
     ];
   },
 

@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: 'https://www.theabikewoman.org/naija-made-market',
+      url: 'https://www.theabikewoman.org/november-sales',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
