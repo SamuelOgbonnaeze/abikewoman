@@ -7,9 +7,12 @@ export const saleInfo = {
   name: "November Sales",
   // Whole-number percentage taken off every price below.
   discountPercent: 20,
-  // Shown in the header; the first is the headline offer.
-  offers: ["20% off all orders", "Buy 4, get 1 free"],
-  dates: "6th – 19th November 2026",
+  // Shown in the strip at the top of the page.
+  offers: ["Up to 20% off", "Buy 4 at original price, get 1 free"],
+  // Shown under the restock line, so the two offers aren't mixed up.
+  offerTerms:
+    "Buy 4, get 1 free is only on original prices. It can't be combined with the 20% discount.",
+  dates: "6th – 20th November 2026",
   // Short line under the offers.
   restock: "Over 30 newly restocked designs: bubus, 2-piece sets, Adire, Raw Silk dresses",
   // Customers DM this word to shop the sale.
