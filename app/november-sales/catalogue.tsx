@@ -161,6 +161,9 @@ export const SaleCatalogue = ({ items }: { items: CatalogueItem[] }) => {
           <p className="mx-auto mt-4 max-w-xl text-sm text-white/75 md:text-base">
             {saleInfo.restock}.
           </p>
+          <p className="mx-auto mt-3 max-w-xl text-xs uppercase tracking-[0.15em] text-[#E2A66B] md:text-sm">
+            {saleInfo.offerTerms}
+          </p>
         </header>
 
         <div className="mt-6 flex flex-col gap-3 md:mt-10 md:flex-row md:items-end md:justify-between">
