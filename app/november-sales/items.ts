@@ -32,10 +32,13 @@ export type SaleItem = {
   price: number;
   // Short line shown under the price, e.g. "Only 3 pieces available".
   note?: string;
+  // Set to true when a piece sells out: it gets a "Sold out" tag, can't be
+  // ordered, and moves to the end of the page.
+  soldOut?: boolean;
 };
 
 export const saleItems: SaleItem[] = [
-  { title: "IRE SET", image: "/november-sales/ire-set.webp", price: 60000 },
+  { title: "IRE SET", image: "/november-sales/ire-set.webp", price: 60000, soldOut: true },
   { title: "EXTRA ORDINARY SET", image: "/november-sales/extra-ordinary-set.webp", price: 55000 },
   { title: "ADIRE VELVETY", image: "/november-sales/adire-velvety.webp", price: 60000 },
   { title: "ADIRE 2 IN 1", image: "/november-sales/adire-2in1-set.webp", price: 60000 },
@@ -51,7 +54,7 @@ export const saleItems: SaleItem[] = [
   { title: "ATOFARATI SET", image: "/november-sales/atofarati-set.webp", price: 57500 },
   { title: "IYE FITTED DRESS", image: "/november-sales/iye-fitted-dress.webp", price: 56000 },
   { title: "EWA SET", image: "/november-sales/ewa-set.webp", price: 54000 },
-  { title: "MOREMI SET", image: "/november-sales/moremi-set.webp", price: 50000 },
+  { title: "MOREMI SET", image: "/november-sales/moremi-set.webp", price: 50000, soldOut: true },
   { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000 },
   { title: "KUKU SET", image: "/november-sales/kuku-set.webp", price: 60000 },
   { title: "SHALOM SET", image: "/november-sales/shalom-set.webp", price: 57500 },
@@ -62,7 +65,7 @@ export const saleItems: SaleItem[] = [
   { title: "IBUKUN SET", image: "/november-sales/ibukun-set.webp", price: 70000 },
   { title: "AYO SET", image: "/november-sales/ayo-set.webp", price: 56000 },
   { title: "ISINMI DRESS", image: "/november-sales/isinmi-dress.webp", price: 45000 },
-  { title: "ANKARA PANEL DRESS", image: "/november-sales/ankara-panel-dress.webp", price: 73000 },
+  { title: "ANKARA PANEL DRESS", image: "/november-sales/ankara-panel-dress.webp", price: 73000, soldOut: true },
   { title: "URBAN WRAP DRESS", image: "/november-sales/urban-wrap-dress.webp", price: 50000 },
   { title: "OPAL DRESS", image: "/november-sales/opal-dress.webp", price: 40000 },
   { title: "BERYL DRESS", image: "/november-sales/beryl-dress.webp", price: 55000 },

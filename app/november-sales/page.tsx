@@ -9,9 +9,12 @@ export const metadata: Metadata = {
   description: `The Abike Woman ${saleInfo.name}, ${saleInfo.dates}: ${saleInfo.offers.join(" and ")}. ${saleInfo.restock}.`,
 };
 
-// Shown in alphabetical order, whatever order they're listed in items.ts.
-const sortedItems = [...saleItems].sort((a, b) =>
-  a.title.localeCompare(b.title, "en", { numeric: true })
+// Shown in alphabetical order, whatever order they're listed in items.ts,
+// with sold-out pieces at the end.
+const sortedItems = [...saleItems].sort(
+  (a, b) =>
+    Number(!!a.soldOut) - Number(!!b.soldOut) ||
+    a.title.localeCompare(b.title, "en", { numeric: true })
 );
 
 // Sizes written by `npm run optimize-sale-photos`: the image itself is 800px
@@ -42,6 +45,7 @@ const items: CatalogueItem[] = sortedItems.map((item, index) => ({
   price: item.price,
   salePrice: salePrice(item.price),
   note: item.note,
+  soldOut: !!item.soldOut,
 }));
 
 export default function NovemberSalesPage() {

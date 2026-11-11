@@ -16,6 +16,7 @@ export type CatalogueItem = {
   price: number;
   salePrice: number;
   note?: string;
+  soldOut: boolean;
 };
 
 // Roughly how wide a photo is shown in the grid: 2 columns on phones,
@@ -60,7 +61,10 @@ const ItemPhoto = ({
     loading={eager ? "eager" : "lazy"}
     fetchPriority={eager ? "high" : undefined}
     decoding="async"
-    className="absolute inset-0 h-full w-full object-cover object-bottom transition-transform duration-500 group-hover:scale-[1.03]"
+    className={cn(
+      "absolute inset-0 h-full w-full object-cover object-bottom transition-transform duration-500",
+      item.soldOut ? "opacity-50 grayscale" : "group-hover:scale-[1.03]"
+    )}
   />
 );
 
@@ -74,14 +78,25 @@ const ItemCard = ({
   <article className="group flex flex-col">
     <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/20">
       <ItemPhoto item={item} eager={eager} />
-      <span className="absolute left-2 top-2 bg-[#C9844A] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#2a0014] md:text-xs">
-        −{saleInfo.discountPercent}%
-      </span>
+      {item.soldOut ? (
+        <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 bg-[#3D021E]/90 py-2 text-center text-sm font-semibold uppercase tracking-[0.3em] text-white md:text-base">
+          Sold out
+        </span>
+      ) : (
+        <span className="absolute left-2 top-2 bg-[#C9844A] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#2a0014] md:text-xs">
+          −{saleInfo.discountPercent}%
+        </span>
+      )}
     </div>
     <h2 className="mt-3 text-sm font-medium uppercase leading-tight tracking-wide md:text-base">
       {item.title}
     </h2>
-    <p className="mt-1.5 flex flex-wrap items-baseline gap-x-2">
+    <p
+      className={cn(
+        "mt-1.5 flex flex-wrap items-baseline gap-x-2",
+        item.soldOut && "opacity-50"
+      )}
+    >
       <span className="text-lg font-light tracking-tight text-white md:text-xl">
         {formatNaira(item.salePrice)}
       </span>
@@ -93,15 +108,21 @@ const ItemCard = ({
     {item.note ? (
       <p className="mt-1 text-xs text-white/70">{item.note}</p>
     ) : null}
-    <a
-      href={whatsappUrl(item)}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mt-3 flex items-center justify-center gap-2 bg-white/15 px-3 py-2 text-xs uppercase tracking-[0.15em] hover:bg-white/25"
-    >
-      <FaWhatsapp size={14} />
-      Order
-    </a>
+    {item.soldOut ? (
+      <p className="mt-3 border border-white/20 px-3 py-2 text-center text-xs uppercase tracking-[0.15em] text-white/50">
+        Sold out
+      </p>
+    ) : (
+      <a
+        href={whatsappUrl(item)}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 flex items-center justify-center gap-2 bg-white/15 px-3 py-2 text-xs uppercase tracking-[0.15em] hover:bg-white/25"
+      >
+        <FaWhatsapp size={14} />
+        Order
+      </a>
+    )}
   </article>
 );
 
