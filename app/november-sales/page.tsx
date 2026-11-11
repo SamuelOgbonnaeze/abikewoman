@@ -46,6 +46,7 @@ const items: CatalogueItem[] = sortedItems.map((item, index) => ({
   salePrice: salePrice(item.price),
   note: item.note,
   soldOut: !!item.soldOut,
+  piecesLeft: item.piecesLeft,
 }));
 
 export default function NovemberSalesPage() {
