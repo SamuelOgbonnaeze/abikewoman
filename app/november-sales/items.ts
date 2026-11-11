@@ -35,11 +35,13 @@ export type SaleItem = {
   // Set to true when a piece sells out: it gets a "Sold out" tag, can't be
   // ordered, and moves to the end of the page.
   soldOut?: boolean;
+  // How many are left when stock is low: shows an "Only 1 left" tag.
+  piecesLeft?: number;
 };
 
 export const saleItems: SaleItem[] = [
   { title: "IRE SET", image: "/november-sales/ire-set.webp", price: 60000, soldOut: true },
-  { title: "EXTRA ORDINARY SET", image: "/november-sales/extra-ordinary-set.webp", price: 55000 },
+  { title: "EXTRA ORDINARY SET", image: "/november-sales/extra-ordinary-set.webp", price: 55000, piecesLeft: 1 },
   { title: "ADIRE VELVETY", image: "/november-sales/adire-velvety.webp", price: 60000 },
   { title: "ADIRE 2 IN 1", image: "/november-sales/adire-2in1-set.webp", price: 60000 },
   { title: "ILERIOLUWA BOUBOU", image: "/november-sales/ilerioluwa-boubou.webp", price: 42500 },
@@ -47,28 +49,28 @@ export const saleItems: SaleItem[] = [
   { title: "OREOLUWA DRESS", image: "/november-sales/oreoluwa-dress.webp", price: 62000 },
   { title: "KEZIAH SKIRT SET", image: "/november-sales/keziah-skirt-set.webp", price: 53500 },
   { title: "AREWA SET", image: "/november-sales/arewa-set.webp", price: 55000 },
-  { title: "LERIN SET", image: "/november-sales/lerin-set.webp", price: 57000 },
+  { title: "LERIN SET", image: "/november-sales/lerin-set.webp", price: 57000, piecesLeft: 1 },
   { title: "IFE SET", image: "/november-sales/ife-set.webp", price: 64000 },
-  { title: "ADUKE PJ SET", image: "/november-sales/aduke-pj-set.webp", price: 60000 },
-  { title: "ADUNBARIN SET", image: "/november-sales/adunbarin-set.webp", price: 61000 },
+  { title: "ADUKE PJ SET", image: "/november-sales/aduke-pj-set.webp", price: 60000, piecesLeft: 1 },
+  { title: "ADUNBARIN SET", image: "/november-sales/adunbarin-set.webp", price: 61000, piecesLeft: 1 },
   { title: "ATOFARATI SET", image: "/november-sales/atofarati-set.webp", price: 57500 },
   { title: "IYE FITTED DRESS", image: "/november-sales/iye-fitted-dress.webp", price: 56000 },
   { title: "EWA SET", image: "/november-sales/ewa-set.webp", price: 54000 },
   { title: "MOREMI SET", image: "/november-sales/moremi-set.webp", price: 50000, soldOut: true },
-  { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000 },
+  { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000, piecesLeft: 1 },
   { title: "KUKU SET", image: "/november-sales/kuku-set.webp", price: 60000 },
   { title: "SHALOM SET", image: "/november-sales/shalom-set.webp", price: 57500 },
   { title: "KEZIAH PANT SET", image: "/november-sales/keziah-pant-set.webp", price: 54500 },
   { title: "IYE SKATER DRESS", image: "/november-sales/iye-skater-dress.webp", price: 68000 },
   { title: "BABARA DRESS (ADIRE)", image: "/november-sales/babara-dress-adire.webp", price: 57000 },
   { title: "BABARA DRESS (FLOWERED MIKADO)", image: "/november-sales/babara-dress-flowered-mikado.webp", price: 68500 },
-  { title: "IBUKUN SET", image: "/november-sales/ibukun-set.webp", price: 70000 },
-  { title: "AYO SET", image: "/november-sales/ayo-set.webp", price: 56000 },
+  { title: "IBUKUN SET", image: "/november-sales/ibukun-set.webp", price: 70000, piecesLeft: 1 },
+  { title: "AYO SET", image: "/november-sales/ayo-set.webp", price: 56000, piecesLeft: 1 },
   { title: "ISINMI DRESS", image: "/november-sales/isinmi-dress.webp", price: 45000 },
   { title: "ANKARA PANEL DRESS", image: "/november-sales/ankara-panel-dress.webp", price: 73000, soldOut: true },
-  { title: "URBAN WRAP DRESS", image: "/november-sales/urban-wrap-dress.webp", price: 50000 },
+  { title: "URBAN WRAP DRESS", image: "/november-sales/urban-wrap-dress.webp", price: 50000, piecesLeft: 1 },
   { title: "OPAL DRESS", image: "/november-sales/opal-dress.webp", price: 40000 },
   { title: "BERYL DRESS", image: "/november-sales/beryl-dress.webp", price: 55000 },
   { title: "HADIZA SET", image: "/november-sales/hadiza-set.webp", price: 75000 },
-  { title: "COLOR BLOOM DRESS", image: "/november-sales/color-bloom-dress.webp", price: 50000 },
+  { title: "COLOR BLOOM DRESS", image: "/november-sales/color-bloom-dress.webp", price: 50000, piecesLeft: 1 },
 ];

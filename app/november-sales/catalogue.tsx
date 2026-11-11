@@ -17,6 +17,7 @@ export type CatalogueItem = {
   salePrice: number;
   note?: string;
   soldOut: boolean;
+  piecesLeft?: number;
 };
 
 // Roughly how wide a photo is shown in the grid: 2 columns on phones,
@@ -83,9 +84,16 @@ const ItemCard = ({
           Sold out
         </span>
       ) : (
-        <span className="absolute left-2 top-2 bg-[#C9844A] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#2a0014] md:text-xs">
-          −{saleInfo.discountPercent}%
-        </span>
+        <>
+          <span className="absolute left-2 top-2 bg-[#C9844A] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-[#2a0014] md:text-xs">
+            −{saleInfo.discountPercent}%
+          </span>
+          {item.piecesLeft ? (
+            <span className="absolute inset-x-0 bottom-0 bg-white/90 py-1.5 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-[#7a1446] md:text-xs">
+              Only {item.piecesLeft} left
+            </span>
+          ) : null}
+        </>
       )}
     </div>
     <h2 className="mt-3 text-sm font-medium uppercase leading-tight tracking-wide md:text-base">
