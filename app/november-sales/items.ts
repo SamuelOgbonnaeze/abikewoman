@@ -75,4 +75,5 @@ export const saleItems: SaleItem[] = [
   { title: "COLOR BLOOM DRESS", image: "/november-sales/color-bloom-dress.webp", price: 50000, piecesLeft: 1 },
   { title: "THE JEAN DRESS", image: "/november-sales/the-jean-dress.webp", price: 50000, piecesLeft: 1 },
   { title: "THE BLOOM SET", image: "/november-sales/the-bloom-set.webp", price: 75000, piecesLeft: 1 },
+  { title: "ONYX DRESS", image: "/november-sales/onyx-dress.webp", price: 56000, piecesLeft: 1 },
 ];
