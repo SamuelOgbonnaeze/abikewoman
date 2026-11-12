@@ -1208,7 +1208,7 @@ export const collectionsData: CollectionItem[] = [
     category: "Adelaide Collection",
     description: <TheJeanDressDesc />,
     link: "adelaide/the-jean-dress",
-    price: 45000,
+    price: 50000,
     priceGBP: undefined,
     priceCAD: undefined,
   },
