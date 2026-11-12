@@ -57,7 +57,7 @@ export const saleItems: SaleItem[] = [
   { title: "IYE FITTED DRESS", image: "/november-sales/iye-fitted-dress.webp", price: 56000 },
   { title: "EWA SET", image: "/november-sales/ewa-set.webp", price: 54000 },
   { title: "MOREMI SET", image: "/november-sales/moremi-set.webp", price: 50000, soldOut: true },
-  { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000, soldOut: true },
+  { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000 },
   { title: "KUKU SET", image: "/november-sales/kuku-set.webp", price: 60000 },
   { title: "SHALOM SET", image: "/november-sales/shalom-set.webp", price: 57500 },
   { title: "KEZIAH PANT SET", image: "/november-sales/keziah-pant-set.webp", price: 54500 },
