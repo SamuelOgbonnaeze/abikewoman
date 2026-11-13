@@ -41,9 +41,9 @@ export type SaleItem = {
 
 export const saleItems: SaleItem[] = [
   { title: "IRE SET", image: "/november-sales/ire-set.webp", price: 60000, soldOut: true },
-  { title: "EXTRA ORDINARY SET", image: "/november-sales/extra-ordinary-set.webp", price: 55000, piecesLeft: 1 },
-  { title: "ADIRE VELVETY", image: "/november-sales/adire-velvety.webp", price: 60000 },
-  { title: "ADIRE 2 IN 1", image: "/november-sales/adire-2in1-set.webp", price: 60000 },
+  { title: "EXTRA ORDINARY SET", image: "/november-sales/extra-ordinary-set.webp", price: 55000, soldOut: true },
+  { title: "ADIRE VELVETY", image: "/november-sales/adire-velvety.webp", price: 60000, piecesLeft: 1 },
+  { title: "ADIRE 2 IN 1", image: "/november-sales/adire-2in1-set.webp", price: 60000, piecesLeft: 1 },
   { title: "ILERIOLUWA BOUBOU", image: "/november-sales/ilerioluwa-boubou.webp", price: 42500 },
   { title: "TIARAOLUWA DRESS", image: "/november-sales/tiaraoluwa-dress.webp", price: 55000, piecesLeft: 1 },
   { title: "OREOLUWA DRESS", image: "/november-sales/oreoluwa-dress.webp", price: 62000 },
