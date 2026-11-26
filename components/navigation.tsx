@@ -13,7 +13,7 @@ export const Navigation = () => {
   const pathname = usePathname();
   const cart = useCart();
   // The sale catalogue is standalone: no shop actions and no link back to the shop.
-  const isCataloguePage = pathname?.startsWith("/november-sales");
+  const isCataloguePage = pathname?.startsWith("/end-of-year-sales");
 
 
   const handleContact = () => {

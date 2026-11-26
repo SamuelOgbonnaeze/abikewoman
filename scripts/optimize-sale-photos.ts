@@ -1,9 +1,9 @@
 // scripts/optimize-sale-photos.ts
-// Converts photos into the WebP sizes the November Sales catalogue serves.
+// Converts photos into the WebP sizes the End of the Year Sales catalogue serves.
 //
 // Usage: npm run optimize-sale-photos -- path/to/amani-dress.jpg [more photos...]
 //
-// For each photo it writes, to public/november-sales/:
+// For each photo it writes, to public/end-of-year-sales/:
 //   <name>.webp      800px wide (the image path you put in items.ts)
 //   <name>-640.webp  640px wide
 //   <name>-480.webp  480px wide
@@ -13,8 +13,8 @@ import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
 
-const OUTPUT_DIR = path.join(process.cwd(), 'public', 'november-sales');
-// Keep in sync with PHOTO_WIDTHS in app/november-sales/page.tsx.
+const OUTPUT_DIR = path.join(process.cwd(), 'public', 'end-of-year-sales');
+// Keep in sync with PHOTO_WIDTHS in app/end-of-year-sales/page.tsx.
 const WIDTHS = [800, 640, 480];
 
 async function optimizeSalePhotos(inputs: string[]) {

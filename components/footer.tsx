@@ -25,7 +25,7 @@ const Footer = () => {
   };
 
   // The sale catalogue is standalone, so it has no shop footer.
-  if (pathname?.startsWith("/november-sales")) return null;
+  if (pathname?.startsWith("/end-of-year-sales")) return null;
 
   return (
     <div
