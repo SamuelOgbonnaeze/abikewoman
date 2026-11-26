@@ -52,8 +52,11 @@ const nextConfig = {
 
   async redirects() {
     return [
-      // Short link for the November Sales catalogue
-      { source: "/november", destination: "/november-sales", permanent: false },
+      // Short link for the End of the Year Sales catalogue
+      { source: "/sales", destination: "/end-of-year-sales", permanent: false },
+      // Old November Sales links, already shared, keep working
+      { source: "/november", destination: "/end-of-year-sales", permanent: false },
+      { source: "/november-sales", destination: "/end-of-year-sales", permanent: false },
     ];
   },
 

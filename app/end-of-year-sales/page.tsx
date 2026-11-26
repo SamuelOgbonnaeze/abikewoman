@@ -49,6 +49,6 @@ const items: CatalogueItem[] = sortedItems.map((item, index) => ({
   piecesLeft: item.piecesLeft,
 }));
 
-export default function NovemberSalesPage() {
+export default function EndOfYearSalesPage() {
   return <SaleCatalogue items={items} />;
 }
