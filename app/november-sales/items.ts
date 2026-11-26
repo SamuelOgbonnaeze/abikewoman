@@ -8,11 +8,11 @@ export const saleInfo = {
   // Whole-number percentage taken off every price below.
   discountPercent: 20,
   // Shown in the strip at the top of the page.
-  offers: ["Up to 20% off", "Buy 4 at original price, get 1 free"],
+  offers: ["20% off every piece — now extended", "Buy 4 at original price, get 1 free"],
   // Shown under the restock line, so the two offers aren't mixed up.
   offerTerms:
     "Buy 4, get 1 free is only on original prices. It can't be combined with the 20% discount.",
-  dates: "6th – 20th November 2026",
+  dates: "6th November – 20th December 2026",
   // Short line under the offers.
   restock: "Over 30 newly restocked designs: bubus, 2-piece sets, Adire, Raw Silk dresses",
   // Customers DM this word to shop the sale.
@@ -49,17 +49,24 @@ export const saleItems: SaleItem[] = [
   { title: "OREOLUWA DRESS", image: "/november-sales/oreoluwa-dress.webp", price: 62000 },
   { title: "KEZIAH SKIRT SET", image: "/november-sales/keziah-skirt-set.webp", price: 53500 },
   { title: "AREWA SET", image: "/november-sales/arewa-set.webp", price: 55000 },
+  { title: "AREWA SET IN PLAIN COLOR", image: "/november-sales/arewa-set-plain.webp", price: 50000, piecesLeft: 1 },
   { title: "LERIN SET", image: "/november-sales/lerin-set.webp", price: 57000, piecesLeft: 1 },
   { title: "IFE SET", image: "/november-sales/ife-set.webp", price: 64000 },
   { title: "ADUKE PJ SET", image: "/november-sales/aduke-pj-set.webp", price: 60000, soldOut: true },
-  { title: "ADUNBARIN SET", image: "/november-sales/adunbarin-set.webp", price: 61000, piecesLeft: 1 },
+  { title: "ADUNBARIN SET", image: "/november-sales/adunbarin-set.webp", price: 61000 },
+  { title: "ALHERI SET", image: "/november-sales/alheri-set.webp", price: 52500, piecesLeft: 1 },
+  { title: "ALORA DRESS", image: "/november-sales/alora-dress.webp", price: 59500 },
   { title: "ATOFARATI SET", image: "/november-sales/atofarati-set.webp", price: 57500 },
+  { title: "ATOFARATI 2-COLORED SET", image: "/november-sales/atofarati-set-2-colour.webp", price: 55000, piecesLeft: 1 },
   { title: "IYE FITTED DRESS", image: "/november-sales/iye-fitted-dress.webp", price: 56000 },
+  { title: "DANIELLE'S DRESS SET", image: "/november-sales/danielle-dress-set.webp", price: 82500, piecesLeft: 1 },
+  { title: "DANIELLE SKIRT SET", image: "/november-sales/danielle-skirt-set.webp", price: 68500, piecesLeft: 1 },
   { title: "EWA SET", image: "/november-sales/ewa-set.webp", price: 54000 },
   { title: "MOREMI SET", image: "/november-sales/moremi-set.webp", price: 50000, soldOut: true },
   { title: "AMANI DRESS", image: "/november-sales/amani-dress.webp", price: 50000 },
   { title: "KUKU SET", image: "/november-sales/kuku-set.webp", price: 60000 },
-  { title: "SHALOM SET", image: "/november-sales/shalom-set.webp", price: 57500 },
+  { title: "SHALOM SET (ADIRE)", image: "/november-sales/shalom-set.webp", price: 57500 },
+  { title: "SHALOM SET (PLAIN COLOR & SUNRAY)", image: "/november-sales/shalom-set-plain.webp", price: 56500, piecesLeft: 1 },
   { title: "KEZIAH PANT SET", image: "/november-sales/keziah-pant-set.webp", price: 54500 },
   { title: "IYE SKATER DRESS", image: "/november-sales/iye-skater-dress.webp", price: 68000 },
   { title: "BABARA DRESS (ADIRE)", image: "/november-sales/babara-dress-adire.webp", price: 57000 },
@@ -73,6 +80,7 @@ export const saleItems: SaleItem[] = [
   { title: "BERYL DRESS", image: "/november-sales/beryl-dress.webp", price: 55000 },
   { title: "HADIZA SET", image: "/november-sales/hadiza-set.webp", price: 75000 },
   { title: "COLOR BLOOM DRESS", image: "/november-sales/color-bloom-dress.webp", price: 50000, piecesLeft: 1 },
+  { title: "TIRZAH PLAIN DRESS (YELLOW)", image: "/november-sales/tirzah-dress-yellow.webp", price: 62000, piecesLeft: 1 },
   { title: "THE JEAN DRESS", image: "/november-sales/the-jean-dress.webp", price: 50000, piecesLeft: 1 },
   { title: "THE BLOOM SET", image: "/november-sales/the-bloom-set.webp", price: 75000, piecesLeft: 1 },
   { title: "ONYX DRESS", image: "/november-sales/onyx-dress.webp", price: 56000, piecesLeft: 1 },
